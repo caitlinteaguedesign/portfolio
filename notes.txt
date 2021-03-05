@@ -1,8 +1,0 @@
-documentation: 
-https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-18-04
-
-site config location:
-/etc/apache2/sites-available/example.com.conf
-
-virtual host:
-/var/www/test.com/public_html/index.html
