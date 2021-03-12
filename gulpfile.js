@@ -42,9 +42,6 @@ function nunjuck() {
       .pipe(data(function(){
          return importFresh("./src/data/global.json");
       }))
-      .pipe(data(function(){
-         return importFresh("./src/data/planets.json");
-      }))
       .pipe(
          nunjucksRender({
             path: ["src/templates"]
@@ -99,8 +96,8 @@ function debugSass() {
 
 function serve(done) {
    nunjuck();
-   compileSass();
-   compileJs();
+   //compileSass();
+   //compileJs();
    startBrowser();
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
@@ -127,3 +124,4 @@ function serve(done) {
 exports.default = serve;
 exports.start = startBrowser;
 exports.debugSass = debugSass;
+exports.nunjuck = nunjuck;
