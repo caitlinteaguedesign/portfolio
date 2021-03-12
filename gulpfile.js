@@ -96,8 +96,8 @@ function debugSass() {
 
 function serve(done) {
    nunjuck();
-   //compileSass();
-   //compileJs();
+   compileSass();
+   compileJs();
    startBrowser();
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
