@@ -25,14 +25,15 @@ function cleanDirectory(directory) {
    ]);
 }
 
-function cleanFiles(filetype) {
+function cleanFiles(filetype, nots) {
    
    if(!filetype) return console.log("Need a filetype");
    
    console.log("sweep "+filetype+" up");
 
    return del([
-      "build/**/*."+filetype
+      "build/**/*."+filetype,
+      nots
    ]);
 }
 
@@ -101,7 +102,7 @@ function serve(done) {
    startBrowser();
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
-      cleanFiles("html");
+      cleanFiles("html", "!build/archive/**");
       nunjuck();
       done();
    }).on("change", browserSync.reload);
