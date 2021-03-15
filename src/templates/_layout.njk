@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>{{page_title}}</title>
+   <meta name="description" content="{{page_description}}">
+   <meta name="copyright" content="{{site_owner}}">
+   <meta name="author" content="{{site_owner}}">
+   <link rel="stylesheet" type="text/css" href="/css/styles.min.css">
+</head>
+<body>   
+
+   <div class="container">
+{# 
+      {% block header %}
+         
+         {% import 'macros/_nav.njk' as nav %}
+
+      {% endblock %} #}
+   
+      <main class="main">
+         {% block main %}
+         {% endblock %}
+      </main>
+
+      {# {% include "partials/_sidebar.njk" %} #}
+
+      {# {% include "partials/_footer.njk" %} #}
+   
+   </div>
+
+   <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(event) { 
+   docReady();
+});
+function docReady() {
+   console.log("App is running!");
+}
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhc2UuanMiLCJyZWFkeS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUNGQTtBQUNBO0FBQ0EiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbImRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoXCJET01Db250ZW50TG9hZGVkXCIsIGZ1bmN0aW9uKGV2ZW50KSB7IFxyXG4gICBkb2NSZWFkeSgpO1xyXG59KTsiLCJmdW5jdGlvbiBkb2NSZWFkeSgpIHtcclxuICAgY29uc29sZS5sb2coXCJBcHAgaXMgcnVubmluZyFcIik7XHJcbn0iXX0=
