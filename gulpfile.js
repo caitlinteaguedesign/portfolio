@@ -143,5 +143,5 @@ function production(done) {
 
 
 exports.default = development;
-exports.production = production;
+exports.build = production;
 exports.start = startBrowser;
