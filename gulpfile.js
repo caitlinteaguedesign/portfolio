@@ -37,7 +37,7 @@ function cleanFiles(filetype, nots) {
    ]);
 }
 
-function nunjuck(folder="preview") {
+function nunjuck() {
    console.log("throwing nunchoku");
    return src("src/pages/**/*.njk")
       .pipe(data(function(){
@@ -49,10 +49,10 @@ function nunjuck(folder="preview") {
          })
       )
       .pipe(prettier({singleQuote: true, tabWidth: 3}))
-      .pipe(dest(folder));
+      .pipe(dest("build"));
 }
 
-function compileSass(folder="preview") {
+function compileSass() {
    console.log("getting sassy");
    return src("./src/scss/**/*.scss")
       .pipe(sourcemaps.init())
@@ -61,7 +61,7 @@ function compileSass(folder="preview") {
       }))
       .pipe(sourcemaps.write())
       .pipe(rename({suffix: ".min"}))
-      .pipe(dest(folder+"/css"));
+      .pipe(dest("build/css"));
 }
 
 function compileDevJs() {
@@ -70,7 +70,7 @@ function compileDevJs() {
       .pipe(sourcemaps.init())
       .pipe(concat("main.js"))
       .pipe(sourcemaps.write())
-      .pipe(dest("preview/js"));
+      .pipe(dest("build/js"));
 }
 
 function compileProdJs() {
@@ -85,7 +85,7 @@ function startBrowser() {
    console.log("Launching");
    browserSync.init({
       server: {
-         baseDir: "./preview/",
+         baseDir: "./build/",
          browser: "Firefox"
       }
    })
@@ -99,11 +99,11 @@ function debugSass() {
          console.log(sass.logError);
       }))
       .pipe(rename({suffix: ".debug"}))
-      .pipe(dest("preview/css"));
+      .pipe(dest("build/css"));
 }
 
 function development(done) {
-   nunjuck("preview");
+   nunjuck();
    compileSass();
    compileDevJs();
    startBrowser();
@@ -131,7 +131,7 @@ function development(done) {
 
 function production(done) {
    cleanFiles("html", "!build/archive/**");
-   nunjuck("build");
+   nunjuck();
    cleanDirectory("build/css");
    compileSass();
    cleanDirectory("build/js");
@@ -139,8 +139,6 @@ function production(done) {
 
    done();
 }
-
-
 
 exports.default = development;
 exports.build = production;
