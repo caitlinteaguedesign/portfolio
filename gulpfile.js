@@ -52,11 +52,21 @@ function nunjuck() {
       .pipe(dest("build"));
 }
 
-function compileSass() {
+function prodSass() {
+   console.log("getting sassy");
+   return src("./src/scss/**/*.scss")
+      .pipe(sass({outputStyle: 'compressed'}).on('error', function() {
+         console.log(sass.logError);
+      }))
+      .pipe(rename({suffix: ".min"}))
+      .pipe(dest("build/css"));
+}
+
+function devSass() {
    console.log("getting sassy");
    return src("./src/scss/**/*.scss")
       .pipe(sourcemaps.init())
-      .pipe(sass({outputStyle: 'compressed'}).on('error', function() {
+      .pipe(sass().on('error', function() {
          console.log(sass.logError);
       }))
       .pipe(sourcemaps.write())
@@ -64,7 +74,7 @@ function compileSass() {
       .pipe(dest("build/css"));
 }
 
-function compileDevJs() {
+function devJs() {
    console.log("writing scripts");
    return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
       .pipe(sourcemaps.init())
@@ -73,7 +83,7 @@ function compileDevJs() {
       .pipe(dest("build/js"));
 }
 
-function compileProdJs() {
+function prodJs() {
    console.log("writing scripts");
    return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
       .pipe(concat("main.js"))
@@ -91,21 +101,10 @@ function startBrowser() {
    })
 }
 
-function debugSass() {
-   console.log("debug sass");
-   return src("./src/scss/**/*.scss")
-      .pipe(sourcemaps.init())
-      .pipe(sass().on('error', function() {
-         console.log(sass.logError);
-      }))
-      .pipe(rename({suffix: ".debug"}))
-      .pipe(dest("build/css"));
-}
-
 function development(done) {
    nunjuck();
-   compileSass();
-   compileDevJs();
+   devSass();
+   devJs();
    startBrowser();
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
@@ -116,13 +115,13 @@ function development(done) {
 
    watch(["src/scss/*.scss"], function(done) {
       cleanDirectory("build/css");
-      compileSass();
+      devSass();
       done();
    }).on("change", browserSync.reload);;
 
    watch(["src/js/*.js"], function(done) {
       cleanDirectory("build/js");
-      compileDevJs();
+      devJs();
       done();
    }).on("change", browserSync.reload);;
 
@@ -133,9 +132,9 @@ function production(done) {
    cleanFiles("html", "!build/archive/**");
    nunjuck();
    cleanDirectory("build/css");
-   compileSass();
+   prodSass();
    cleanDirectory("build/js");
-   compileProdJs();
+   prodJs();
 
    done();
 }
