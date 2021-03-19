@@ -7,5 +7,7 @@
    &__content {
       @include universal-container();
       padding: rhythm(2);
+      display: grid;
+      grid-template-columns: $sidebar-width 1fr;
    }
 }
