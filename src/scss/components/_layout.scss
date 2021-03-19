@@ -4,5 +4,6 @@
    z-index: 1;
    display: flex;
    flex-direction: row-reverse;
-   box-shadow: 0 0 6px 0 rgba(144,148,162,.75);
+   box-shadow: 3px 0 6px 0 rgba(200, 200, 200, 0.5),
+   -3px 0 6px 0 rgba(144, 158, 162, 0.5);
 }
