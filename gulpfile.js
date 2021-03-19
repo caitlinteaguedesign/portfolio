@@ -37,12 +37,13 @@ function cleanFiles(filetype, nots) {
    ]);
 }
 
-function nunjuck() {
+function nunjuck(params) {
    console.log("throwing nunchoku");
    return src("src/pages/**/*.njk")
       .pipe(data(function(){
          return importFresh("./src/data/global.json");
       }))
+      .pipe(data(params))
       .pipe(
          nunjucksRender({
             path: ["src/templates"]
@@ -52,8 +53,20 @@ function nunjuck() {
       .pipe(dest("build"));
 }
 
+function devSass() {
+   console.log("getting dev sassy");
+   return src("./src/scss/**/*.scss")
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', function() {
+         console.log(sass.logError);
+      }))
+      .pipe(sourcemaps.write())
+      .pipe(rename({suffix: ".full"}))
+      .pipe(dest("build/css"));
+}
+
 function prodSass() {
-   console.log("getting sassy");
+   console.log("getting prod sassy");
    return src("./src/scss/**/*.scss")
       .pipe(sass({outputStyle: 'compressed'}).on('error', function() {
          console.log(sass.logError);
@@ -62,20 +75,8 @@ function prodSass() {
       .pipe(dest("build/css"));
 }
 
-function devSass() {
-   console.log("getting sassy");
-   return src("./src/scss/**/*.scss")
-      .pipe(sourcemaps.init())
-      .pipe(sass().on('error', function() {
-         console.log(sass.logError);
-      }))
-      .pipe(sourcemaps.write())
-      .pipe(rename({suffix: ".min"}))
-      .pipe(dest("build/css"));
-}
-
 function devJs() {
-   console.log("writing scripts");
+   console.log("writing dev scripts");
    return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
       .pipe(sourcemaps.init())
       .pipe(concat("main.js"))
@@ -84,9 +85,9 @@ function devJs() {
 }
 
 function prodJs() {
-   console.log("writing scripts");
+   console.log("writing prod scripts");
    return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
-      .pipe(concat("main.js"))
+      .pipe(concat("main.min.js"))
       .pipe(dest("build/js"));
 }
 
@@ -102,14 +103,18 @@ function startBrowser() {
 }
 
 function development(done) {
-   nunjuck();
+   cleanFiles("html", "!build/archive/**");
+   //cleanDirectory("build/css");
+   //cleanDirectory("build/js");
+
+   nunjuck({stylesheet: "styles.full.css"});
    devSass();
    devJs();
    startBrowser();
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
       cleanFiles("html", "!build/archive/**");
-      nunjuck();
+      nunjuck({stylesheet: "styles.full.css"});
       done();
    }).on("change", browserSync.reload);
 
@@ -130,10 +135,10 @@ function development(done) {
 
 function production(done) {
    cleanFiles("html", "!build/archive/**");
-   nunjuck();
-   cleanDirectory("build/css");
+   nunjuck({stylesheet: "styles.min.css"});
+   //cleanDirectory("build/css");
    prodSass();
-   cleanDirectory("build/js");
+   //cleanDirectory("build/js");
    prodJs();
 
    done();
