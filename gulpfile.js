@@ -87,7 +87,7 @@ function devJs() {
 function prodJs() {
    console.log("writing prod scripts");
    return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
-      .pipe(concat("main.min.js"))
+      .pipe(concat("main.js"))
       .pipe(dest("build/js"));
 }
 
@@ -104,8 +104,8 @@ function startBrowser() {
 
 function development(done) {
    cleanFiles("html", "!build/archive/**");
-   //cleanDirectory("build/css");
-   //cleanDirectory("build/js");
+   cleanDirectory("build/css");
+   cleanDirectory("build/js");
 
    nunjuck({stylesheet: "styles.full.css"});
    devSass();
@@ -134,13 +134,9 @@ function development(done) {
 }
 
 function production(done) {
-   cleanFiles("html", "!build/archive/**");
    nunjuck({stylesheet: "styles.min.css"});
-   //cleanDirectory("build/css");
    prodSass();
-   //cleanDirectory("build/js");
    prodJs();
-
    done();
 }
 
