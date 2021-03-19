@@ -4,3 +4,4 @@ build/**/*.html
 build/archive/*.html
 build/css
 build/js
+node_modules
