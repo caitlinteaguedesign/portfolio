@@ -1,0 +1,10 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   background: #cbe4e9 url('/img/patterns/mark-small-void.jpg') repeat;
+
+   .layout {
+      flex-grow: 1;
+   }
+}

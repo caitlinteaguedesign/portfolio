@@ -1,5 +1,6 @@
 {
    "site_owner": "Caitlin Teague Doerr",
+   "icon_path": "/img/icons.svg?=1",
    "navigation": [
       { "name": "Link 1", "url": "//google.com"},
       { "name": "Link 2", "url": "//google.com"},

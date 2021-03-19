@@ -14,6 +14,8 @@ const browserSync = require('browser-sync').create();
 const data = require('gulp-data');
 const importFresh = require("import-fresh");
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 // utilities
 function cleanDirectory(directory) {
 
@@ -43,6 +45,9 @@ function nunjuck(params) {
       .pipe(data(function(){
          return importFresh("./src/data/global.json");
       }))
+      .pipe(data({
+         current_year: CURRENT_YEAR
+      }))
       .pipe(data(params))
       .pipe(
          nunjucksRender({
@@ -57,9 +62,7 @@ function devSass() {
    console.log("getting dev sassy");
    return src("./src/scss/**/*.scss")
       .pipe(sourcemaps.init())
-      .pipe(sass().on('error', function() {
-         console.log(sass.logError);
-      }))
+      .pipe(sass().on('error', sass.logError))
       .pipe(sourcemaps.write())
       .pipe(rename({suffix: ".full"}))
       .pipe(dest("build/css"));
@@ -68,9 +71,7 @@ function devSass() {
 function prodSass() {
    console.log("getting prod sassy");
    return src("./src/scss/**/*.scss")
-      .pipe(sass({outputStyle: 'compressed'}).on('error', function() {
-         console.log(sass.logError);
-      }))
+      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(rename({suffix: ".min"}))
       .pipe(dest("build/css"));
 }
@@ -118,7 +119,7 @@ function development(done) {
       done();
    }).on("change", browserSync.reload);
 
-   watch(["src/scss/*.scss"], function(done) {
+   watch(["src/scss/**/*.scss"], function(done) {
       cleanDirectory("build/css");
       devSass();
       done();

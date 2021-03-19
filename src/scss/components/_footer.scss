@@ -1,0 +1,21 @@
+.footer {
+   position: relative;
+   z-index: 2;
+   background-color: #00161c;
+   color: #ffffff;
+   line-height: 1.4em;
+   text-align: center;
+
+   &__content {
+      @include universal-container();
+      padding: rhythm(2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rhythm(1);
+   }
+
+   &__link {
+      font-size: .9em;
+   }
+}

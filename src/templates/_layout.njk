@@ -9,9 +9,6 @@
    <meta name="copyright" content="{{site_owner}}">
    <meta name="author" content="{{site_owner}}">
 
-   <!-- css -->
-   <link rel="stylesheet" type="text/css" href="/css/{{stylesheet}}">
-
    <!-- favicons -->
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=xQ7kYNgqYG">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=xQ7kYNgqYG">
@@ -22,28 +19,42 @@
 	<link rel="icon" href="/favicon.ico?v=xQ7kYNgqYG" type="image/x-icon">
 	<meta name="msapplication-TileColor" content="#04506b">
 	<meta name="theme-color" content="#e1e5f2">
+
+   <!-- social media images -->
+	<link rel="image_src" href="/img/social-media/big.jpg">
+	<meta property="og:image" content="/img/social-media/big.jpg">
+	<link rel="image_src" href="/img/social-media/square.jpg" />
+	<meta property="og:image" content="/img/social-media/square.jpg" />
+
+   <!-- css -->
+   <link rel="stylesheet" type="text/css" href="/css/{{stylesheet}}">
+
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,300&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+   
 </head>
 <body>   
 
    <div class="container">
-{# 
-      {% block header %}
-         
-         {% import 'macros/_nav.njk' as nav %}
 
-      {% endblock %} #}
+      {% include "partials/_header.njk" %}
    
-      <main class="main">
-         {% block main %}
-         {% endblock %}
-      </main>
+      <div class="layout">
+         <main class="main">
+            {% block main %}
+            {% endblock %}
+         </main>
 
-      {# {% include "partials/_sidebar.njk" %} #}
+         {% include "partials/_sidebar.njk" %}
+      </div>
 
       {% include "partials/_footer.njk" %}
    
    </div>
 
+   <!-- js -->
    <script src="/js/main.js"></script>
+
 </body>
 </html>
