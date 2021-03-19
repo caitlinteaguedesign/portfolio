@@ -1,4 +1,11 @@
 .header {
+   position: relative;
+   z-index: 2;
    background-color: #00161c;
    color: #ffffff;
+
+   &__content {
+      @include universal-container();
+      padding: rhythm(2);
+   }
 }
