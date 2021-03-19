@@ -1,8 +1,21 @@
 .nav {
-   padding: rhythm(0.25) rhythm(2);
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   background-color: #115161;
+   border-bottom: 10px solid #00313d;
+   padding: rhythm(0.5) rhythm(1.5);
+   display: grid;
+   grid-gap: rhythm(0.5);
+   gap: rhythm(0.5);
+
+   @media (min-width: $nav-min-width) {
+      padding: rhythm(1) rhythm(2);
+      border-bottom: unset;
+      background-color: unset;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      grid-gap: rhythm(1);
+      gap: rhythm(1);
+   }
 
    &__link {
       font-family: $font-heading;
@@ -12,12 +25,20 @@
       text-transform: uppercase;
       letter-spacing: 0.01em;
       color: #ffffff;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 0.1em;
+      padding: rhythm(0.5);
 
       &:hover {
          color: #ffffff;
-         border-color: #ffffff;
+      }
+
+      @media (min-width: $nav-min-width) {
+         transition: 0.5s ease-in-out;
+         border-bottom: 2px solid transparent;
+         padding: 0 0 0.1em;
+
+         &:hover {
+            border-color: #ffffff;
+         }
       }
    }
 }
