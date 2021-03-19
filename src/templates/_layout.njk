@@ -9,9 +9,6 @@
    <meta name="copyright" content="{{site_owner}}">
    <meta name="author" content="{{site_owner}}">
 
-   <!-- css -->
-   <link rel="stylesheet" type="text/css" href="/css/{{stylesheet}}">
-
    <!-- favicons -->
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=xQ7kYNgqYG">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=xQ7kYNgqYG">
@@ -22,28 +19,32 @@
 	<link rel="icon" href="/favicon.ico?v=xQ7kYNgqYG" type="image/x-icon">
 	<meta name="msapplication-TileColor" content="#04506b">
 	<meta name="theme-color" content="#e1e5f2">
+
+   <!-- css -->
+   <link rel="stylesheet" type="text/css" href="/css/{{stylesheet}}">
+   
 </head>
 <body>   
 
    <div class="container">
-{# 
-      {% block header %}
-         
-         {% import 'macros/_nav.njk' as nav %}
 
-      {% endblock %} #}
+      {% include "partials/_header.njk" %}
    
-      <main class="main">
-         {% block main %}
-         {% endblock %}
-      </main>
+      <div class="layout">
+         <main class="main">
+            {% block main %}
+            {% endblock %}
+         </main>
 
-      {# {% include "partials/_sidebar.njk" %} #}
+         {% include "partials/_sidebar.njk" %}
+      </div>
 
       {% include "partials/_footer.njk" %}
    
    </div>
 
+   <!-- js -->
    <script src="/js/main.js"></script>
+
 </body>
 </html>
