@@ -66,9 +66,7 @@ function devSass() {
 function prodSass() {
    console.log("getting prod sassy");
    return src("./src/scss/**/*.scss")
-      .pipe(sass({outputStyle: 'compressed'}).on('error', function() {
-         console.log(sass.logError);
-      }))
+      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(rename({suffix: ".min"}))
       .pipe(dest("build/css"));
 }
