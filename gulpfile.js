@@ -57,9 +57,7 @@ function devSass() {
    console.log("getting dev sassy");
    return src("./src/scss/**/*.scss")
       .pipe(sourcemaps.init())
-      .pipe(sass().on('error', function() {
-         console.log(sass.logError);
-      }))
+      .pipe(sass().on('error', sass.logError))
       .pipe(sourcemaps.write())
       .pipe(rename({suffix: ".full"}))
       .pipe(dest("build/css"));

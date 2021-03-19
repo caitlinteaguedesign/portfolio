@@ -1,14 +1,14 @@
-@import 'colors';
-@import 'dimensions';
+@import 'variables/colors';
+@import 'variables/dimensions';
 
-@import 'rhythm';
+@import 'mixins/rhythm';
 
-@import 'reset';
-@import 'link';
+@import 'global/reset';
 
-@import 'container';
-@import 'layout';
-@import 'main';
-@import 'header';
-@import 'footer';
-@import 'sidebar';
+@import 'components/link';
+@import 'components/container';
+@import 'components/layout';
+@import 'components/main';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sidebar';
