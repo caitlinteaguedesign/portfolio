@@ -14,6 +14,8 @@ const browserSync = require('browser-sync').create();
 const data = require('gulp-data');
 const importFresh = require("import-fresh");
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 // utilities
 function cleanDirectory(directory) {
 
@@ -42,6 +44,9 @@ function nunjuck(params) {
    return src("src/pages/**/*.njk")
       .pipe(data(function(){
          return importFresh("./src/data/global.json");
+      }))
+      .pipe(data({
+         current_year: CURRENT_YEAR
       }))
       .pipe(data(params))
       .pipe(
@@ -114,7 +119,7 @@ function development(done) {
       done();
    }).on("change", browserSync.reload);
 
-   watch(["src/scss/*.scss"], function(done) {
+   watch(["src/scss/**/*.scss"], function(done) {
       cleanDirectory("build/css");
       devSass();
       done();
