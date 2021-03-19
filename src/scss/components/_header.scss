@@ -1,13 +1,16 @@
 .header {
    position: relative;
    z-index: 2;
-   background-color: #00161c;
+   background-color: #00313d;
    color: #ffffff;
 
    &__content {
       @include universal-container();
-      padding: rhythm(2);
       display: grid;
       grid-template-columns: $sidebar-width 1fr;
+   }
+
+   &__logo {
+      padding: rhythm(1);
    }
 }

@@ -1,0 +1,23 @@
+.nav {
+   padding: rhythm(0.25) rhythm(2);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   &__link {
+      font-family: $font-heading;
+      font-size: 1.5em;
+      font-weight: 300;
+      line-height: 1em;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.1em;
+
+      &:hover {
+         color: #ffffff;
+         border-color: #ffffff;
+      }
+   }
+}
