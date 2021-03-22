@@ -1,6 +1,7 @@
 .sidebar {
    padding: rhythm(1);
-   background-color: #d5e6e8;
+   background-color: #e1ebf0;
+   color: #123337;
 
    @media (min-width: $layout-min-width) {
       width: $sidebar-width;
