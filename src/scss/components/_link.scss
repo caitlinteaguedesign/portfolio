@@ -1,4 +1,11 @@
 .link {
-   color: $link-secondary;
-   border-bottom: 1px solid $link-secondary;
+   &_style-primary {
+      color: $link-primary;
+      font-weight: 700;
+   }
+
+   &_style-secondary {
+      color: $link-secondary;
+      border-bottom: 1px solid $link-secondary;
+   }
 }

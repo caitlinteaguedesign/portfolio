@@ -1,13 +1,16 @@
+@import 'reset';
+
 @import 'variables/colors';
 @import 'variables/fonts';
 @import 'variables/dimensions';
 
 @import 'functions/rhythm';
+
 @import 'mixins/layout';
 
-@import 'global/reset';
-@import 'global/typography';
-@import 'global/icons';
+@import 'utilities/margin';
+@import 'utilities/typography';
+@import 'utilities/icons';
 
 @import 'components/link';
 @import 'components/container';
