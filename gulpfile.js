@@ -39,16 +39,36 @@ function cleanFiles(filetype, nots) {
    ]);
 }
 
-function nunjuck(params) {
-   console.log("throwing nunchoku");
+function devNunjuck() {
+   console.log("throwing dev nunchoku");
    return src("src/pages/**/*.njk")
       .pipe(data(function(){
          return importFresh("./src/data/global.json");
       }))
       .pipe(data({
-         current_year: CURRENT_YEAR
+         current_year: CURRENT_YEAR,
+         stylesheet: "styles.full.css"
       }))
-      .pipe(data(params))
+      .pipe(
+         nunjucksRender({
+            path: ["src/templates"]
+         })
+      )
+      .pipe(prettier({singleQuote: true, tabWidth: 3}))
+      .pipe(dest("build"))
+      .pipe(browserSync.reload({stream: true}));
+}
+
+function prodNunjuck() {
+   console.log("throwing prod nunchoku");
+   return src("src/pages/**/*.njk")
+      .pipe(data(function(){
+         return importFresh("./src/data/global.json");
+      }))
+      .pipe(data({
+         current_year: CURRENT_YEAR,
+         stylesheet: "styles.min.css"
+      }))
       .pipe(
          nunjucksRender({
             path: ["src/templates"]
@@ -65,7 +85,8 @@ function devSass() {
       .pipe(sass().on('error', sass.logError))
       .pipe(sourcemaps.write())
       .pipe(rename({suffix: ".full"}))
-      .pipe(dest("build/css"));
+      .pipe(dest("build/css"))
+      .pipe(browserSync.reload({stream: true}));
 }
 
 function prodSass() {
@@ -82,7 +103,8 @@ function devJs() {
       .pipe(sourcemaps.init())
       .pipe(concat("main.js"))
       .pipe(sourcemaps.write())
-      .pipe(dest("build/js"));
+      .pipe(dest("build/js"))
+      .pipe(browserSync.reload({stream: true}));
 }
 
 function prodJs() {
@@ -108,34 +130,34 @@ function development(done) {
    cleanDirectory("build/css");
    cleanDirectory("build/js");
 
-   nunjuck({stylesheet: "styles.full.css"});
+   devNunjuck();
    devSass();
    devJs();
    startBrowser();
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
       cleanFiles("html", "!build/archive/**");
-      nunjuck({stylesheet: "styles.full.css"});
+      devNunjuck();
       done();
-   }).on("change", browserSync.reload);
+   });
 
    watch(["src/scss/**/*.scss"], function(done) {
       cleanDirectory("build/css");
       devSass();
       done();
-   }).on("change", browserSync.reload);;
+   });
 
    watch(["src/js/*.js"], function(done) {
       cleanDirectory("build/js");
       devJs();
       done();
-   }).on("change", browserSync.reload);;
+   });
 
    done();
 }
 
 function production(done) {
-   nunjuck({stylesheet: "styles.min.css"});
+   prodNunjuck();
    prodSass();
    prodJs();
    done();

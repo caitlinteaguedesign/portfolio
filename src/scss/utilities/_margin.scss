@@ -1,0 +1,21 @@
+$i: 1;
+
+@while $i <= 3 {
+   .margin-top-#{$i} {
+      margin-top: rhythm($i);
+   }
+
+   .margin-bottom-#{$i} {
+      margin-bottom: rhythm($i);
+   }
+
+   .margin-left-#{$i} {
+      margin-left: rhythm($i);
+   }
+
+   .margin-right-#{$i} {
+      margin-right: rhythm($i);
+   }
+
+   $i: $i + 1;
+}
