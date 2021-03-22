@@ -39,16 +39,16 @@ function cleanFiles(filetype, nots) {
    ]);
 }
 
-function nunjuck(params) {
-   console.log("throwing nunchoku");
+function devNunjuck() {
+   console.log("throwing dev nunchoku");
    return src("src/pages/**/*.njk")
       .pipe(data(function(){
          return importFresh("./src/data/global.json");
       }))
       .pipe(data({
-         current_year: CURRENT_YEAR
+         current_year: CURRENT_YEAR,
+         stylesheet: "styles.full.css"
       }))
-      .pipe(data(params))
       .pipe(
          nunjucksRender({
             path: ["src/templates"]
@@ -57,6 +57,25 @@ function nunjuck(params) {
       .pipe(prettier({singleQuote: true, tabWidth: 3}))
       .pipe(dest("build"))
       .pipe(browserSync.reload({stream: true}));
+}
+
+function prodNunjuck() {
+   console.log("throwing prod nunchoku");
+   return src("src/pages/**/*.njk")
+      .pipe(data(function(){
+         return importFresh("./src/data/global.json");
+      }))
+      .pipe(data({
+         current_year: CURRENT_YEAR,
+         stylesheet: "styles.min.css"
+      }))
+      .pipe(
+         nunjucksRender({
+            path: ["src/templates"]
+         })
+      )
+      .pipe(prettier({singleQuote: true, tabWidth: 3}))
+      .pipe(dest("build"));
 }
 
 function devSass() {
@@ -111,14 +130,14 @@ function development(done) {
    cleanDirectory("build/css");
    cleanDirectory("build/js");
 
-   nunjuck({stylesheet: "styles.full.css"});
+   devNunjuck();
    devSass();
    devJs();
    startBrowser();
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
       cleanFiles("html", "!build/archive/**");
-      nunjuck({stylesheet: "styles.full.css"});
+      devNunjuck();
       done();
    });
 
@@ -138,7 +157,7 @@ function development(done) {
 }
 
 function production(done) {
-   nunjuck({stylesheet: "styles.min.css"});
+   prodNunjuck();
    prodSass();
    prodJs();
    done();
