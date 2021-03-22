@@ -1,37 +1,42 @@
 <section class="sidebar">
-   <img src="/img/portrait.jpg" alt="portrait of {{site_owner}}" width="250" class="margin-bottom-1">
-   <p class="paragraph">I am <span class="text_bold">Caitlin Teague</span>, an <span class="text_bold">interface designer and developer</span>. I help software teams build beautiful and easy-to-use web apps by designing and front-end developing user interfaces that marry business goals and user needs.</p>
 
-   <div>
-      <h2>Get in touch</h2>
+   <div class="sidebar__main">
+      <img src="/img/portrait.jpg" alt="portrait of {{site_owner}}" width="250" class="sidebar__portrait">
+      <p class="paragraph">I am <span class="text_bold">Caitlin Teague</span>, an <span class="text_bold">interface designer and developer</span>. I help software teams build beautiful and easy-to-use web apps by designing and front-end developing user interfaces that marry business goals and user needs.</p>
+   </div>
+
+   <section class="sidebar__section">
+      <h2 class="sidebar__title">Get in touch</h2>
       <a href="mailto:design@caitlinteague.com" class="link_style-primary">design@caitlinteague.com</a>
-   </div>
+   </section>
 
-   <div>
-      <h2>Connect with me</h2>
-      <a href="https://www.linkedin.com/in/caitlin-teague-doerr" class="link_style-primary">
-         <svg class="icon_fill" width="32" height="32" role="img" aria-label="Connect with me on LinkedIn">
-            <use xlink:href="{{icon_path}}#icon-linkedin" />
-         </svg>
-      </a>
+   <section class="sidebar__section">
+      <h2 class="sidebar__title">Connect with me</h2>
 
-      <a href="https://codepen.io/cteague" class="link_style-primary">
-         <svg class="icon_fill" width="32" height="32" role="img" aria-label="Follow me on Codepen">
-            <use xlink:href="{{icon_path}}#icon-codepen" />
-         </svg>
-      </a>
+      <div class="sidebar__icons">
+         <a href="https://www.linkedin.com/in/caitlin-teague-doerr" class="link_style-primary">
+            <svg class="icon_fill" width="32" height="32" role="img" aria-label="Connect with me on LinkedIn">
+               <use xlink:href="{{icon_path}}#icon-linkedin"></use>
+            </svg>
+         </a>
 
-      <a href="https://codepen.io/cteague" class="link_style-primary">
-         <svg class="icon_fill" width="32" height="32" role="img" aria-label="Fork me on Github">
-            <use xlink:href="{{icon_path}}#icon-github" />
-         </svg>
-      </a>
+         <a href="https://codepen.io/cteague" class="link_style-primary">
+            <svg class="icon_fill" width="32" height="32" role="img" aria-label="Follow me on Codepen">
+               <use xlink:href="{{icon_path}}#icon-codepen"></use>
+            </svg>
+         </a>
 
-      <a href="https://github.com/caitlinteaguedesign" class="link_style-primary">
-         <svg class="icon_fill" width="32" height="32" role="img" aria-label="Follow me on Instagram">
-            <use xlink:href="{{icon_path}}#icon-instagram" />
-         </svg>
-      </a>
-      
-   </div>
+         <a href="https://codepen.io/cteague" class="link_style-primary">
+            <svg class="icon_fill" width="32" height="32" role="img" aria-label="Fork me on Github">
+               <use xlink:href="{{icon_path}}#icon-github"></use>
+            </svg>
+         </a>
+
+         <a href="https://github.com/caitlinteaguedesign" class="link_style-primary">
+            <svg class="icon_fill" width="32" height="32" role="img" aria-label="Follow me on Instagram">
+               <use xlink:href="{{icon_path}}#icon-instagram"></use>
+            </svg>
+         </a>
+      </div>
+   </section>
 </section>
