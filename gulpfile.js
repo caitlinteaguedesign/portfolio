@@ -55,7 +55,8 @@ function nunjuck(params) {
          })
       )
       .pipe(prettier({singleQuote: true, tabWidth: 3}))
-      .pipe(dest("build"));
+      .pipe(dest("build"))
+      .pipe(browserSync.reload({stream: true}));
 }
 
 function devSass() {
@@ -65,7 +66,8 @@ function devSass() {
       .pipe(sass().on('error', sass.logError))
       .pipe(sourcemaps.write())
       .pipe(rename({suffix: ".full"}))
-      .pipe(dest("build/css"));
+      .pipe(dest("build/css"))
+      .pipe(browserSync.reload({stream: true}));
 }
 
 function prodSass() {
@@ -82,7 +84,8 @@ function devJs() {
       .pipe(sourcemaps.init())
       .pipe(concat("main.js"))
       .pipe(sourcemaps.write())
-      .pipe(dest("build/js"));
+      .pipe(dest("build/js"))
+      .pipe(browserSync.reload({stream: true}));
 }
 
 function prodJs() {
@@ -117,19 +120,19 @@ function development(done) {
       cleanFiles("html", "!build/archive/**");
       nunjuck({stylesheet: "styles.full.css"});
       done();
-   }).on("change", browserSync.reload);
+   });
 
    watch(["src/scss/**/*.scss"], function(done) {
       cleanDirectory("build/css");
       devSass();
       done();
-   }).on("change", browserSync.reload);;
+   });
 
    watch(["src/js/*.js"], function(done) {
       cleanDirectory("build/js");
       devJs();
       done();
-   }).on("change", browserSync.reload);;
+   });
 
    done();
 }
