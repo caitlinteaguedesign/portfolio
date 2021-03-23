@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g>
+        <circle cx="50" cy="50" r="47" style="fill:white;"/>
+        <path d="M50,0C22.4,0 0,22.4 0,50C0,77.6 22.4,100 50,100C77.6,100 100,77.6 100,50C100,22.4 77.6,0 50,0ZM50,95C25.1,95 5,74.9 5,50C5,25.1 25.1,5 50,5C74.9,5 95,25.1 95,50C95,74.9 74.9,95 50,95Z" style="fill:rgb(189,226,232);fill-rule:nonzero;"/>
+    </g>
+    <path d="M66.6,48.3L66.6,60C66.6,68.4 59.8,75.2 51.4,75.3L51.4,79.9C62.4,79.9 71.2,71 71.2,60L71.2,48.3L66.6,48.3Z" style="fill:rgb(37,116,136);fill-rule:nonzero;"/>
+    <path d="M40.9,53C40.9,48.4 39,44.7 35.2,44.7L32,44.7C31,44.7 30.2,45.5 30.2,46.5L30.2,59.5C30.2,60.5 31,61.3 32,61.3L35.3,61.3C39,61.4 40.9,57.6 40.9,53Z" style="fill:rgb(207,119,60);fill-rule:nonzero;"/>
+    <path d="M51.4,19L51.3,19C40.3,19 31.5,27.9 31.5,38.9L31.5,43.5L36.1,43.5L36.1,38.9C36.1,30.5 42.9,23.6 51.3,23.6C59.7,23.6 66.5,30.4 66.5,38.9L66.5,43.5L71.1,43.5L71.1,38.9C71.3,27.9 62.4,19 51.4,19Z" style="fill:rgb(37,116,136);fill-rule:nonzero;"/>
+    <g>
+        <ellipse cx="51.4" cy="75.7" rx="7" ry="5.3" style="fill:white;"/>
+        <ellipse cx="51.4" cy="75.7" rx="5.9" ry="4.2" style="fill:rgb(207,119,60);"/>
+    </g>
+    <rect x="63.5" y="54.1" width="12.4" height="8.5" style="fill:white;"/>
+    <path d="M61.8,53C61.8,48.4 63.7,44.7 67.5,44.7L70.8,44.7C71.8,44.7 72.6,45.5 72.6,46.5L72.6,59.5C72.6,60.5 71.8,61.3 70.8,61.3L67.5,61.3C63.7,61.4 61.8,57.6 61.8,53Z" style="fill:rgb(207,119,60);fill-rule:nonzero;"/>
+</svg>
