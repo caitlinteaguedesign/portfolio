@@ -1,0 +1,11 @@
+.alert {
+   padding: rhythm(0.5);
+   border-radius: rhythm(0.5);
+   border: 1px solid #000000;
+
+   &_color-caution {
+      color: #5e2c01;
+      border-color: #df9b43;
+      background-color: #ffdb86;
+   }
+}

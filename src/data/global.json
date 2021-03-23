@@ -1,4 +1,17 @@
 {
    "site_owner": "Caitlin Teague Doerr",
-   "icon_path": "/img/icons.svg?v=3"
+   "icon_path": "/img/icons.svg?v=3",
+
+   "projects": {
+      "id_1": {
+         "name": "Shipping label management application",
+         "client": "Leerburg Enterprises, Inc.",
+         "key": { 
+            "label": "Result", 
+            "value": "Reduced average cost of shipping and streamlined the process for users to make and modify labels." 
+         },
+         "role": "UX/UI Design and Development",
+         "summary": ""
+      }
+   } 
 }

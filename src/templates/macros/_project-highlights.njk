@@ -1,8 +1,31 @@
-{% macro settings(name="", client="", goal) %}
+{% macro settings(name, client, key, h1=false) %}
 
-{{ name }} <br>
-{{ client }} <br>
-{{ goal.label }} <br>
-{{ goal.value }}
+<div class="snapshot">
+   {% if h1 %}
+   <h1>
+   {% else %}
+   <div>
+   {% endif %}
+
+      <span>Project</span>
+      <span>{{ name }}</span>
+
+   {% if h1 %}
+   </h1>
+   {% else %}
+   </div>
+   {% endif %}
+
+   <div>   
+      <div>
+         <label>Client</label>
+         <span>{{ client }}</span>
+      </div>
+      <div>
+         <label>{{ key.label }}</label>
+         <span>{{ key.value }}</span>
+      </div>
+   </div>
+</div>
 
 {% endmacro %}

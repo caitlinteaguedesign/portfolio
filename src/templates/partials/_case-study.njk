@@ -1,1 +1,15 @@
-<p>{{ project.goal.value }}</p>
+<div>Role</div>
+<p>{{ project.role }}</p>
+
+<div>Business Goals</div>
+<p>{{ overview.b_goals }}</p>
+
+<div>User Needs</div>
+<p>{{ overview.u_needs }}</p>
+
+<div>Process</div>
+<ul>
+{% for process in overview.process %}
+   <li>{{process}}</li>
+{% endfor %}
+</ul>
