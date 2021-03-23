@@ -3,8 +3,30 @@
 
 {% extends '_layout.njk' %}
 
+{% import 'macros/_portfolio-preview.njk' as preview %}
+
 {% block main %}
 
-   <h1 class="heading-1 bottom-spacing-2">Portfolio</h1>
+   <h1 class="heading-1 margin-bottom-2">Portfolio</h1>
+
+   <section class="margin-bottom-2">
+      <h2 class="heading-2 margin-bottom-1">UX Case Studies</h2>
+
+      <div class="gallery">
+         {{ preview.settings("Shipping label manager application", "ship-manager/", "/img/portfolio/ship-manager/thumbnail.jpg") }}
+         {{ preview.settings("Product page redesign", "product-page/", "/img/portfolio/products/thumbnail.jpg") }}
+      </div>
+
+   </section>
+   
+   <section>
+      <h2 class="heading-2 margin-bottom-1">Projects</h2>
+      <div class="gallery">
+         {{ preview.settings("CSS framework", "nitro/", "/img/portfolio/nitro/thumbnail.jpg") }}
+         {{ preview.settings("Dog training online university", "online-university/", "/img/portfolio/lou/lou-thumbnail.jpg") }}
+         {{ preview.settings("Marketing site for learning management software", "xandolms/", "/img/portfolio/xandolms/thumbnail.jpg") }}
+         {{ preview.settings("NADD website and portal", "nadd/", "/img/portfolio/nadd/thumbnail.jpg") }}
+      </div>
+   </section>
 
 {% endblock %}

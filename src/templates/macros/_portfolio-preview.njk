@@ -1,0 +1,10 @@
+{% macro settings(name, url, src) %}
+
+<div class="gallery__item">
+   <img src="{{ src }}" alt="{{ name }} thumbnail image">
+   <a href="/portfolio/{{ url }}" class="link_layout-flex link_style-primary">
+      {{ name }}
+   </a>
+</div>
+
+{% endmacro %}
