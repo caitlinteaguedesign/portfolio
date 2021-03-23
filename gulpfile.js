@@ -99,7 +99,7 @@ function prodSass() {
 
 function devJs() {
    console.log("writing dev scripts");
-   return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
+   return src(["./src/js/jquery-3.6.0.min.js", "./src/js/ready.js", "./src/js/*.js"])
       .pipe(sourcemaps.init())
       .pipe(concat("main.js"))
       .pipe(sourcemaps.write())
@@ -109,7 +109,7 @@ function devJs() {
 
 function prodJs() {
    console.log("writing prod scripts");
-   return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
+   return src(["./src/js/jquery-3.6.0.min.js", "./src/js/ready.js", "./src/js/*.js"])
       .pipe(concat("main.js"))
       .pipe(dest("build/js"));
 }
