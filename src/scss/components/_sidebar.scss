@@ -1,5 +1,6 @@
 .sidebar {
    display: grid;
+   grid-template-rows: repeat(3, auto) 1fr;
    grid-gap: rhythm(2);
    gap: rhythm(2);
    padding: rhythm(1);
