@@ -1,0 +1,33 @@
+{% set project = {
+      name: 'Shipping label management application',
+      client: 'Leerburg Enterprises, Inc.',
+      goal: { 
+         label: 'Result', 
+         value: 'Reduced average cost of shipping and streamlined the process for users to make and modify labels.' 
+      },
+      role: 'UX/UI Design and UI Development',
+      b_goals: 'Cut down on shipping costs and improve warehouse worker productivity.',
+      u_goals: 'Have an application that is easier to use and less error prone.',
+      process: [
+         "Researched desktop design conventions, relying heavily on Microsoft's Windows Dev Center documentation.",
+         "Interviewed users and observed how they used current software to better understand their needs and workflow.",
+         "Documented project requirements and mapped out the project's scope, breaking down complex pieces of the app into smaller tasks.",
+         "Built prototypes of the application in Adobe XD to get initial user feedback on the UI, and clarify with the development team what components we were building.",
+         "Worked with back-end developer to come up with solutions on how to handle different use scenarios and ways to reduce user error.",
+         "Developed visual design in XAML (WPF) and used C# to build small interactions, like pop ups for messaging and data entry."
+      ]
+   } %}
+
+{% set page_title = 'Portfolio | '+project.name %}
+{% set page_description = project.goal.value %}
+
+{% extends '_layout.njk' %}
+
+{% block main %}
+
+   <h1 class="heading-1 margin-bottom-2">{{ project.name }}</h1>
+
+   {% include 'partials/_case-study.njk' %}
+   {% include 'macros/_project-highlights.njk '%}
+
+{% endblock %}
