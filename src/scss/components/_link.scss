@@ -8,4 +8,14 @@
       color: $link-secondary;
       border-bottom: 1px solid $link-secondary;
    }
+
+   &_layout-flex {
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
+
+      .link__icon {
+         flex-shrink: 0;
+      }
+   }
 }

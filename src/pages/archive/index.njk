@@ -3,36 +3,29 @@
 
 {% extends '_layout.njk' %}
 
+{% import 'macros/_archive-preview.njk' as preview %}
+
 {% block main %}
 
    <h1 class="heading-1 margin-bottom-2">Archive</h1>
 
    <section class="margin-bottom-2">
       <h2 class="heading-2 margin-bottom-1">Web Apps</h2>
-      <a href="/archive/dashboard/" class="link_style-primary" target="_blank">
-         Dashboard in React
-         <svg class="icon_fill" width="16" height="16" role="img" aria-label="(press to open in a new window)">
-            <use xlink:href="{{icon_path}}#icon-externalLink"></use>
-         </svg>
-      </a>
-      <a href="/archive/tic-tac-toe/" class="link_style-primary" target="_blank">
-         Tic-Tac-Toe in React
-         <svg class="icon_fill" width="16" height="16" role="img" aria-label="(press to open in a new window)">
-            <use xlink:href="{{icon_path}}#icon-externalLink"></use>
-         </svg>
-      </a>
-      <a href="/archive/pong/" class="link_style-primary" target="_blank">
-         Pong in Canvas and Javascript
-         <svg class="icon_fill" width="16" height="16" role="img" aria-label="(press to open in a new window)">
-            <use xlink:href="{{icon_path}}#icon-externalLink"></use>
-         </svg>
-      </a>
+
+      <div class="gallery">
+         {{ preview.settings(icon_path, "Dashboard in React", "dashboard/", "dashboard.jpg") }}
+         {{ preview.settings(icon_path, "Tic-Tac-Toe in React", "tic-tac-toe/", "tic-tac-toe.jpg") }}
+         {{ preview.settings(icon_path, "Pong in Canvas and Javascript", "pong/", "pong.jpg") }}
+      </div>
+
    </section>
    
    <section>
       <h2 class="heading-2 margin-bottom-1">Experiments</h2>
-      <a href="/archive/between-the-world-and-me/" target="_blank">between-the-world-and-me</a>
-      <a href="/archive/other-women/" target="_blank">other-women</a>
+      <div class="gallery">
+         {{ preview.settings(icon_path, "Between the World and Me", "between-the-world-and-me/", "between-the-world-and-me.jpg") }}
+         {{ preview.settings(icon_path, "Other Women", "other-women/", "other-women.jpg") }}
+      </div>
    </section>
 
 {% endblock %}
