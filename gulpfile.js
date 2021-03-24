@@ -17,6 +17,12 @@ const importFresh = require("import-fresh");
 const CURRENT_YEAR = new Date().getFullYear();
 
 // utilities
+
+function copyStaticAssets() {
+   console.log("copy the things");
+   return src('./test/**/*').pipe(dest('./build/'))
+}
+
 function cleanDirectory(directory) {
 
    if(!directory) return console.log("Need a directory in build");
@@ -114,7 +120,6 @@ function prodJs() {
       .pipe(dest("build/js"));
 }
 
-// custom tasks
 function startBrowser() {
    console.log("Launching");
    browserSync.init({
@@ -125,14 +130,15 @@ function startBrowser() {
    })
 }
 
-function development(done) {
-   cleanFiles("html", "!build/archive/**");
-   cleanDirectory("build/css");
-   cleanDirectory("build/js");
+// custom tasks
 
+function development(done) {
+   cleanDirectory("build/");
    devNunjuck();
    devSass();
    devJs();
+   copyStaticAssets();
+
    startBrowser();
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
@@ -157,12 +163,13 @@ function development(done) {
 }
 
 function production(done) {
+   cleanDirectory("build/");
    prodNunjuck();
    prodSass();
    prodJs();
+   copyStaticAssets();
    done();
 }
 
 exports.default = development;
 exports.build = production;
-exports.start = startBrowser;

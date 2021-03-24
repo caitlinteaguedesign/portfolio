@@ -1,7 +1,2 @@
 node_modules
-build/**/*.html
-!build/archive/**/*.html
-build/archive/*.html
-build/css
-build/js
-node_modules
+build/
