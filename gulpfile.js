@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const del = require('del');
 const nunjucksRender = require('gulp-nunjucks-render');
 const prettier = require('gulp-prettier');
@@ -20,13 +20,10 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 function copyStaticAssets() {
    console.log("copy the things");
-   return src('./test/**/*').pipe(dest('./build/'))
+   return src('./assets/**/*').pipe(dest('./build/'))
 }
 
 function cleanDirectory(directory) {
-
-   if(!directory) return console.log("Need a directory in build");
-
    console.log("sweep "+directory+" up");
    return del([
       directory+"/**/*",
@@ -34,11 +31,7 @@ function cleanDirectory(directory) {
 }
 
 function cleanFiles(filetype, nots) {
-   
-   if(!filetype) return console.log("Need a filetype");
-   
    console.log("sweep "+filetype+" up");
-
    return del([
       "build/**/*."+filetype,
       nots
@@ -120,6 +113,8 @@ function prodJs() {
       .pipe(dest("build/js"));
 }
 
+// tasks 
+
 function startBrowser() {
    console.log("Launching");
    browserSync.init({
@@ -130,16 +125,15 @@ function startBrowser() {
    })
 }
 
-// custom tasks
+function clean(done) {
+   console.log("a fresh start");
+   del(['build/**/*', '!build']);
+   done();
+}
 
-function development(done) {
-   cleanDirectory("build/");
-   devNunjuck();
-   devSass();
-   devJs();
-   copyStaticAssets();
+function watchDev(done) {
 
-   startBrowser();
+   console.log("watching...");
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
       cleanFiles("html", "!build/archive/**");
@@ -162,14 +156,6 @@ function development(done) {
    done();
 }
 
-function production(done) {
-   cleanDirectory("build/");
-   prodNunjuck();
-   prodSass();
-   prodJs();
-   copyStaticAssets();
-   done();
-}
-
-exports.default = development;
-exports.build = production;
+exports.default = series(clean, parallel(devNunjuck,devJs,copyStaticAssets), devSass, watchDev, startBrowser);
+exports.build = series(clean, parallel(prodNunjuck,prodJs,copyStaticAssets), prodSass);
+exports.start = startBrowser;
