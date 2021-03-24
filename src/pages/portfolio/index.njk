@@ -13,8 +13,11 @@
       <h2 class="heading-2 margin-bottom-1">UX Case Studies</h2>
 
       <div class="gallery">
-         {{ preview.settings("Shipping label manager application", "ship-manager/", "/img/portfolio/ship-manager/thumbnail.jpg") }}
-         {{ preview.settings("Product page redesign", "product-page/", "/img/portfolio/products/thumbnail.jpg") }}
+         {% set loopers = [projects.id_1, projects.id_2] %}
+
+         {% for loop in loopers %}
+         {{ preview.settings(loop.name, loop.url, loop.thumbnail) }}
+         {% endfor %}
       </div>
 
    </section>
@@ -22,10 +25,11 @@
    <section>
       <h2 class="heading-2 margin-bottom-1">Projects</h2>
       <div class="gallery">
-         {{ preview.settings("CSS framework", "nitro/", "/img/portfolio/nitro/thumbnail.jpg") }}
-         {{ preview.settings("Dog training online university", "online-university/", "/img/portfolio/lou/lou-thumbnail.jpg") }}
-         {{ preview.settings("Learning management software marketing site", "xandolms/", "/img/portfolio/xandolms/thumbnail.jpg") }}
-         {{ preview.settings("NADD website and portal", "nadd/", "/img/portfolio/nadd/thumbnail.jpg") }}
+         {% set loopers = [projects.id_3, projects.id_4, projects.id_5, projects.id_6] %}
+
+         {% for loop in loopers %}
+         {{ preview.settings(loop.name, loop.url, loop.thumbnail) }}
+         {% endfor %}
       </div>
    </section>
 

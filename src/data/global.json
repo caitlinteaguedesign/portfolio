@@ -5,6 +5,8 @@
    "projects": {
       "id_1": {
          "name": "Shipping label management application",
+         "thumbnail": "/img/portfolio/ship-manager/thumbnail.jpg",
+         "url": "/portfolio/ship-manager/",
          "client": "Leerburg Enterprises, Inc.",
          "key": { 
             "label": "Result", 
@@ -12,6 +14,31 @@
          },
          "role": "UX/UI Design and Development",
          "summary": ""
+      },
+      "id_2": {
+         "name": "Product page redesign",
+         "thumbnail": "/img/portfolio/products/thumbnail.jpg",
+         "url": "/portfolio/product-page/"
+      },
+      "id_3": {
+         "name": "CSS framework",
+         "thumbnail": "/img/portfolio/nitro/thumbnail.jpg",
+         "url": "/portfolio/nitro/"
+      },
+      "id_4": {
+         "name": "Dog training online university",
+         "thumbnail": "/img/portfolio/lou/lou-thumbnail.jpg",
+         "url": "/portfolio/online-university/"
+      },
+      "id_5": {
+         "name": "Learning management software marketing site",
+         "thumbnail": "/img/portfolio/xandolms/thumbnail.jpg",
+         "url": "/portfolio/xandolms/"
+      },
+      "id_6": {
+         "name": "NADD website and portal",
+         "thumbnail": "/img/portfolio/nadd/thumbnail.jpg",
+         "url": "/portfolio/nadd/"
       }
    } 
 }
