@@ -10,7 +10,7 @@
    }
 
    @media (min-width: $section-min-width) {
-      grid-template-columns: minmax(300px, 33em) auto;
+      grid-template-columns: 1fr 240px;
 
       &--child {
          grid-column: 1/-1;
