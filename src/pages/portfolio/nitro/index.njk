@@ -1,0 +1,48 @@
+{% set project = projects.id_3 %}
+
+{% set page_title = 'Portfolio | '+project.name %}
+{% set page_description = project.summary %}
+
+{% extends '_layout.njk' %}
+
+{% import 'macros/_project-highlights.njk' as highlights %}
+
+{% block main %}
+
+   {{ highlights.settings(project.name, project.client, project.key, true) }}
+
+   <img src="/img/portfolio/nitro/hero.jpg" alt="{{ project.name }} illustrative graphic" class="margin-bottom-3">
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Introduction</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__text">
+         <p class="paragraph">In the lead up to the start of a new project with our first external client, I decided to use Sass to make my own custom CSS framework. By this point I had completed several web projects, and I recognized there were many styles I was rewriting over and over again. My team had difficulties working with some existing CSS frameworks in the past, in particular ones that used JavaScript to add extra markup to the HTML. It was harder to predict results and sometimes conflicts arose, especially with our legacy code base. I therefore set out to make a simple CSS-only framework to help keep my code organized and establish a core set of reusable and flexible components.</p>
+         <p class="paragraph">While I did implement a basic grid structure akin to Bootstrap, I ultimately found that responsive design would almost require custom solutions. Built before I adopted CSS Grid and Flexbox, I created a basic grid structure using floats and widths in percentages that would suit most cases, and then wrote custom CSS on a case by case basis for layouts that needed to be responsive. I even created a mixin that I could invoke if all I had to do was set a multi-column layout into a stacked single column layout, one of the most common responsive design scenarios. I also included classes that defined vertical spacing that I could reuse on various elements throughout the project. In the first iteration I began with values that I used frequently, such as 10px, 20px, 30px, etc., and then in a later version implemented a project-defined variable as a basis for spacing, thus creating a more harmonious vertical rhythm throughout layouts (more on that below).</p>
+      </div>
+   </section>
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Case Studies</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <section class="section section--child">
+         <h2 class="heading-2 section__header">NADD</h2>
+         
+         <div class="section__text">
+            <p class="paragraph">Our client was treated to the first iteration of the CSS framework. It allowed me to build pages very quickly, and then the lead developer was able to use it for updates as the project moved forward without me (for small updates and quick changes). Button styles were one of my first components, in the examples below gray buttons and purple buttons shared a common class defining their font size, padding, and rounded corners, and alternative classes were used to define the colors. I created an alternative version of the main grid system specifically for form layouts, allowing for a variety of column combinations depending on the content.</p>
+         </div>
+
+         <div class="section__figures section__figures--multiple">
+            <img src="/img/portfolio/nitro/nadd-2.jpg" alt="" class="figure__img">
+            <img src="/img/portfolio/nitro/nadd-4.jpg" alt="" class="figure__img">
+         </div>
+      </section>
+   </section>
+
+{% endblock %}

@@ -23,7 +23,14 @@
       "id_3": {
          "name": "CSS framework",
          "thumbnail": "/img/portfolio/nitro/thumbnail.jpg",
-         "url": "/portfolio/nitro/"
+         "url": "/portfolio/nitro/",
+         "client": "Leerburg Enterprises, Inc.",
+         "key": { 
+            "label": "Role", 
+            "value": "UI Design and Front-end Developer" 
+         },
+         "role": "UI Design and Front-end Developer",
+         "summary": ""
       },
       "id_4": {
          "name": "Dog training online university",
