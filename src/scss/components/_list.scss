@@ -1,0 +1,17 @@
+.list {
+   list-style: none;
+   
+   &_style-disc {
+      list-style: disc;
+   }
+
+   &_style-decimal {
+      list-style: decimal;
+   }
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rhythm(0.5);
+      }
+   }
+}

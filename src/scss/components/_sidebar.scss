@@ -1,18 +1,17 @@
 .sidebar {
    display: grid;
-   grid-template-rows: repeat(3, auto) 1fr;
+   grid-template-rows: repeat(2, auto) 1fr;
    grid-gap: rhythm(2);
    gap: rhythm(2);
-   padding: rhythm(1);
+   align-items: start;
+   padding: rhythm(3);
    background-color: #e1ebf0;
    color: #123337;
 
-   @media (min-width: $sidebar-min-width) and (max-width: $layout-max-width) {
-      grid-template-columns: 1fr 1fr;
-   }
-
    @media (min-width: $layout-min-width) {
+      padding: rhythm(1);
       width: $sidebar-width;
+      grid-template-rows: repeat(2, auto) 1fr;
    }
 
    &__main {
@@ -20,9 +19,6 @@
       grid-gap: rhythm(0.5) rhythm(1);
       gap: rhythm(0.5) rhythm(1);
 
-      @media (min-width: $sidebar-min-width) {
-         grid-column: 1 / -1;
-      }
       @media (min-width: $sidebar-min-width) and (max-width: $layout-max-width) {
          grid-template-columns: 1fr 1fr;
       }
@@ -63,5 +59,6 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
+      max-width: 300px;
    }
 }
