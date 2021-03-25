@@ -4,9 +4,10 @@ $text-height: 24px;
 // containers
 $max-width: 75em;
 $sidebar-width: 18em;
+$measure: 33em;
 
 // media queries
-$layout-min-width: 750px;
+$layout-min-width: 780px;
 $layout-max-width: $layout-min-width - 1px;
 $header-min-width: 875px;
 $nav-min-width: 585px;
