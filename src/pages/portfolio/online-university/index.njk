@@ -1,0 +1,51 @@
+{% set project = projects.id_4 %}
+
+{% set page_title = 'Portfolio | '+project.name %}
+{% set page_description = project.summary %}
+
+{% extends '_layout.njk' %}
+
+{% import 'macros/_project-highlights.njk' as highlights %}
+
+{% block main %}
+
+   {{ highlights.settings(project.name, project.client, project.key, true) }}
+
+   <img src="/img/portfolio/lou/hero.jpg" alt="{{ project.name }} illustrative graphic" class="margin-bottom-3">
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Personalized Testimonials</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__text">
+         <p class="paragraph">The best way to improve testimonials is to personalize them. I reached out to students that had recently passed courses and left positive reviews to see if they would be interested in contributing to the redesign of the online university homepage. To my delight the few people I approached agreed! I had the students send me photos of the dog they trained with along with their name. Meanwhile I took a short excerpt from their reviews, with small edits for grammar and clarity, to send to student for approval. By reaching out to users I was able to create an effective marketing element on the homepage.</p>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/lou/testimonial-1.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/lou/testimonial-2.jpg" alt="" class="figure__img">
+      </div>
+   </section>
+
+   <section class="section">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Screenshots</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/lou/desktop-1.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/lou/desktop-2.jpg" alt="" class="figure__img">
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/lou/mobile-1.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/lou/mobile-2.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/lou/mobile-3.jpg" alt="" class="figure__img">
+      </div>
+
+   </section>
+
+{% endblock %}

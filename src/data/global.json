@@ -18,7 +18,14 @@
       "id_2": {
          "name": "Product page redesign",
          "thumbnail": "/img/portfolio/products/thumbnail.jpg",
-         "url": "/portfolio/product-page/"
+         "url": "/portfolio/product-page/",
+         "client": "Leerburg Enterprises, Inc.",
+         "key": { 
+            "label": "Result", 
+            "value": "33% increase in sitewide conversion rate" 
+         },
+         "role": "UX/UI Design and Development",
+         "summary": ""
       },
       "id_3": {
          "name": "CSS framework",
@@ -34,8 +41,15 @@
       },
       "id_4": {
          "name": "Dog training online university",
-         "thumbnail": "/img/portfolio/lou/lou-thumbnail.jpg",
-         "url": "/portfolio/online-university/"
+         "thumbnail": "/img/portfolio/lou/thumbnail.jpg",
+         "url": "/portfolio/online-university/",
+         "client": "Leerburg Enterprises, Inc.",
+         "key": { 
+            "label": "Role", 
+            "value": "UI Design and Front-end Developer" 
+         },
+         "role": "UI Design and Front-end Developer",
+         "summary": ""
       },
       "id_5": {
          "name": "Learning management software marketing site",
