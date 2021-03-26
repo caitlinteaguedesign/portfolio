@@ -50,10 +50,13 @@
       </div>
 
       {% include "partials/_footer.njk" %}
-   
    </div>
 
-   <a href="#" class="js_scroll-to-top scroll-to-top">Back to top</a>
+   <button type="button" id="js_scroll-to-top__button" class="scroll-to-top__button scroll-to-top__button--hidden" style="display: none">
+      <svg class="icon_fill" width="24" height="24" role="img" aria-label="press to scroll to the top of the page">
+         <use xlink:href="{{icon_path}}#icon-caret-chunky"></use>
+      </svg>
+   </button>
 
    <!-- js -->
    <script src="/js/main.js"></script>

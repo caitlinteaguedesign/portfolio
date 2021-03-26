@@ -1,0 +1,20 @@
+.menu-button {
+   background: none;
+   border: none;
+   padding: 0.25rem;
+   color: #ffffff;
+   cursor: pointer;
+   font-size: inherit;
+   font-family: $font-body;
+
+   &:hover {
+      color: $link-secondary;
+   }
+
+   &__layout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rhythm(0.25);
+   }
+}
