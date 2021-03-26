@@ -56,4 +56,11 @@
          }
       }
    }
+
+   &__icons {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 2em;
+   }
 }

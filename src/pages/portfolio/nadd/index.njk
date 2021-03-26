@@ -1,0 +1,67 @@
+{% set project = projects.id_6 %}
+
+{% set page_title = 'Portfolio | '+project.name %}
+{% set page_description = project.summary %}
+
+{% extends '_layout.njk' %}
+
+{% import 'macros/_project-highlights.njk' as highlights %}
+
+{% block main %}
+
+   {{ highlights.settings(project.name, project.client, project.key, true) }}
+
+   <img src="/img/portfolio/nadd/hero.jpg" alt="{{ project.name }} illustrative graphic" class="margin-bottom-3">
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Whiteboarding Session with Client</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__text">
+         <p class="paragraph">In our first meeting with our client to learn about how their events worked, I whiteboarded our conversations and mapped the organization's process for creating, managing, and closing events. We approached the discussion from the perspective of the organization's leaders, the event organizers, and the attendees. The excerpt below is a sample from our conversations about event goer's experience and "user" flow, followed by notes summarizing those findings.</p>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/nadd/whiteboard-event.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/nadd/whiteboard-event-summary.jpg" alt="" class="figure__img">
+      </div>
+   </section>
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Closed Card Sorting</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__text">
+         <p class="paragraph">I met with the IT manager and lead software developer and used a card sorting activity to guide our reorganization of the client's website and portal. Our challenges included reconciling two separate systems into one unified site, and organizing content based on relevance to three types of users. Different-colored stickies denoted the location of the page currently (content management platform, third party suite, or portal).</p>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/nadd/card-sort-events.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/nadd/card-sort-accounts.jpg" alt="" class="figure__img">
+      </div>
+   </section>
+
+   <section class="section">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Screenshots</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/nadd/shot_04.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/nadd/shot_05.jpg" alt="" class="figure__img">
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/nadd/shot_02.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/nadd/shot_03.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/nadd/shot_01.jpg" alt="" class="figure__img">
+      </div>
+
+   </section>
+
+{% endblock %}

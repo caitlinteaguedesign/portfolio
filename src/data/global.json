@@ -54,12 +54,26 @@
       "id_5": {
          "name": "Learning management software marketing site",
          "thumbnail": "/img/portfolio/xandolms/thumbnail.jpg",
-         "url": "/portfolio/xandolms/"
+         "url": "/portfolio/xandolms/",
+         "client": "Leerburg Enterprises, Inc.",
+         "key": { 
+            "label": "Role", 
+            "value": "Graphic Designer, Web Designer & Developer" 
+         },
+         "role": "Graphic Designer, Web Designer & Developer",
+         "summary": ""
       },
       "id_6": {
          "name": "NADD website and portal",
          "thumbnail": "/img/portfolio/nadd/thumbnail.jpg",
-         "url": "/portfolio/nadd/"
+         "url": "/portfolio/nadd/",
+         "client": "North America Diving Dogs",
+         "key": { 
+            "label": "Role", 
+            "value": "Lead UI Designer & Front-end Developer" 
+         },
+         "role": "Lead UI Designer & Front-end Developer",
+         "summary": ""
       }
    } 
 }
