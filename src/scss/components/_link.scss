@@ -18,4 +18,16 @@
          flex-shrink: 0;
       }
    }
+
+   &_layout-atsign {
+      display: flex;
+      align-items: center;
+
+      .link__icon {
+         width: 1em;
+         height: 1em;
+         flex-shrink: 0;
+         margin: 0.07em 0.05em 0;
+      }
+   }
 }
