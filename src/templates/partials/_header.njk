@@ -5,15 +5,15 @@
             <use xlink:href="{{icon_path}}#icon-logo-2021"></use>
          </svg>
       </a>
-      <button type="button" id="js_menu-button" class="menu-button" style="display:none">
-         <div class="menu-button__layout">
-            <svg class="icon_fill" width="32" height="32" role="img" aria-label="hamburger menu">
-               <use xlink:href="{{icon_path}}#icon-hamburger"></use>
-            </svg>
-            Open Navigation
-         </div>
-      </button>
-      <nav class="nav">
+      <nav id="js_nav" class="nav">
+         <button type="button" id="js_menu-button" class="menu-button" style="display:none">
+            <div class="menu-button__layout">
+               <svg class="icon_fill" width="32" height="32" role="img" aria-label="hamburger menu">
+                  <use xlink:href="{{icon_path}}#icon-hamburger"></use>
+               </svg>
+               Open Navigation
+            </div>
+         </button>
          <a href="/" class="nav__link">Home</a>
          <a href="/portfolio/" class="nav__link">Portfolio</a>
          <a href="/archive/" class="nav__link">Archive</a>

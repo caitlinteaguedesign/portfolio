@@ -1,3 +1,10 @@
+#js_nav {
+   z-index: 0;
+   @media (max-width: $nav-max-width) {
+      z-index: 100;
+   }
+}
+
 .nav {
    background-color: #115161;
    border-bottom: 10px solid #00313d;
@@ -5,6 +12,19 @@
    display: grid;
    grid-gap: rhythm(0.5);
    gap: rhythm(0.5);
+
+   @media (max-width: $nav-max-width) {
+      overflow: hidden;
+      transition: height 0.5s ease-out;
+
+      &--opened {
+         height: 321px;
+      }
+
+      &--closed {
+         height: 66px;
+      }
+   }
 
    @media (min-width: $nav-min-width) {
       padding: rhythm(0.75) rhythm(3);
