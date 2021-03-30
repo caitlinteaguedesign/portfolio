@@ -1,0 +1,102 @@
+{% set project = projects.id_5 %}
+
+{% set page_title = 'Portfolio | '+project.name %}
+{% set page_description = project.summary %}
+
+{% extends '_layout.njk' %}
+
+{% import 'macros/_project-highlights.njk' as highlights %}
+
+{% block main %}
+
+   {{ highlights.settings(project.name, project.client, project.key, true) }}
+
+   <img src="/img/portfolio/xandolms/hero.jpg" alt="{{ project.name }} illustrative graphic" class="margin-bottom-3">
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Layout Ideation</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__text">
+         <p class="paragraph">I studied existing marketing sites for similar software as a services and competitor learning management softwares. I brainstormed qualities that made XandoLMS stand out, as well as identified features that would be the most important to our target audience.</p>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/xandolms/sketches/sketch-1.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/xandolms/sketches/sketch-2.jpg" alt="" class="figure__img">
+      </div>
+   </section>
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Custom Icon Set</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+         
+      <div class="section__text">
+         <p class="paragraph">A sample of icon ideation and final results.</p>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/xandolms/sketches/sketch-3.jpg" alt="" class="figure__img">
+
+         <div class="section__icons">
+            <img src="/img/portfolio/xandolms/icons/responsive.svg" alt="" width="120">
+            <img src="/img/portfolio/xandolms/icons/variable.svg" alt="" width="120">
+         </div>
+      
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/xandolms/sketches/sketch-4.jpg" alt="" class="figure__img">
+
+         <div class="section__icons">
+            <img src="/img/portfolio/xandolms/icons/content.svg" alt="" width="120">
+            <img src="/img/portfolio/xandolms/icons/mobile.svg" alt="" width="120">
+            <img src="/img/portfolio/xandolms/icons/conferences.svg" alt="" width="120">
+            <img src="/img/portfolio/xandolms/icons/theme.svg" alt="" width="120">
+         </div>
+      </div>
+
+   </section>
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Illustrations</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+         
+      <div class="section__text">
+         <p class="paragraph">A few years after the initial site was launched I decided to revisit how I handled the main image and titles of the support pages. This also presented me with the opportunity to incorporate call to actions at the top of the page better. I gathered the graphics below from the Adobe XD plugin <span class="text_bold">Undraw</span>, and then updated the colors to match my color palette. In the features image, I went a step further and update the abstracted elements on the computer to resemble our software. This change gave the pages a consistent appearance and visual interest.</p>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/xandolms/mobile_features.png" alt="" class="figure__img">
+         <img src="/img/portfolio/xandolms/mobile_pricing.png" alt="" class="figure__img">
+         <img src="/img/portfolio/xandolms/mobile_learn.png" alt="" class="figure__img">
+      </div>
+
+   </section>
+
+   <section class="section">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Screenshots</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/xandolms/desktop-learnmore.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/xandolms/features.jpg" alt="" class="figure__img">
+      </div>
+
+      <div class="section__figures section__figures--multiple">
+         <img src="/img/portfolio/xandolms/mobile_home.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/xandolms/mobile_home-dd.jpg" alt="" class="figure__img">
+         <img src="/img/portfolio/xandolms/mobile_learn-toc.jpg" alt="" class="figure__img">
+      </div>
+
+   </section>
+
+{% endblock %}

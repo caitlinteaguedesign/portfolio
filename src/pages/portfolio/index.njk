@@ -3,8 +3,34 @@
 
 {% extends '_layout.njk' %}
 
+{% import 'macros/_portfolio-preview.njk' as preview %}
+
 {% block main %}
 
-   <h1>Portfolio</h1>
+   <h1 class="heading-1 margin-bottom-2">Portfolio</h1>
+
+   <section class="margin-bottom-2">
+      <h2 class="heading-2 margin-bottom-1">Projects</h2>
+      <div class="gallery">
+         {% set loopers = [projects.id_3, projects.id_4, projects.id_5, projects.id_6] %}
+
+         {% for loop in loopers %}
+         {{ preview.settings(loop.name, loop.url, loop.thumbnail) }}
+         {% endfor %}
+      </div>
+   </section>
+
+   <section>
+      <h2 class="heading-2 margin-bottom-1">UX Case Studies</h2>
+
+      <div class="gallery">
+         {% set loopers = [projects.id_1, projects.id_2] %}
+
+         {% for loop in loopers %}
+         {{ preview.settings(loop.name, loop.url, loop.thumbnail) }}
+         {% endfor %}
+      </div>
+
+   </section>
 
 {% endblock %}

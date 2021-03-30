@@ -1,0 +1,28 @@
+<div class="heading-divider">
+   <h2 class="heading-divider__text">Overview</h2>
+   <div class="heading-divider__line" role="presentation"></div>
+</div>
+
+<section class="case-study-overview__section">
+   <h3 class="case-study-overview__heading">Role</h3>
+   <p class="case-study-overview__content paragraph">{{ project.role }}</p>
+</section>
+
+<section class="case-study-overview__section">
+   <h3 class="case-study-overview__heading">Business Goals</h3>
+   <p class="case-study-overview__content paragraph">{{ overview.b_goals }}</p>
+</section>
+
+<section class="case-study-overview__section">
+   <h3 class="case-study-overview__heading">User Needs</h3>
+   <p class="case-study-overview__content paragraph">{{ overview.u_needs }}</p>
+</section>
+
+<section class="case-study-overview__section">
+   <h3 class="case-study-overview__heading">Process</h3>
+   <ol class="case-study-overview__content list">
+   {% for process in overview.process %}
+      <li class="list__item paragraph">{{process}}</li>
+   {% endfor %}
+   </ol>
+</section>

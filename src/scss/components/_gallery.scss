@@ -1,0 +1,22 @@
+.gallery {
+   display: grid;
+   grid-gap: rhythm(2);
+   gap: rhythm(2);
+
+   @media (min-width: 360px) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   }
+
+   &__item {
+      display: grid;
+      grid-gap: rhythm(0.5);
+      gap: rhythm(0.5);
+      grid-template-rows: auto 1fr;
+      align-items: start;
+   }
+
+   &__link {
+      font-size: 1em;
+      line-height: 1.3em;
+   }
+}

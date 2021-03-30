@@ -3,16 +3,22 @@
 @import 'variables/colors';
 @import 'variables/fonts';
 @import 'variables/dimensions';
+@import 'variables/speeds';
 
 @import 'functions/rhythm';
 
 @import 'mixins/layout';
 
 @import 'utilities/margin';
-@import 'utilities/typography';
+@import 'utilities/text';
 @import 'utilities/icons';
+@import 'utilities/typography';
 
 @import 'components/link';
+@import 'components/list';
+@import 'components/alert';
+@import 'components/figure';
+@import 'components/buttons';
 @import 'components/container';
 @import 'components/layout';
 @import 'components/main';
@@ -20,3 +26,8 @@
 @import 'components/nav';
 @import 'components/footer';
 @import 'components/sidebar';
+@import 'components/gallery';
+@import 'components/snapshot';
+@import 'components/section';
+@import 'components/case-study-overview';
+@import 'components/scroll-to-top';

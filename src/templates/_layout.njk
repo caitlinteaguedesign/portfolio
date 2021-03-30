@@ -27,10 +27,10 @@
 	<meta property="og:image" content="/img/social-media/square.jpg" />
 
    <!-- css -->
-   <link rel="stylesheet" type="text/css" href="/css/{{stylesheet}}">
+   <link rel="stylesheet" type="text/css" href="/css/{{stylesheet}}?v=1">
 
-   <!-- fonts -->
-   {# <link rel="preconnect" href="https://fonts.gstatic.com">
+   {# <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">  #}
    
 </head>
@@ -50,8 +50,13 @@
       </div>
 
       {% include "partials/_footer.njk" %}
-   
    </div>
+
+   <button type="button" id="js_scroll-to-top__button" class="scroll-to-top__button scroll-to-top__button--hidden" style="display: none">
+      <svg class="icon_fill" width="24" height="24" role="img" aria-label="press to scroll to the top of the page">
+         <use xlink:href="{{icon_path}}#icon-caret-chunky"></use>
+      </svg>
+   </button>
 
    <!-- js -->
    <script src="/js/main.js"></script>

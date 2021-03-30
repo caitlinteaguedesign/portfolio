@@ -1,7 +1,7 @@
 {
-  "name": "gulp-demo",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Test",
+  "description": "My modern portfolio site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/caitlinteaguedesign/gulp-demo.git"
+    "url": "git+https://github.com/caitlinteaguedesign/portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/caitlinteaguedesign/gulp-demo/issues"
+    "url": "https://github.com/caitlinteaguedesign/portfolio/issues"
   },
-  "homepage": "https://github.com/caitlinteaguedesign/gulp-demo#readme",
+  "homepage": "https://github.com/caitlinteaguedesign/portfolio#readme",
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",

@@ -1,3 +1,10 @@
+#js_nav {
+   z-index: 0;
+   @media (max-width: $nav-max-width) {
+      z-index: 100;
+   }
+}
+
 .nav {
    background-color: #115161;
    border-bottom: 10px solid #00313d;
@@ -6,8 +13,21 @@
    grid-gap: rhythm(0.5);
    gap: rhythm(0.5);
 
+   @media (max-width: $nav-max-width) {
+      overflow: hidden;
+      transition: height $speed-navigation-animation ease-out;
+
+      &--opened {
+         height: 321px;
+      }
+
+      &--closed {
+         height: 66px;
+      }
+   }
+
    @media (min-width: $nav-min-width) {
-      padding: rhythm(0.75) rhythm(2);
+      padding: rhythm(0.75) rhythm(3);
       border-bottom: unset;
       background-color: unset;
       display: flex;
@@ -33,10 +53,10 @@
       }
 
       @media (min-width: $nav-min-width) {
-         transition: border-color 0.4s ease-in-out;
-         border-bottom: 2px solid transparent;
+         border-bottom: 2px solid rgba(255,255,255,0);
          padding: 0 0 0.1em;
-
+         transition: border-color 0.4s ease-in-out;
+         
          &:hover {
             border-color: #ffffff;
          }

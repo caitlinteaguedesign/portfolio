@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const del = require('del');
 const nunjucksRender = require('gulp-nunjucks-render');
 const prettier = require('gulp-prettier');
@@ -17,10 +17,13 @@ const importFresh = require("import-fresh");
 const CURRENT_YEAR = new Date().getFullYear();
 
 // utilities
+
+function copyStaticAssets() {
+   console.log("copy the things");
+   return src('./assets/**/*').pipe(dest('./build/'))
+}
+
 function cleanDirectory(directory) {
-
-   if(!directory) return console.log("Need a directory in build");
-
    console.log("sweep "+directory+" up");
    return del([
       directory+"/**/*",
@@ -28,11 +31,7 @@ function cleanDirectory(directory) {
 }
 
 function cleanFiles(filetype, nots) {
-   
-   if(!filetype) return console.log("Need a filetype");
-   
    console.log("sweep "+filetype+" up");
-
    return del([
       "build/**/*."+filetype,
       nots
@@ -99,7 +98,7 @@ function prodSass() {
 
 function devJs() {
    console.log("writing dev scripts");
-   return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
+   return src(["./src/js/jquery-3.6.0.min.js", "./src/js/ready.js", "./src/js/*.js"])
       .pipe(sourcemaps.init())
       .pipe(concat("main.js"))
       .pipe(sourcemaps.write())
@@ -109,12 +108,13 @@ function devJs() {
 
 function prodJs() {
    console.log("writing prod scripts");
-   return src(["./src/js/jquery-3.6.0.min.js", "./src/js/base.js", "./src/js/*.js"])
+   return src(["./src/js/jquery-3.6.0.min.js", "./src/js/ready.js", "./src/js/*.js"])
       .pipe(concat("main.js"))
       .pipe(dest("build/js"));
 }
 
-// custom tasks
+// tasks 
+
 function startBrowser() {
    console.log("Launching");
    browserSync.init({
@@ -125,15 +125,15 @@ function startBrowser() {
    })
 }
 
-function development(done) {
-   cleanFiles("html", "!build/archive/**");
-   cleanDirectory("build/css");
-   cleanDirectory("build/js");
+function clean(done) {
+   console.log("a fresh start");
+   del(['build/**/*', '!build']);
+   done();
+}
 
-   devNunjuck();
-   devSass();
-   devJs();
-   startBrowser();
+function watchDev(done) {
+
+   console.log("watching...");
 
    watch(["src/**/*.njk", "src/data/*.json"], function(done) {
       cleanFiles("html", "!build/archive/**");
@@ -156,13 +156,6 @@ function development(done) {
    done();
 }
 
-function production(done) {
-   prodNunjuck();
-   prodSass();
-   prodJs();
-   done();
-}
-
-exports.default = development;
-exports.build = production;
+exports.default = series(clean, parallel(devNunjuck,devJs,copyStaticAssets), devSass, watchDev, startBrowser);
+exports.build = series(clean, parallel(prodNunjuck,prodJs,copyStaticAssets), prodSass);
 exports.start = startBrowser;

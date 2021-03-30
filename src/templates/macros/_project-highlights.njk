@@ -1,0 +1,32 @@
+{% macro settings(name, client, key, h1=false) %}
+
+<div class="snapshot">
+   {% if h1 %}
+   <h1 class="snapshot__detail snapshot__detail--heading">
+   {% else %}
+   <h2 class="snapshot__detail snapshot__detail--heading">
+   {% endif %}
+
+      <span class="snapshot__label">Project</span>
+      <span class="snapshot__title">{{ name }}</span>
+
+   {% if h1 %}
+   </h1>
+   {% else %}
+   </h2>
+   {% endif %}
+   
+   <div class="snapshot__details">
+      <div class="snapshot__detail snapshot__detail--default" role="region">
+         <span class="snapshot__label">Client</span>
+         <span class="snapshot__text">{{ client }}</span>
+      </div>
+
+      <div class="snapshot__detail snapshot__detail--default" role="region">
+         <span class="snapshot__label">{{ key.label }}</span>
+         <span class="snapshot__text">{{ key.value }}</span>
+      </div>
+   </div>
+</div>
+
+{% endmacro %}
