@@ -1,27 +1,30 @@
 $(function() {
    // handle mobile menu
-   if( $('#js_nav').css('z-index') !== '0') 
+   const nav = $('#js_nav');
+   if(nav.css('z-index') !== '0') 
    {
       $('#js_menu-button').show().on('click', function(){
          toggleNav();
       });
 
-      $('#js_nav').addClass('nav--closed');
+      nav.addClass('nav--closed');
    }
 
    // handle scroll to top
+   const scrollButton = $('#js_scroll-to-top__button');
+
    $('#js_scroll-to-top__backup').hide(); // js works, hide backup
 
-   $('#js_scroll-to-top__button').show().on('click', function(){
+   scrollButton.show().on('click', function(){
       scrollTop();
    });
 
    $(window).scroll(function () {
 		if ($(this).scrollTop() > 300) {
-         $('#js_scroll-to-top__button').addClass('scroll-to-top__button--visible').removeClass('scroll-to-top__button--hidden');
+         scrollButton.addClass('scroll-to-top__button--visible').removeClass('scroll-to-top__button--hidden');
       }
 		else {
-			$('#js_scroll-to-top__button').removeClass('scroll-to-top__button--visible').addClass('scroll-to-top__button--hidden');;
+			scrollButton.removeClass('scroll-to-top__button--visible').addClass('scroll-to-top__button--hidden');;
 		}
 	});
 });

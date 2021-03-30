@@ -15,7 +15,7 @@
 
    @media (max-width: $nav-max-width) {
       overflow: hidden;
-      transition: height 0.5s ease-out;
+      transition: height $speed-navigation-animation ease-out;
 
       &--opened {
          height: 321px;

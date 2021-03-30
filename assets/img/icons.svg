@@ -5,10 +5,9 @@ This file contains icons
 
 on the page:
 
-<svg><use xlink:href="<?php echo $SVG_PATH; ?>#icon-name" /></svg>
+<svg><use xlink:href="{{icon_path}}#icon-name"></use></svg>
 
 -->
-
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
 
 	<defs>
@@ -99,9 +98,9 @@ on the page:
 		</symbol>
 
 		<symbol id="icon-hamburger" viewBox="0 0 32 32">
-			<rect class="icon-hamburger__top" x="2" y="22" width="28" height="4"/>
+			<rect class="icon-hamburger__top" x="2" y="6" width="28" height="4"/>	
 			<rect class="icon-hamburger__middle" x="2" y="14" width="28" height="4"/>
-			<rect class="icon-hamburger__bottom" x="2" y="6" width="28" height="4"/>	
+			<rect class="icon-hamburger__bottom" x="2" y="22" width="28" height="4"/>
 		</symbol>
 
 		<symbol id="icon-exMark" viewBox="0 0 32 32">
