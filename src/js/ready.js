@@ -1,20 +1,32 @@
 $(function() {
+   // ---------------------
    // handle mobile menu
-   const nav = $('#js_nav');
-   if(nav.css('z-index') !== '0') 
-   {
-      $('#js_menu-button').show().on('click', function(){
-         toggleNav();
-      });
+   var mobileNav = checkNav();
 
-      nav.addClass('nav--closed');
+   // this device started with mobile nav on
+   if(mobileNav) {
+      initlializeNav();
    }
 
+   // check for window resizes
+   $(window).on('resize', function()
+   {
+      // set up once, this device has the ability to use mobile or desktop
+      if(checkNav() && !mobileNav) 
+      {
+         mobileNav = true;
+         initlializeNav();
+      }
+   });
+
+   // ------------------------
    // handle scroll to top
    const scrollButton = $('#js_scroll-to-top__button');
 
-   $('#js_scroll-to-top__backup').hide(); // js works, hide backup
+   // js works, hide backup
+   $('#js_scroll-to-top__backup').hide();
 
+   // show and run nice button
    scrollButton.show().on('click', function(){
       scrollTop();
    });
