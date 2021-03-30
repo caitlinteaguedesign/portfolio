@@ -8,6 +8,7 @@ $(function() {
       initlializeNav();
    }
 
+   
    // check for window resizes
    $(window).on('resize', function()
    {
