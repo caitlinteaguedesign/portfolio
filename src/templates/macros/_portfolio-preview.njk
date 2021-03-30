@@ -1,7 +1,7 @@
 {% macro settings(name, url, src) %}
 
 <div class="gallery__item">
-   <img src="{{ src }}" alt="{{ name }} thumbnail image">
+   <img src="{{ src }}" alt="{{ name }} thumbnail image" width="360" class="gallery__image">
    <a href="{{ url }}" class="gallery__link link_style-primary">
       {{ name }}
    </a>
