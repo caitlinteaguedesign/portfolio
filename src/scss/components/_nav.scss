@@ -53,10 +53,10 @@
       }
 
       @media (min-width: $nav-min-width) {
-         transition: border-color 0.4s ease-in-out;
-         border-bottom: 2px solid transparent;
+         border-bottom: 2px solid rgba(255,255,255,0);
          padding: 0 0 0.1em;
-
+         transition: border-color 0.4s ease-in-out;
+         
          &:hover {
             border-color: #ffffff;
          }
