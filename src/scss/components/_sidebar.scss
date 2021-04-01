@@ -27,7 +27,7 @@
       }
       @media (min-width: $layout-min-width) {
          grid-column: unset;
-         grid-template-rows: auto 1fr;
+         grid-template-rows: 261px 1fr;
       }
    }
    &__section {
