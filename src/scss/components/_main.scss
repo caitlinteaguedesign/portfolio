@@ -1,6 +1,10 @@
 .main {
-   padding: rhythm(3);
+   padding: rhythm(2);
    background-color: #ffffff;
    width: 100%;
    min-width: 0;
+
+   @media (min-width: $layout-min-width) {
+      padding: rhythm(3);
+   }
 }

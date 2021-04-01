@@ -37,6 +37,15 @@
       gap: rhythm(1);
    }
 
+   &__divider {
+      height: 1px;
+      background-color: #528491;
+      
+      @media (min-width: $nav-min-width) {
+         display: none;
+      }
+   }
+
    &__link {
       font-family: $font-heading;
       font-size: 1.5em;
