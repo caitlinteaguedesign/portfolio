@@ -1,5 +1,9 @@
 $(function() {
    // ---------------------
+   // svgs!
+   svg4everybody();
+
+   // ---------------------
    // handle mobile menu
    var mobileNav = checkNav();
 
