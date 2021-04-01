@@ -8,14 +8,15 @@
 
    &__content {
       @include universal-container();
-      padding: rhythm(3);
+      padding: rhythm(2);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: rhythm(1);
    }
 
    &__link {
+      display: inline-block;
+      margin-top: rhythm(1);
       font-size: .9em;
    }
 }

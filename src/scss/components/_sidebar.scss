@@ -4,7 +4,7 @@
    grid-gap: rhythm(2);
    gap: rhythm(2);
    align-items: start;
-   padding: rhythm(3);
+   padding: rhythm(2);
    background-color: #e1ebf0;
    color: #123337;
 
@@ -27,6 +27,7 @@
       }
       @media (min-width: $layout-min-width) {
          grid-column: unset;
+         grid-template-rows: auto 1fr;
       }
    }
    &__section {
