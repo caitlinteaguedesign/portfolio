@@ -30,14 +30,6 @@ $(function() {
    // show and run nice button
    scrollButton.show().on('click', function(){
       scrollTop();
-   }).on('touchstart', function(){
-      scrollButton.addClass('scroll-to-top__button--hover');
-   }).on('touchend', function() {
-      scrollButton.removeClass('scroll-to-top__button--hover');
-   }).on('mouseenter', function(){
-      scrollButton.addClass('scroll-to-top__button--hover');
-   }).on('mouseleave', function() {
-      scrollButton.removeClass('scroll-to-top__button--hover');
    });
 
    $(window).scroll(function () {
