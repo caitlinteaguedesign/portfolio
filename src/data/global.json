@@ -74,6 +74,18 @@
          },
          "role": "Lead UI Designer & Front-end Developer",
          "summary": ""
+      },
+      "id_7": {
+         "name": "AWS S3 File Explorer",
+         "thumbnail": "/img/portfolio/file-explorer/thumbnail.jpg",
+         "url": "/portfolio/file-explorer/",
+         "client": "Leerburg",
+         "key": { 
+            "label": "Role", 
+            "value": "UI Designer & Web Developer" 
+         },
+         "role": "UI Designer & Web Developer",
+         "summary": ""
       }
    } 
 }
