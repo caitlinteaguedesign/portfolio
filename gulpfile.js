@@ -3,8 +3,7 @@ const del = require('del');
 const nunjucksRender = require('gulp-nunjucks-render');
 const prettier = require('gulp-prettier');
 
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
+const sass = require('gulp-sass')(require('node-sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
