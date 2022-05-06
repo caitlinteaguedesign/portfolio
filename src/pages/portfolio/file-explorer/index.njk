@@ -20,8 +20,41 @@
       </div>
 
       <div class="section__text">
-         <p class="paragraph">Text...</p>
+         <p class="paragraph">Marketing and video production needed a way to view and share media stored in AWS S3 buckets. Tools in use already allowed users to view lists of files and folders, but the user would have to download the file in order to view it. To facilitate faster file browsing and media management, I was tasked with creating a web app that would allow users to view and manage files in the browser.</p>
       </div>
+
+      <section class="section section--child">
+         <h3 class="heading-2 section__header">Requirements</h3>
+
+         <div class="section__text">
+            <p class="paragraph">The core app required a few basic functions:</p>
+            <ul class="list list_indent list_style-disc">
+               <li class="list__item paragraph">Show a list of available buckets for the user to choose from</li>
+               <li class="list__item paragraph">Ability to navigate between folders and buckets</li>
+               <li class="list__item paragraph">With a bucket selected, show a list of files and folders located in the root of the bucket and a view pane with current bucket or folder details</li>
+               <li class="list__item paragraph">With a file selected, update the view pane to show the file's details</li>
+               <li class="list__item paragraph">Download files to device</li>
+               <li class="list__item paragraph">URL pathing that let users share exact bucket/folder/file locations</li>
+            </ul>
+
+            <p class="paragraph">In addition to exploring and viewing files, a few standard file storage management features were required:</p>
+            <ul class="list list_indent list_style-disc">
+               <li class="list__item paragraph">Upload files</li>
+               <li class="list__item paragraph">Delete files</li>
+               <li class="list__item paragraph">Add folder</li>
+               <li class="list__item paragraph">Delete folder (and all its contents)</li>
+               <li class="list__item paragraph">Sort lists of files by either name, filetype, size, or date last modified, with ascending and descending options</li>
+               <li class="list__item paragraph">Paginate large buckets</li>
+            </ul>
+
+            <p class="paragraph">The availability of these features changed depending on a permissions setting: all or read-only. Read-only removed abilities that modified or removed files and folders, but allowed users to still explore files and download them.</p>
+         </div>
+
+         {# <div class="section__figures section__figures--multiple">
+            <img src="/img/portfolio/nitro/nadd-2.jpg" alt="" class="figure__img">
+            <img src="/img/portfolio/nitro/nadd-4.jpg" alt="" class="figure__img">
+         </div> #}
+      </section>
    </section>
 
 {% endblock %}
