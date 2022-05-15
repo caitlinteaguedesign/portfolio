@@ -47,7 +47,7 @@
                <li class="list__item paragraph">Paginate large buckets</li>
             </ul>
 
-            <p class="paragraph">The availability of these features changed depending on a permissions setting: all or read-only. Read-only removed abilities that modified or removed files and folders, but allowed users to still explore files and download them.</p>
+            <p class="paragraph">The availability of these features changed depending on a permissions setting: all or read-only. Read-only removed abilities that modified or removed files and folders, but allowed users to still view file details and download them.</p>
          </div>
 
          {# <div class="section__figures section__figures--multiple">
@@ -55,6 +55,43 @@
             <img src="/img/portfolio/nitro/nadd-4.jpg" alt="" class="figure__img">
          </div> #}
       </section>
+
+      <section class="section section--child">
+         <h3 class="heading-2 section__header">Additional Features</h3>
+
+         <div class="section__text">
+            <p class="paragraph">After the completion of the core web app, additional quality-of-life improvements were added:</p>
+            <ul class="list list_indent list_style-disc">
+               <li class="list__item paragraph">Move / rename files</li>
+               <li class="list__item paragraph">Move / rename folders (along with their contents)</li>
+               <li class="list__item paragraph">Search (by filename, exact match)</li>
+               <li class="list__item paragraph">Lazy pager (up and down buttons that moved the cursor around the file list, updating the view pane as the file selection changed)</li>
+            </ul>
+         </div>
+      </section>
+
+      <section class="section section--child">
+         <h3 class="heading-2 section__header">Technology Stack</h3>
+
+         <div class="section__text">
+            <p class="paragraph">I chose to build this web app in <a class="link link_style-primary" href="https://reactjs.org/">React</a> since I had prior experience in it. I also knew that tools like <a class="link link_style-primary" href="https://reactrouter.com/web/guides/quick-start">React Router</a> would assist in the URL paths I wanted to set up to handle location sharing (i.e. sending a link to another user of a specific folder or file in the explorer). Most importantly AWS S3 has a <a class="link link_style-primary" href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html">JavaScript SDK</a> I could utilize for writing to the buckets. The JavaScript route did present limitations due to security measures by AWS, such as not allowing me to list all buckets in our account (and instead having to call out to them individually by name). Ultimately these limitations were not a deal breaker for the goals of this particular web app.</p>
+         </div>
+      </section>
+   </section>
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Improvements</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+
+      <div class="section__text">
+         <p class="paragraph">The following is a list of things that upon reflection I would handle differently if the opportunity presented itself.</p>
+         <p class="paragraph"><span class="text_bold">Bucket permissions.</span> I manually set the settings in a .json file within the codebase, which exposes bucket names and requires rebuilding the app to change the type of user access on the bucket. Instead we should have incorporated a setting from the AWS bucket itself (if possible) that the app would then query. Further, the team could now consider individual user access and set permissions that way, rather than on a bucket as a whole regardless of user.</p>
+         <p class="paragraph"><span class="text_bold">Custom React Router “middleware”.</span> I initially wrote some middleware functional components to handle React Router between class components. I did this because some features only worked within functional components, and for AWS reasonsI needed my bucket and file components to be written as class components. I later discovered that React Router already had a method for implementing their methods in class components, withRouter(). I would advise refactoring the code to follow the library's methods.</p>
+         <p class="paragraph"><span class="text_bold">Custom uploading methods.</span> I implemented a basic file uploading system using the SDK's <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#upload-property">upload method</a>. We had specific circumstances where we needed to process video files for the streaming platform differently, and in those cases I'd have liked to write alternative uploading functions depending on the bucket to handle those needs as well.</p>
+         <p class="paragraph"><span class="text_bold">Pager with keyboard arrow buttons in addition to custom UI buttons.</span> I added buttons to the interface where space was available, but they aren't in an ideal position for users who need to comfortably sift through files quickly. Since learning how easy it is to attach functions to key bindings, I would now add that feature as well.</p>
+      </div>
    </section>
 
 {% endblock %}
