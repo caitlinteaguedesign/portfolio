@@ -1,10 +1,14 @@
-{% macro settings(GLOBAL_ICON_PATH, name, url, file) %}
+{% macro settings(GLOBAL_ICON_PATH, name, url, file, isExt = false) %}
+
+{% if not isExt %}
+   {% set url = '/builds/'+url %}
+{% endif %}
 
 <div class="gallery__item">
-   <a href="/archive/{{ url }}" target="_blank">
-      <img src="/img/archive/{{ file }}" alt="{{ name }} thumbnail image" width="360" height="218" class="gallery__image">
+   <a href="{{ url }}" target="_blank">
+      <img src="/img/builds/{{ file }}" alt="{{ name }} thumbnail image" width="360" height="218" class="gallery__image">
    </a>
-   <a href="/archive/{{ url }}" target="_blank" class="gallery__link link_layout-flex link_style-primary">
+   <a href="{{ url }}" target="_blank" class="gallery__link link_layout-flex link_style-primary">
       {{ name }}
       <svg class="link__icon icon_scale icon_fill" width="16" height="16" role="img" aria-label="(press to open in a new window)">
          <use xlink:href="{{ GLOBAL_ICON_PATH }}#icon-leave"></use>
