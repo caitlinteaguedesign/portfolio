@@ -1,12 +1,16 @@
 .list {
    list-style: none;
-   
+
    &_style-disc {
       list-style: disc;
    }
 
    &_style-decimal {
       list-style: decimal;
+   }
+
+   &_indent {
+      padding-left: 1rem;
    }
 
    &__item {
