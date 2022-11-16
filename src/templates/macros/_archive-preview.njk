@@ -1,7 +1,7 @@
 {% macro settings(GLOBAL_ICON_PATH, name, url, file, isExt = false) %}
 
 {% if not isExt %}
-   {% set url = '/builds/'+url %}
+   {% set url = '/archive/'+url %}
 {% endif %}
 
 <div class="gallery__item">
