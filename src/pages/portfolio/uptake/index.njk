@@ -1,0 +1,35 @@
+{% set project = projects.id_8 %}
+
+{% set page_title = 'Portfolio | '+project.name %}
+{% set page_description = project.summary %}
+
+{% extends '_layout.njk' %}
+
+{% import 'macros/_project-highlights.njk' as highlights %}
+
+{% block main %}
+
+   {{ highlights.settings(project.name, project.client, project.key, true) }}
+
+   <img src="/img/portfolio/uptake/hero.jpg" alt="{{ project.name }} screenshots" class="margin-bottom-3">
+
+   <section class="section margin-bottom-3">
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">UX/UI Design + Brand Cohesion</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Enhancements</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Change management</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+      <div class="section__header heading-divider">
+         <h2 class="heading-divider__text">Project management</h2>
+         <div class="heading-divider__line" role="presentation"></div>
+      </div>
+   </section>
+
+{% endblock %}
