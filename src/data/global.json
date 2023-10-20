@@ -1,91 +1,103 @@
 {
-   "site_owner": "Caitlin Teague Doerr",
-   "icon_path": "/img/icons.svg?v=1",
+  "site_owner": "Caitlin Teague Doerr",
+  "icon_path": "/img/icons.svg?v=1",
 
-   "projects": {
-      "id_1": {
-         "name": "Shipping label management application",
-         "thumbnail": "/img/portfolio/ship-manager/thumbnail.jpg",
-         "url": "/portfolio/ship-manager/",
-         "client": "Leerburg Enterprises, Inc.",
-         "key": { 
-            "label": "Result", 
-            "value": "Reduced average cost of shipping and streamlined the process for users to make and modify labels." 
-         },
-         "role": "UX/UI Design and Development",
-         "summary": ""
+  "projects": {
+    "id_1": {
+      "name": "Shipping label management application",
+      "thumbnail": "/img/portfolio/ship-manager/thumbnail.jpg",
+      "url": "/portfolio/ship-manager/",
+      "client": "Leerburg Enterprises, Inc.",
+      "key": {
+        "label": "Result",
+        "value": "Reduced average cost of shipping and streamlined the process for users to make and modify labels."
       },
-      "id_2": {
-         "name": "Product page redesign",
-         "thumbnail": "/img/portfolio/products/thumbnail.jpg",
-         "url": "/portfolio/product-page/",
-         "client": "Leerburg Enterprises, Inc.",
-         "key": { 
-            "label": "Result", 
-            "value": "33% increase in sitewide conversion rate" 
-         },
-         "role": "UX/UI Design and Development",
-         "summary": ""
+      "role": "UX/UI Design and Development",
+      "summary": ""
+    },
+    "id_2": {
+      "name": "Product page redesign",
+      "thumbnail": "/img/portfolio/products/thumbnail.jpg",
+      "url": "/portfolio/product-page/",
+      "client": "Leerburg Enterprises, Inc.",
+      "key": {
+        "label": "Result",
+        "value": "33% increase in sitewide conversion rate"
       },
-      "id_3": {
-         "name": "CSS framework",
-         "thumbnail": "/img/portfolio/nitro/thumbnail.jpg",
-         "url": "/portfolio/nitro/",
-         "client": "Leerburg Enterprises, Inc.",
-         "key": { 
-            "label": "Role", 
-            "value": "UI Design and Front-end Developer" 
-         },
-         "role": "UI Design and Front-end Developer",
-         "summary": ""
+      "role": "UX/UI Design and Development",
+      "summary": ""
+    },
+    "id_3": {
+      "name": "CSS framework",
+      "thumbnail": "/img/portfolio/nitro/thumbnail.jpg",
+      "url": "/portfolio/nitro/",
+      "client": "Leerburg Enterprises, Inc.",
+      "key": {
+        "label": "Role",
+        "value": "UI Design and Front-end Developer"
       },
-      "id_4": {
-         "name": "Dog training online university",
-         "thumbnail": "/img/portfolio/lou/thumbnail.jpg",
-         "url": "/portfolio/online-university/",
-         "client": "Leerburg Enterprises, Inc.",
-         "key": { 
-            "label": "Role", 
-            "value": "UI Design and Front-end Developer" 
-         },
-         "role": "UI Design and Front-end Developer",
-         "summary": ""
+      "role": "UI Design and Front-end Developer",
+      "summary": ""
+    },
+    "id_4": {
+      "name": "Dog training online university",
+      "thumbnail": "/img/portfolio/lou/thumbnail.jpg",
+      "url": "/portfolio/online-university/",
+      "client": "Leerburg Enterprises, Inc.",
+      "key": {
+        "label": "Role",
+        "value": "UI Design and Front-end Developer"
       },
-      "id_5": {
-         "name": "Learning management software marketing site",
-         "thumbnail": "/img/portfolio/xandolms/thumbnail.jpg",
-         "url": "/portfolio/xandolms/",
-         "client": "Leerburg Enterprises, Inc.",
-         "key": { 
-            "label": "Role", 
-            "value": "Graphic Designer, Web Designer & Developer" 
-         },
-         "role": "Graphic Designer, Web Designer & Developer",
-         "summary": ""
+      "role": "UI Design and Front-end Developer",
+      "summary": ""
+    },
+    "id_5": {
+      "name": "Software-as-a-Service marketing site",
+      "thumbnail": "/img/portfolio/xandolms/thumbnail.jpg",
+      "url": "/portfolio/xandolms/",
+      "client": "Leerburg Enterprises, Inc.",
+      "key": {
+        "label": "Role",
+        "value": "Graphic Designer, Web Designer & Developer"
       },
-      "id_6": {
-         "name": "NADD website and portal",
-         "thumbnail": "/img/portfolio/nadd/thumbnail.jpg",
-         "url": "/portfolio/nadd/",
-         "client": "North America Diving Dogs",
-         "key": { 
-            "label": "Role", 
-            "value": "Lead UI Designer & Front-end Developer" 
-         },
-         "role": "Lead UI Designer & Front-end Developer",
-         "summary": ""
+      "role": "Graphic Designer, Web Designer & Developer",
+      "summary": ""
+    },
+    "id_6": {
+      "name": "Dog sport website and portal",
+      "thumbnail": "/img/portfolio/nadd/thumbnail.jpg",
+      "url": "/portfolio/nadd/",
+      "client": "North America Diving Dogs",
+      "key": {
+        "label": "Role",
+        "value": "Lead UI Designer & Front-end Developer"
       },
-      "id_7": {
-         "name": "AWS S3 File Explorer",
-         "thumbnail": "/img/portfolio/file-explorer/thumbnail.jpg",
-         "url": "/portfolio/file-explorer/",
-         "client": "Leerburg",
-         "key": { 
-            "label": "Role", 
-            "value": "UI Designer & Web Developer" 
-         },
-         "role": "UI Designer & Web Developer",
-         "summary": ""
-      }
-   } 
+      "role": "Lead UI Designer & Front-end Developer",
+      "summary": ""
+    },
+    "id_7": {
+      "name": "AWS S3 File Explorer",
+      "thumbnail": "/img/portfolio/file-explorer/thumbnail.jpg",
+      "url": "/portfolio/file-explorer/",
+      "client": "Leerburg",
+      "key": {
+        "label": "Role",
+        "value": "UI Designer & Web Developer"
+      },
+      "role": "UI Designer & Web Developer",
+      "summary": ""
+    },
+    "id_8": {
+      "name": "B2B Marketing Website",
+      "thumbnail": "/img/portfolio/uptake/thumbnail.jpg",
+      "url": "/portfolio/uptake/",
+      "client": "Uptake",
+      "key": {
+        "label": "Role",
+        "value": "Front-end Developer & UI Designer"
+      },
+      "role": "Front-end Developer & UI Designer",
+      "summary": ""
+    }
+  }
 }
