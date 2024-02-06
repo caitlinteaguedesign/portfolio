@@ -1,0 +1,316 @@
+$timing: 1s;
+$btn-timing: 0.25s;
+$title-timing: 0.5s;
+$title-delay: 0.5s;
+
+@mixin mobileSwitch() {
+  @media screen and (min-width: 650px) {
+    @content;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 28rem 1fr;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #050608;
+
+  @include mobileSwitch() {
+    grid-template-rows: 31rem 1fr;
+  }
+
+  &.night {
+    .title {
+      color: red;
+      transition: color $title-timing linear $title-delay;
+    }
+    .author,
+    .sample {
+      color: #d8e1ff;
+    }
+    .cta {
+      border-top-color: #ff483e;
+    }
+    .link {
+      color: #ff483e;
+    }
+    .sky {
+      opacity: 0;
+    }
+    .water {
+      background-color: #101b3d;
+    }
+    .sun {
+      top: 28rem;
+
+      @include mobileSwitch() {
+        top: 32rem;
+      }
+    }
+    #landscape-sunset {
+      opacity: 0;
+    }
+  }
+
+  &.sunset {
+    .title {
+      color: white;
+      transition: color $title-timing linear;
+    }
+    .author,
+    .sample {
+      color: white;
+    }
+    .cta {
+      border-top-color: #ffe939;
+    }
+    .link {
+      color: #ffe939;
+    }
+    .sky {
+      opacity: 1;
+    }
+    .water {
+      background-color: #475ea4;
+    }
+    .sun {
+      top: 26rem;
+
+      @include mobileSwitch() {
+        top: 29rem;
+      }
+    }
+    #landscape-sunset {
+      opacity: 1;
+    }
+  }
+}
+
+.sky {
+  position: relative;
+  z-index: 1;
+  grid-row: 1;
+  grid-column: 1;
+  background: linear-gradient(to bottom, #050608 35%, #442812 50%, #e98817);
+  width: 100%;
+  height: 100%;
+  transition: all $timing linear;
+  box-sizing: border-box;
+}
+
+.landscape {
+  grid-row: 1;
+  z-index: 4;
+  position: absolute;
+  width: 360px;
+  height: 120px;
+  top: 21rem;
+  left: 0;
+
+  &-svg {
+    position: absolute;
+  }
+
+  @include mobileSwitch() {
+    top: 24rem;
+  }
+}
+
+#landscape-sunset {
+  z-index: 1;
+  transition: opacity $timing linear;
+}
+
+.water {
+  z-index: 3;
+  grid-row: 2;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 2rem 6rem;
+  transition: all $timing linear;
+  display: grid;
+  box-sizing: border-box;
+
+  @include mobileSwitch() {
+    padding: 3rem 3rem 6rem;
+  }
+}
+
+.sun {
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background-color: yellow;
+  left: calc(50% - 50px);
+  top: 26rem;
+
+  @include mobileSwitch() {
+    top: 29rem;
+  }
+}
+
+.transition {
+  &--sun {
+    transition: all $timing ease-in-out;
+  }
+}
+
+.title {
+  z-index: 2;
+  grid-row: 1;
+  grid-column: 1;
+  font-family: "Josefin Slab", sans-erif;
+  line-height: 1em;
+
+  &-default {
+    display: none;
+    font-size: 6rem;
+    padding: 8rem 3rem 0;
+
+    @include mobileSwitch() {
+      display: block;
+    }
+  }
+
+  &-mobile {
+    display: block;
+    font-size: 4rem;
+    padding: 6rem 2rem 0;
+
+    @include mobileSwitch() {
+      display: none;
+    }
+  }
+}
+
+.author {
+  font-family: "Josefin Slab", sans-erif;
+  font-size: 2.5rem;
+  line-height: 1em;
+  transition: color $timing linear;
+}
+
+.sample {
+  max-width: 62ch;
+  margin: 6rem auto 0;
+  transition: color $timing linear;
+}
+
+.chapter {
+  font-family: "Josefin Slab", sans-erif;
+  font-size: 2.5rem;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.paragraph {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  line-height: 1.7em;
+  text-indent: 1.5rem;
+}
+
+.no-indent {
+  text-indent: 0;
+}
+.apos-indent {
+  text-indent: 1.25rem;
+}
+
+.detail {
+  font-family: "Merriweather", serif;
+  font-size: 1.25rem;
+  line-height: 1em;
+  margin: 3rem auto 3.25rem;
+  display: grid;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.cta {
+  margin-top: 3rem;
+  padding-top: 2.8rem;
+  border-top: 1px solid;
+  transition: border-top-color $timing linear;
+}
+
+.link,
+.link:hover {
+  color: #ff483e;
+  transition: color $timing linear;
+}
+
+.button {
+  cursor: pointer;
+  position: fixed;
+  overflow: hidden;
+  background: radial-gradient(circle closest-side, #f08118 40%, #35200f);
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  z-index: 10;
+  top: 2rem;
+  right: 2rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.5),
+    0 0 0 2px rgba(255, 255, 255, 0.25);
+
+  &__bg {
+    // moon version
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle closest-side, #465da3 40%, #101b3d);
+    transition: opacity $btn-timing ease-in-out;
+  }
+
+  &_mode {
+    &--night {
+      .svg-sunset {
+        left: -3.5rem;
+      }
+      .svg-moon {
+        left: 10.5px;
+      }
+      .button__bg {
+        opacity: 1;
+      }
+    }
+
+    &--sunset {
+      .svg-sunset {
+        left: 10.5px;
+      }
+      .svg-moon {
+        left: 3.5rem;
+      }
+      .button__bg {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.svg {
+  position: absolute;
+  transition: all $btn-timing ease-in-out;
+
+  &-sunset {
+    top: 8px;
+    color: yellow;
+  }
+
+  &-moon {
+    top: 10px;
+    color: white;
+  }
+}
