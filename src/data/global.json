@@ -91,12 +91,12 @@
       "name": "B2B Marketing Website",
       "thumbnail": "/img/portfolio/uptake/thumbnail.jpg",
       "url": "/portfolio/uptake/",
-      "client": "Uptake",
+      "client": "Uptake Technologies, Inc.",
       "key": {
         "label": "Role",
-        "value": "Front-end Developer & UI Designer"
+        "value": "Web Developer & UI Designer"
       },
-      "role": "Front-end Developer & UI Designer",
+      "role": "Web Developer & UI Designer",
       "summary": ""
     }
   }
