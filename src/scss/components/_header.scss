@@ -1,27 +1,27 @@
 .header {
-   position: relative;
-   z-index: 2;
-   background-color: #00313d;
-   color: #ffffff;
+  position: relative;
+  z-index: 2;
+  background-color: $brand-primary;
+  color: #ffffff;
 
-   &__content {
-      @include universal-container();
-      display: grid;
-      align-items: center;
-      @media (min-width: $header-min-width) {
-         grid-template-columns: $sidebar-width 1fr;
-      }
-   }
+  &__content {
+    @include universal-container();
+    display: grid;
+    align-items: center;
+    @media (min-width: $header-min-width) {
+      grid-template-columns: $sidebar-width 1fr;
+    }
+  }
 
-   &__logo {
-      padding: rhythm(0.25) rhythm(2);
-      text-align: center;
-      color: $link-secondary;
-      border-bottom: 1px solid #115161;
+  &__logo {
+    padding: rhythm(0.25) rhythm(2);
+    text-align: center;
+    color: $link-secondary;
+    border-bottom: 1px solid #115161;
 
-      @media (min-width: $header-min-width) {
-         padding: 0 rhythm(1);
-         border-bottom: unset;
-      }
-   }
+    @media (min-width: $header-min-width) {
+      padding: 0 rhythm(1);
+      border-bottom: unset;
+    }
+  }
 }

@@ -1,0 +1,131 @@
+.homepage {
+  &__layout {
+    @include universal-container();
+    padding: rhythm(4) rhythm(1);
+    color: white;
+  }
+
+  &__section {
+    margin-top: rhythm(3);
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+
+  &__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &-text {
+      align-self: end;
+      margin-bottom: rhythm(2);
+      max-width: 558px;
+    }
+
+    &-image {
+      justify-self: center;
+    }
+  }
+
+  &__bar {
+    width: 100%;
+    height: 24px;
+    border-radius: 6px;
+    background: #67e5e9;
+  }
+
+  &__portfolio {
+    display: grid;
+    gap: rhythm(1);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &-column {
+      grid-column: 2;
+      grid-row: 1/-1;
+    }
+  }
+
+  &__personal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rhythm(1);
+  }
+
+  &__image {
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  &__image-link {
+    display: block;
+    transform: scale(1);
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      transform: scale(0.98);
+
+      .homepage__image {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+
+  &__qualities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-list {
+      display: grid;
+      gap: rhythm(1);
+      max-width: 556px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: start;
+    }
+
+    &-icon {
+      margin-right: 16px;
+      margin-top: 4px;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rhythm(5);
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: space-around;
+    gap: 48px;
+  }
+
+  // typography
+  .heading-1 {
+    color: #67e5e9;
+  }
+  &__greeting {
+    font-family: $font-heading;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1em;
+    margin-bottom: 16px;
+  }
+  &__introduction {
+    font-size: 24px;
+    line-height: 1.3em;
+    margin-bottom: rhythm(1);
+  }
+  &__email {
+    font-size: 24px;
+    margin-top: 16px;
+  }
+}

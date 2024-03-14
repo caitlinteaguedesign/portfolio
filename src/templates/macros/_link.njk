@@ -1,0 +1,16 @@
+{% macro settings(GLOBAL_ICON_PATH, label, url, style = 'white', isExt = false) %}
+
+{% set icon = '#icon-arrow' %}
+
+{% if isExt %}
+  {% set icon = '#icon-leave' %}
+{% endif %}
+
+<a href="{{ url }}" target="_blank" class="{{ 'link_layout-flex link_style-' ~ style}}">
+  {{ label }}
+  <svg class="link__icon icon_scale icon_fill" width="16" height="16" role="img" aria-label="(press to open in a new window)">
+    <use xlink:href="{{ GLOBAL_ICON_PATH ~ icon }}"></use>
+  </svg>
+</a>
+
+{% endmacro %}
