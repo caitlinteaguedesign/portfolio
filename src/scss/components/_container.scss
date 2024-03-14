@@ -1,16 +1,23 @@
 .container {
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
-   background: #cbe4e9 url('/img/patterns/mark-small-void.jpg') repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-   /* flex doesn't work in IE9, IE10, IE11 */
-	@media screen and (min-width:0\0) {
-		display: block;
-		height: 100%;
-	}
+  &--pattern {
+    background: #cbe4e9 url("/img/patterns/mark-small-void.jpg") repeat;
+  }
 
-   .layout {
-      flex-grow: 1;
-   }
+  &--solid {
+    background: $brand-primary;
+  }
+
+  /* flex doesn't work in IE9, IE10, IE11 */
+  @media screen and (min-width: 0\0) {
+    display: block;
+    height: 100%;
+  }
+
+  .layout {
+    flex-grow: 1;
+  }
 }

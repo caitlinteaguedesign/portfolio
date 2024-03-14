@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% include "partials/_head.njk" %}
+</head>
+<body>   
+
+   <div class="container container--pattern">
+
+      {% include "partials/_header.njk" %}
+   
+      <div class="layout">
+         <main class="main">
+            {% block main %}
+            {% endblock %}
+         </main>
+
+         {% include "partials/_sidebar.njk" %}
+      </div>
+
+      {% include "partials/_footer.njk" %}
+   </div>
+
+   {% include "partials/_scroll-top.njk" %}
+
+   <!-- js -->
+   <script src="/js/main.js"></script>
+
+</body>
+</html>
