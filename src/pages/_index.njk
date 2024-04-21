@@ -1,0 +1,121 @@
+{% set page_title = 'Caitlin Teague&apos;s Portfolio' %}
+{% set page_description = 'Welcome to my portfolio! Have a look around.' %}
+
+{% import 'macros/_link.njk' as link %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "partials/_head.njk" %}
+</head>
+<body>   
+
+  <div class="homepage container container--solid">
+
+    {% include "partials/_header.njk" %}
+  
+    <main class="homepage__layout">
+
+      <div class="homepage__hero">
+        <div class="homepage__hero-text">
+          <h1 class="homepage__greeting">Hi! I'm Caitlin,</h1>
+          <p class="homepage__introduction">a nerdy developer and designer driven by curiosity. I merge creativity with technical expertise to craft seamless user interfaces.</p>
+          {{ link.settings(icon_path, 'Read more about me', '/about-me/') }}
+        </div>
+        <img src="img/hero-production.svg" class="homepage__hero-image" width="558" height="284px" alt="an illustration of a woman with shoulder-length blonde hair and an open smile from the should up">
+      </div>
+
+      <div role="presentation" class="homepage__bar"></div>
+
+      <section class="margin-top-3">
+        <h2 class="heading-1 margin-bottom-1">Portfolio Highlights</h2>
+
+        <div class="homepage__portfolio margin-bottom-3">
+          <a href="/portfolio/uptake/" class="homepage__image-link">
+            <img src="img/portfolio/uptake/borderless-thumbnail.png" alt="B2B Marketing Website" class="homepage__image">
+          </a>
+          <a href="/portfolio/file-explorer/" class="homepage__image-link">
+            <img src="img/portfolio/file-explorer/borderless-thumbnail.png" alt="AWS S3 File Explorer App" class="homepage__image">
+          </a>
+          <a href="/archive/dashboard/" class="homepage__image-link homepage__portfolio-column">
+            <img src="img/portfolio/dashboard/thumbnail.jpg" alt="Dashboard React App" class="homepage__image">
+          </a>
+        </div>
+
+        <div class="homepage__qualities">
+          <ul class="list homepage__qualities-list">
+            <li class="homepage__qualities-item">
+              <img src="img/checkbox.svg" alt="" class="homepage__qualities-icon" width="40" height="40">
+              <p class="paragraph">Empathizing with user's needs, goals, and pain points to bring them UI features that are useful and delightful.</p>
+            </li>
+            <li class="homepage__qualities-item">
+              <img src="img/checkbox.svg" alt="" class="homepage__qualities-icon" width="40" height="40">
+              <p class="paragraph">Translating business goals into technical requirements, and balancing tasks for speed to implement with value to gain.</p>
+            </li>
+            <li class="homepage__qualities-item">
+              <img src="img/checkbox.svg" alt="" class="homepage__qualities-icon" width="40" height="40">
+              <p class="paragraph">Collaborating with teammates across disciplines, including content creators, marketing, and other designers and developers.</p>
+            </li>
+            <li class="homepage__qualities-item">
+              <img src="img/checkbox.svg" alt="" class="homepage__qualities-icon" width="40" height="40">
+              <p class="paragraph">Managing projects from initiation through completion, from requirements gathering, to mockups, to launch and beyond.</p>
+            </li>
+          </ul>
+          <img src="img/wireframe.svg" width="550px" height="286px" alt="an illustration of a website prototype with a desktop version and a mobile version">
+        </div>
+      </section>
+
+      <section class="margin-top-3">
+        <h2 class="heading-1 margin-bottom-1">Latest Personal Project</h2>
+
+        <div class="homepage__personal">
+          <a href="/archive/brightwell/" class="homepage__image-link">
+            <img src="img/portfolio/brightwell/sunset.png" alt="Murder at the Brightwell Theme, Sunset Mode" class="homepage__image">
+          </a>
+          <a href="/archive/brightwell/" class="homepage__image-link">
+            <img src="img/portfolio/brightwell/night.png" alt="Murder at the Brightwell Theme, Night Mode" class="homepage__image">
+          </a>
+        </div>
+      </section>
+
+      <section class="homepage__cta">
+        <div class="homepage__cta-text" role="presentation">
+          <h2 class="heading-1">Got a project? Let's connect!</h2>
+          <a href="mailto:design@caitlinteague.com" class="homepage__email link_style-white link_layout-atsign">design<svg class="icon_fill link__icon" width="16" height="16" role="img" aria-label="at"><use xlink:href="{{icon_path}}#icon-atsign"></use></svg>caitlinteague.com</a>
+        </div>
+
+        <div class="homepage__socials">
+          <a href="https://www.linkedin.com/in/caitlin-teague-doerr" class="link_style-white" target="_blank">
+            <svg class="icon_fill" width="64" height="64" role="img" aria-label="Connect with me on LinkedIn">
+              <use xlink:href="{{icon_path}}#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a href="https://codepen.io/cteague" class="link_style-white" target="_blank">
+              <svg class="icon_fill" width="64" height="64" role="img" aria-label="Follow me on Codepen">
+                <use xlink:href="{{icon_path}}#icon-codepen"></use>
+              </svg>
+          </a>
+          <a href="https://github.com/caitlinteaguedesign" class="link_style-white" target="_blank">
+              <svg class="icon_fill" width="64" height="64" role="img" aria-label="Fork me on Github">
+                <use xlink:href="{{icon_path}}#icon-github"></use>
+              </svg>
+          </a>
+          <a href="//www.instagram.com/caitlin.teague/" class="link_style-white" target="_blank">
+              <svg class="icon_fill" width="64" height="64" role="img" aria-label="Follow me on Instagram">
+                <use xlink:href="{{icon_path}}#icon-instagram"></use>
+              </svg>
+          </a>
+         </div>
+      </section>
+    </main>
+
+    {% include "partials/_footer.njk" %}
+  </div>
+
+  {% include "partials/_scroll-top.njk" %}
+
+  <!-- js -->
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

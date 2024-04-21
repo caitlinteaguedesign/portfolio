@@ -1,0 +1,91 @@
+$settings-blink: 4s linear infinite;
+
+.self-portrait-svg {
+  // portrait color assignments
+  .skin {
+    color: $self-portrait-skin;
+  }
+  .skin-shadow {
+    color: $self-portrait-skin-shadow;
+  }
+  .nostril {
+    color: $self-portrait-nostril;
+  }
+  .hair {
+    color: $self-portrait-hair;
+  }
+  .hair-shadow {
+    color: $self-portrait-hair-shadow;
+  }
+  .hair-highlight {
+    color: $self-portrait-hair-highlight;
+  }
+  .eyebrow {
+    color: $self-portrait-eyebrow;
+  }
+  .eye {
+    color: $self-portrait-eye;
+  }
+  .lips {
+    color: $self-portrait-lips;
+  }
+  .teeth {
+    color: $self-portrait-teeth;
+  }
+  .shirt {
+    color: $self-portrait-shirt;
+  }
+  .shirt-shadow {
+    color: $self-portrait-shirt-shadow;
+  }
+  .glasses {
+    color: $self-portrait-glasses;
+  }
+
+  // portrait animation
+  .eye-open {
+    opacity: 1;
+  }
+  .eye-closed {
+    opacity: 0;
+  }
+
+  &--blinks {
+    .eye-open {
+      animation: animate-eyes-open $settings-blink;
+    }
+
+    @keyframes animate-eyes-open {
+      0%,
+      52% {
+        opacity: 1;
+      }
+      53%,
+      56% {
+        opacity: 0;
+      }
+      57%,
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .eye-closed {
+      animation: animate-eyes-closed $settings-blink;
+    }
+    @keyframes animate-eyes-closed {
+      0%,
+      52% {
+        opacity: 0.01;
+      }
+      53%,
+      56% {
+        opacity: 1;
+      }
+      57%,
+      100% {
+        opacity: 0.01;
+      }
+    }
+  }
+}
