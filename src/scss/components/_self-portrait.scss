@@ -1,45 +1,45 @@
 $settings-blink: 4s linear infinite;
 
 .self-portrait-svg {
-  // portrait color assignments
+  // portrait fill assignments
   .skin {
-    color: $self-portrait-skin;
+    fill: $self-portrait-skin;
   }
   .skin-shadow {
-    color: $self-portrait-skin-shadow;
+    fill: $self-portrait-skin-shadow;
   }
   .nostril {
-    color: $self-portrait-nostril;
+    fill: $self-portrait-nostril;
   }
   .hair {
-    color: $self-portrait-hair;
+    fill: $self-portrait-hair;
   }
   .hair-shadow {
-    color: $self-portrait-hair-shadow;
+    fill: $self-portrait-hair-shadow;
   }
   .hair-highlight {
-    color: $self-portrait-hair-highlight;
+    fill: $self-portrait-hair-highlight;
   }
   .eyebrow {
-    color: $self-portrait-eyebrow;
+    fill: $self-portrait-eyebrow;
   }
   .eye {
-    color: $self-portrait-eye;
+    fill: $self-portrait-eye;
   }
   .lips {
-    color: $self-portrait-lips;
+    fill: $self-portrait-lips;
   }
   .teeth {
-    color: $self-portrait-teeth;
+    fill: $self-portrait-teeth;
   }
   .shirt {
-    color: $self-portrait-shirt;
+    fill: $self-portrait-shirt;
   }
   .shirt-shadow {
-    color: $self-portrait-shirt-shadow;
+    fill: $self-portrait-shirt-shadow;
   }
   .glasses {
-    color: $self-portrait-glasses;
+    fill: $self-portrait-glasses;
   }
 
   // portrait animation
