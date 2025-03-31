@@ -1,5 +1,7 @@
+@use "../variables/dimensions";
+
 @mixin universal-container() {
-   max-width: $max-width;
+   max-width: dimensions.$max-width;
    width: 100%;
    margin-left: auto;
    margin-right: auto;

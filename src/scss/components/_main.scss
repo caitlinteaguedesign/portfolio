@@ -1,10 +1,13 @@
+@use "../functions/rhythm";
+@use "../variables/dimensions";
+
 .main {
-   padding: rhythm(2);
+   padding: rhythm.rhythm(2);
    background-color: #ffffff;
    width: 100%;
    min-width: 0;
 
-   @media (min-width: $layout-min-width) {
-      padding: rhythm(3);
+   @media (min-width: dimensions.$layout-min-width) {
+      padding: rhythm.rhythm(3);
    }
 }

@@ -1,6 +1,8 @@
+@use "../variables/colors";
+
 .link {
   &_style-primary {
-    color: $link-primary;
+    color: colors.$link-primary;
     font-weight: 700;
   }
 
@@ -10,8 +12,8 @@
   }
 
   &_style-secondary {
-    color: $link-secondary;
-    border-bottom: 1px solid $link-secondary;
+    color: colors.$link-secondary;
+    border-bottom: 1px solid colors.$link-secondary;
   }
 
   &_layout-flex {

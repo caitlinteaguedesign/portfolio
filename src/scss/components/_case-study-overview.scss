@@ -1,13 +1,16 @@
+@use "../functions/rhythm";
+@use "../variables/fonts";
+
 .case-study-overview {
    display: grid;
-   grid-gap: rhythm(1);
-   gap: rhythm(1);
+   grid-gap: rhythm.rhythm(1);
+   gap: rhythm.rhythm(1);
 
    &__section {
       display: grid;
       
-      grid-gap: rhythm(0.25) rhythm(0.75);
-      gap: rhythm(0.25) rhythm(0.75);
+      grid-gap: rhythm.rhythm(0.25) rhythm.rhythm(0.75);
+      gap: rhythm.rhythm(0.25) rhythm.rhythm(0.75);
 
       @media (min-width: 960px) {
          grid-template-columns: 200px 1fr;
@@ -15,7 +18,7 @@
    }
 
    &__heading {
-      font-family: $font-body;
+      font-family: fonts.$font-body;
       font-size: 1em;
       line-height: 1.5em;
       font-weight: 700;

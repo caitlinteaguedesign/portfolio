@@ -1,26 +1,31 @@
+@use "../functions/rhythm";
+@use "../mixins/layout";
+@use "../variables/colors";
+@use "../variables/dimensions";
+
 .header {
   position: relative;
   z-index: 2;
-  background-color: $brand-primary;
+  background-color: colors.$brand-primary;
   color: #ffffff;
 
   &__content {
-    @include universal-container();
+    @include layout.universal-container();
     display: grid;
     align-items: center;
-    @media (min-width: $header-min-width) {
-      grid-template-columns: $sidebar-width 1fr;
+    @media (min-width: dimensions.$header-min-width) {
+      grid-template-columns: dimensions.$sidebar-width 1fr;
     }
   }
 
   &__logo {
-    padding: rhythm(0.25) rhythm(2);
+    padding: rhythm.rhythm(0.25) rhythm.rhythm(2);
     text-align: center;
-    color: $link-secondary;
+    color: colors.$link-secondary;
     border-bottom: 1px solid #115161;
 
-    @media (min-width: $header-min-width) {
-      padding: 0 rhythm(1);
+    @media (min-width: dimensions.$header-min-width) {
+      padding: 0 rhythm.rhythm(1);
       border-bottom: unset;
     }
   }

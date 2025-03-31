@@ -1,15 +1,18 @@
+@use "../functions/rhythm";
+@use "../variables/dimensions";
+
 .section {
    display: grid;
    grid-auto-flow: dense;
-   grid-gap: rhythm(1) rhythm(2);
-   gap: rhythm(1) rhythm(2);
+   grid-gap: rhythm.rhythm(1) rhythm.rhythm(2);
+   gap: rhythm.rhythm(1) rhythm.rhythm(2);
    align-items: start;
 
    &--child {
-      margin-top: rhythm(1);
+      margin-top: rhythm.rhythm(1);
    }
 
-   @media (min-width: $section-min-width) {
+   @media (min-width: dimensions.$section-min-width) {
       grid-template-columns: 1fr 220px;
 
       &--child {
@@ -23,34 +26,34 @@
 
    &__text {
       display: grid;
-      grid-gap: rhythm(1);
-      gap: rhythm(1);
+      grid-gap: rhythm.rhythm(1);
+      gap: rhythm.rhythm(1);
       align-items: start;
 
-      @media (min-width: $section-min-width) {
+      @media (min-width: dimensions.$section-min-width) {
          grid-column: 1;
       }
    }
 
    &__figures {
       display: grid;
-      grid-gap: rhythm(1);
-      gap: rhythm(1);
+      grid-gap: rhythm.rhythm(1);
+      gap: rhythm.rhythm(1);
       align-items: start;
 
-      @media (min-width: $section-min-width) {
+      @media (min-width: dimensions.$section-min-width) {
          grid-column: 2;
       }
 
       &--multiple {
          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
-         @media (min-width: $section-min-width) {
+         @media (min-width: dimensions.$section-min-width) {
             grid-column: 1/-1;
          }
       }
       &--thirds {
-         @media (min-width: $section-min-width) {
+         @media (min-width: dimensions.$section-min-width) {
             grid-template-columns: 2fr 1fr;
             grid-column: 1/-1;
          }

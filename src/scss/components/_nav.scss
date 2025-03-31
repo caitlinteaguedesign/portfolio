@@ -1,21 +1,27 @@
+@use "../functions/rhythm";
+@use "../variables/colors";
+@use "../variables/dimensions";
+@use "../variables/fonts";
+@use "../variables/speeds";
+
 #js_nav {
   z-index: 0;
-  @media (max-width: $nav-max-width) {
+  @media (max-width: dimensions.$nav-max-width) {
     z-index: 100;
   }
 }
 
 .nav {
   background-color: #115161;
-  border-bottom: 10px solid $brand-primary;
-  padding: rhythm(0.5) rhythm(1.5);
+  border-bottom: 10px solid colors.$brand-primary;
+  padding: rhythm.rhythm(0.5) rhythm.rhythm(1.5);
   display: grid;
-  grid-gap: rhythm(0.5);
-  gap: rhythm(0.5);
+  grid-gap: rhythm.rhythm(0.5);
+  gap: rhythm.rhythm(0.5);
 
-  @media (max-width: $nav-max-width) {
+  @media (max-width: dimensions.$nav-max-width) {
     overflow: hidden;
-    transition: height $speed-navigation-animation ease-out;
+    transition: height speeds.$speed-navigation-animation ease-out;
 
     &--opened {
       height: 321px;
@@ -26,42 +32,42 @@
     }
   }
 
-  @media (min-width: $nav-min-width) {
-    padding: rhythm(0.75) rhythm(3);
+  @media (min-width: dimensions.$nav-min-width) {
+    padding: rhythm.rhythm(0.75) rhythm.rhythm(3);
     border-bottom: unset;
     background-color: unset;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-gap: rhythm(1);
-    gap: rhythm(1);
+    grid-gap: rhythm.rhythm(1);
+    gap: rhythm.rhythm(1);
   }
 
   &__divider {
     height: 1px;
     background-color: #528491;
 
-    @media (min-width: $nav-min-width) {
+    @media (min-width: dimensions.$nav-min-width) {
       display: none;
     }
   }
 
   &__link {
-    font-family: $font-heading;
+    font-family: fonts.$font-heading;
     font-size: 1.5em;
     font-weight: 300;
     line-height: 1em;
     text-transform: uppercase;
     letter-spacing: 0.01em;
     color: #ffffff;
-    padding: rhythm(0.5);
+    padding: rhythm.rhythm(0.5);
     border-bottom: 0px solid transparent;
 
     &:hover {
       color: #ffffff;
     }
 
-    @media (min-width: $nav-min-width) {
+    @media (min-width: dimensions.$nav-min-width) {
       border-bottom: 2px solid rgba(255, 255, 255, 0);
       padding: 0 0 0.1em;
       transition: border-color 0.4s ease-in-out;

@@ -1,3 +1,8 @@
+@use "../functions/rhythm";
+@use "../mixins/layout";
+@use "../variables/dimensions";
+@use "../variables/fonts";
+
 $mq-hero-desktop: 1120px;
 $mq-hero-tablet: 700px;
 $mq-hero-mobile: 400px;
@@ -5,21 +10,21 @@ $mq-qualities-desktop: 970px;
 
 .homepage {
   &__layout {
-    @include universal-container();
-    padding: rhythm(2) rhythm(1) rhythm(5);
+    @include layout.universal-container();
+    padding: rhythm.rhythm(2) rhythm.rhythm(1) rhythm.rhythm(5);
     border-bottom: 1px solid #115161;
     color: white;
 
-    @media screen and (min-width: $nav-min-width) and (max-width: $mq-hero-desktop) {
-      padding-top: rhythm(3);
+    @media screen and (min-width: dimensions.$nav-min-width) and (max-width: $mq-hero-desktop) {
+      padding-top: rhythm.rhythm(3);
     }
 
-    @media screen and (min-width: $nav-min-width) {
+    @media screen and (min-width: dimensions.$nav-min-width) {
       border-top: 1px solid #115161;
     }
 
     @media screen and (min-width: $mq-hero-tablet) {
-      padding-top: rhythm(4);
+      padding-top: rhythm.rhythm(4);
     }
   }
 
@@ -38,7 +43,7 @@ $mq-qualities-desktop: 970px;
     }
 
     &-text {
-      margin-bottom: rhythm(1);
+      margin-bottom: rhythm.rhythm(1);
       max-width: 558px;
 
       @media screen and (min-width: $mq-hero-tablet) {
@@ -51,7 +56,7 @@ $mq-qualities-desktop: 970px;
       @media screen and (min-width: $mq-hero-desktop) {
         grid-row: unset;
         grid-column: unset;
-        margin-bottom: rhythm(2);
+        margin-bottom: rhythm.rhythm(2);
       }
     }
 
@@ -81,7 +86,7 @@ $mq-qualities-desktop: 970px;
 
   &__portfolio {
     display: grid;
-    gap: rhythm(1);
+    gap: rhythm.rhythm(1);
     grid-template-columns: 1fr;
 
     @media screen and (min-width: 500px) {
@@ -98,7 +103,7 @@ $mq-qualities-desktop: 970px;
   &__personal {
     display: grid;
     grid-template-columns: 1fr;
-    gap: rhythm(1);
+    gap: rhythm.rhythm(1);
 
     @media screen and (min-width: 500px) {
       grid-template-columns: 1fr 1fr;
@@ -128,7 +133,7 @@ $mq-qualities-desktop: 970px;
 
   &__qualities {
     display: grid;
-    gap: rhythm(1);
+    gap: rhythm.rhythm(1);
     justify-items: center;
 
     @media screen and (min-width: $mq-qualities-desktop) {
@@ -140,11 +145,11 @@ $mq-qualities-desktop: 970px;
     &-list {
       display: grid;
       grid-template-columns: 1fr;
-      gap: rhythm(1);
+      gap: rhythm.rhythm(1);
 
       @media screen and (min-width: 675px) {
         grid-template-columns: 1fr 1fr;
-        gap: rhythm(1) rhythm(2);
+        gap: rhythm.rhythm(1) rhythm.rhythm(2);
       }
 
       @media screen and (min-width: $mq-qualities-desktop) {
@@ -176,11 +181,11 @@ $mq-qualities-desktop: 970px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: rhythm(5);
+    margin-top: rhythm.rhythm(5);
 
     &-text {
       text-align: center;
-      margin-bottom: rhythm(2);
+      margin-bottom: rhythm.rhythm(2);
 
       .link_layout-atsign {
         display: inline-flex;
@@ -222,7 +227,7 @@ $mq-qualities-desktop: 970px;
     color: #67e5e9;
   }
   &__greeting {
-    font-family: $font-heading;
+    font-family: fonts.$font-heading;
     font-weight: 700;
     font-size: 36px;
     line-height: 1em;
@@ -239,7 +244,7 @@ $mq-qualities-desktop: 970px;
   &__introduction {
     font-size: 16px;
     line-height: 1.4em;
-    margin-bottom: rhythm(1);
+    margin-bottom: rhythm.rhythm(1);
 
     @media screen and (min-width: $mq-hero-mobile) {
       font-size: 18px;

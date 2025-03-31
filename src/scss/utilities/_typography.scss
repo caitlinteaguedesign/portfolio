@@ -1,24 +1,28 @@
+@use "../functions/rhythm";
+@use "../variables/dimensions";
+@use "../variables/fonts";
+
 body {
   font-family: ui-sans-serif, system-ui, -system-ui, -apple-system, Helvetica,
     BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     "Helvetica Neue", sans-serif;
-  font-family: $font-body;
+  font-family: fonts.$font-body;
   font-weight: 400;
   color: #333333;
 }
 
 .paragraph {
-  font-family: $font-body;
+  font-family: fonts.$font-body;
   font-size: 1em;
   line-height: 1.5em;
 }
 
 .measure {
-  max-width: $measure;
+  max-width: dimensions.$measure;
 }
 
 .heading-1 {
-  font-family: $font-body;
+  font-family: fonts.$font-body;
   font-size: 2.25em;
   font-style: italic;
   color: #1f7a8c;
@@ -26,7 +30,7 @@ body {
 }
 
 .heading-2 {
-  font-family: $font-heading;
+  font-family: fonts.$font-heading;
   font-size: 2em;
   font-weight: 700;
   color: #04506b;
@@ -37,11 +41,11 @@ body {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  grid-gap: rhythm(0.5);
-  gap: rhythm(0.5);
+  grid-gap: rhythm.rhythm(0.5);
+  gap: rhythm.rhythm(0.5);
 
   &__text {
-    font-family: $font-body;
+    font-family: fonts.$font-body;
     font-weight: 700;
     font-size: 2.25em;
     font-style: italic;
