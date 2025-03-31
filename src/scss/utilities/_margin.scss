@@ -1,20 +1,22 @@
+@use "../functions/rhythm";
+
 $i: 1;
 
 @while $i <= 3 {
    .margin-top-#{$i} {
-      margin-top: rhythm($i);
+      margin-top: rhythm.rhythm($i);
    }
 
    .margin-bottom-#{$i} {
-      margin-bottom: rhythm($i);
+      margin-bottom: rhythm.rhythm($i);
    }
 
    .margin-left-#{$i} {
-      margin-left: rhythm($i);
+      margin-left: rhythm.rhythm($i);
    }
 
    .margin-right-#{$i} {
-      margin-right: rhythm($i);
+      margin-right: rhythm.rhythm($i);
    }
 
    $i: $i + 1;

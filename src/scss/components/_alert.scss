@@ -1,6 +1,8 @@
+@use "../functions/rhythm";
+
 .alert {
-   padding: rhythm(0.5);
-   border-radius: rhythm(0.5);
+   padding: rhythm.rhythm(0.5);
+   border-radius: rhythm.rhythm(0.5);
    border: 1px solid #000000;
 
    &_color-caution {

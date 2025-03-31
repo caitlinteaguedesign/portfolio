@@ -1,17 +1,23 @@
+@use "../functions/rhythm";
+@use "../variables/colors";
+@use "../variables/dimensions";
+@use "../variables/fonts";
+@use "../variables/speeds";
+
 .menu-button {
    background: none;
    border: none;
    color: #ffffff;
    cursor: pointer;
    font-size: inherit;
-   font-family: $font-body;
+   font-family: fonts.$font-body;
 
-   @media (min-width: $nav-min-width) {
+   @media (min-width: dimensions.$nav-min-width) {
       display: none; 
    }
 
    &:hover {
-      color: $link-secondary;
+      color: colors.$link-secondary;
    }
 
    &__layout {
@@ -22,7 +28,7 @@
 
    &__icon {
       fill: currentColor;
-      margin-right: rhythm(0.25);
+      margin-right: rhythm.rhythm(0.25);
 
       &--state-hamburger {
          .animated-icon__menu-button__top {
@@ -42,13 +48,13 @@
 
       &--to-hamburger{
          .animated-icon__menu-button__top {
-            animation: topbar $speed-navigation-animation ease-in-out reverse forwards;
+            animation: topbar speeds.$speed-navigation-animation ease-in-out reverse forwards;
          }
          .animated-icon__menu-button__middle {
-            animation: middlebar $speed-navigation-animation ease-in-out reverse forwards;
+            animation: middlebar speeds.$speed-navigation-animation ease-in-out reverse forwards;
          }
          .animated-icon__menu-button__bottom {
-            animation: bottombar $speed-navigation-animation ease-in-out reverse forwards;
+            animation: bottombar speeds.$speed-navigation-animation ease-in-out reverse forwards;
          }
       }
 
@@ -70,13 +76,13 @@
 
       &--to-exmark{
          .animated-icon__menu-button__top {
-            animation: topbar $speed-navigation-animation ease-in-out forwards;
+            animation: topbar speeds.$speed-navigation-animation ease-in-out forwards;
          }
          .animated-icon__menu-button__middle {
-            animation: middlebar $speed-navigation-animation ease-in-out forwards;
+            animation: middlebar speeds.$speed-navigation-animation ease-in-out forwards;
          }
          .animated-icon__menu-button__bottom {
-            animation: bottombar $speed-navigation-animation ease-in-out forwards;
+            animation: bottombar speeds.$speed-navigation-animation ease-in-out forwards;
          }
       }
    }

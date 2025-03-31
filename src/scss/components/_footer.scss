@@ -1,17 +1,21 @@
+@use "../functions/rhythm";
+@use "../mixins/layout";
+@use "../variables/colors";
+
 .footer {
   position: relative;
   z-index: 2;
-  background-color: $brand-primary;
+  background-color: colors.$brand-primary;
   color: #ffffff;
   line-height: 1.4em;
   text-align: center;
 
   &__content {
-    @include universal-container();
-    padding: rhythm(2);
+    @include layout.universal-container();
+    padding: rhythm.rhythm(2);
     display: grid;
     justify-items: center;
-    gap: rhythm(1);
+    gap: rhythm.rhythm(1);
   }
 
   &__link {

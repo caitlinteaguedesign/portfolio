@@ -1,7 +1,10 @@
+@use "../functions/rhythm";
+@use "../variables/fonts";
+
 .figure {
    display: grid;
-   grid-gap: rhythm(0.5);
-   gap: rhythm(0.5);
+   grid-gap: rhythm.rhythm(0.5);
+   gap: rhythm.rhythm(0.5);
    max-width: 400px;
 
    &__img {
@@ -10,7 +13,7 @@
    }
 
    &__caption {
-      font-family: $font-body;
+      font-family: fonts.$font-body;
       font-size: 0.9em;
       line-height: 1.4em;
       font-style: italic;

@@ -1,3 +1,5 @@
+@use "../variables/dimensions";
+
 @function rhythm($param) {
-  @return #{calc($text-height / 16px) * $param + "rem"};
+  @return #{calc(dimensions.$text-height / 16px) * $param + "rem"};
 }
