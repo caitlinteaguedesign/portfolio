@@ -1,0 +1,22 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Sass",
+      "type": "shell",
+      "command": "sass --stop-on-error --no-source-map --style=compressed ${file} ${fileDirname}/../css/${fileBasenameNoExtension}.min.css",
+      "group": "build",
+      "problemMatcher": []
+    },
+
+    {
+      "label": "Watch Sass",
+      "type": "shell",
+      "command": "sass --watch --stop-on-error --embed-source-map ${file} ${fileDirname}/../css/${fileBasenameNoExtension}.dev.css",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
