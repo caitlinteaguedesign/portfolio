@@ -27,11 +27,12 @@ $title-delay: 0.5s;
       transition: color $title-timing linear $title-delay;
     }
     .author,
-    .sample {
+    .sample,
+    .about {
       color: #d8e1ff;
     }
     .cta {
-      border-top-color: #ff483e;
+      border-color: #ff483e;
     }
     .link {
       color: #ff483e;
@@ -60,11 +61,12 @@ $title-delay: 0.5s;
       transition: color $title-timing linear;
     }
     .author,
-    .sample {
+    .sample,
+    .about {
       color: white;
     }
     .cta {
-      border-top-color: #ffe939;
+      border-color: #ffe939;
     }
     .link {
       color: #ffe939;
@@ -129,14 +131,9 @@ $title-delay: 0.5s;
   grid-column: 1;
   width: 100%;
   height: 100%;
-  padding: 3rem 2rem 6rem;
   transition: all $timing linear;
   display: grid;
   box-sizing: border-box;
-
-  @include mobileSwitch() {
-    padding: 3rem 3rem 6rem;
-  }
 }
 
 .sun {
@@ -167,7 +164,7 @@ $title-delay: 0.5s;
   grid-row: 1;
   grid-column: 1;
   font-family: "Josefin Slab", sans-erif;
-  line-height: 1em;
+  line-height: 1;
 
   &-default {
     display: none;
@@ -191,30 +188,84 @@ $title-delay: 0.5s;
 }
 
 .author {
+  padding: 3rem 2rem 0;
   font-family: "Josefin Slab", sans-erif;
   font-size: 2.5rem;
   line-height: 1em;
   transition: color $timing linear;
+
+  @include mobileSwitch() {
+    padding: 3rem 3rem 0;
+  }
 }
 
 .sample {
-  max-width: 62ch;
+  max-width: 72ch;
   margin: 6rem auto 0;
+  padding: 3rem 2rem 3rem;
   transition: color $timing linear;
+
+  @include mobileSwitch() {
+    padding: 3rem 3rem 3.5rem;
+  }
+}
+
+.about {
+  display: grid;
+  gap: 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4rem 2rem 6rem;
+
+  @include mobileSwitch() {
+    padding: 4rem 3rem 6rem;
+  }
+
+  @media screen and (min-width: 970px) {
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: 1fr auto auto 1fr;
+  }
+
+  &__copy {
+    width: 100%;
+
+    @media screen and (min-width: 1100px) {
+      max-width: 62ch;
+      grid-column: 2;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__cover {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
 }
 
 .chapter {
   font-family: "Josefin Slab", sans-erif;
   font-size: 2.5rem;
-  line-height: 1em;
+  line-height: 1;
   text-transform: uppercase;
-  text-align: center;
+
+  &--center {
+    text-align: center;
+  }
 }
 
 .paragraph {
   font-family: "Merriweather", serif;
   font-size: 1rem;
-  line-height: 1.7em;
+  line-height: 1.7;
   text-indent: 1.5rem;
 }
 
@@ -228,7 +279,7 @@ $title-delay: 0.5s;
 .detail {
   font-family: "Merriweather", serif;
   font-size: 1.25rem;
-  line-height: 1em;
+  line-height: 1;
   margin: 3rem auto 3.25rem;
   display: grid;
   gap: 0.5rem;
@@ -239,7 +290,7 @@ $title-delay: 0.5s;
   margin-top: 3rem;
   padding-top: 2.8rem;
   border-top: 1px solid;
-  transition: border-top-color $timing linear;
+  transition: border-color $timing linear;
 }
 
 .link,

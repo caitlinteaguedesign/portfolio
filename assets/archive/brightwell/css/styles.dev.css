@@ -83,11 +83,12 @@ html {
   transition: color 0.5s linear 0.5s;
 }
 .container.night .author,
-.container.night .sample {
+.container.night .sample,
+.container.night .about {
   color: #d8e1ff;
 }
 .container.night .cta {
-  border-top-color: #ff483e;
+  border-color: #ff483e;
 }
 .container.night .link {
   color: #ff483e;
@@ -114,11 +115,12 @@ html {
   transition: color 0.5s linear;
 }
 .container.sunset .author,
-.container.sunset .sample {
+.container.sunset .sample,
+.container.sunset .about {
   color: white;
 }
 .container.sunset .cta {
-  border-top-color: #ffe939;
+  border-color: #ffe939;
 }
 .container.sunset .link {
   color: #ffe939;
@@ -182,15 +184,9 @@ html {
   grid-column: 1;
   width: 100%;
   height: 100%;
-  padding: 3rem 2rem 6rem;
   transition: all 1s linear;
   display: grid;
   box-sizing: border-box;
-}
-@media screen and (min-width: 650px) {
-  .water {
-    padding: 3rem 3rem 6rem;
-  }
 }
 
 .sun {
@@ -220,7 +216,7 @@ html {
   grid-row: 1;
   grid-column: 1;
   font-family: "Josefin Slab", sans-erif;
-  line-height: 1em;
+  line-height: 1;
 }
 .title-default {
   display: none;
@@ -244,30 +240,86 @@ html {
 }
 
 .author {
+  padding: 3rem 2rem 0;
   font-family: "Josefin Slab", sans-erif;
   font-size: 2.5rem;
   line-height: 1em;
   transition: color 1s linear;
 }
+@media screen and (min-width: 650px) {
+  .author {
+    padding: 3rem 3rem 0;
+  }
+}
 
 .sample {
-  max-width: 62ch;
+  max-width: 72ch;
   margin: 6rem auto 0;
+  padding: 3rem 2rem 3rem;
   transition: color 1s linear;
+}
+@media screen and (min-width: 650px) {
+  .sample {
+    padding: 3rem 3rem 3.5rem;
+  }
+}
+
+.about {
+  display: grid;
+  gap: 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4rem 2rem 6rem;
+}
+@media screen and (min-width: 650px) {
+  .about {
+    padding: 4rem 3rem 6rem;
+  }
+}
+@media screen and (min-width: 970px) {
+  .about {
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .about {
+    grid-template-columns: 1fr auto auto 1fr;
+  }
+}
+.about__copy {
+  width: 100%;
+}
+@media screen and (min-width: 1100px) {
+  .about__copy {
+    max-width: 62ch;
+    grid-column: 2;
+  }
+}
+.about__title {
+  margin-bottom: 3rem;
+}
+.about__cover {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .chapter {
   font-family: "Josefin Slab", sans-erif;
   font-size: 2.5rem;
-  line-height: 1em;
+  line-height: 1;
   text-transform: uppercase;
+}
+.chapter--center {
   text-align: center;
 }
 
 .paragraph {
   font-family: "Merriweather", serif;
   font-size: 1rem;
-  line-height: 1.7em;
+  line-height: 1.7;
   text-indent: 1.5rem;
 }
 
@@ -282,7 +334,7 @@ html {
 .detail {
   font-family: "Merriweather", serif;
   font-size: 1.25rem;
-  line-height: 1em;
+  line-height: 1;
   margin: 3rem auto 3.25rem;
   display: grid;
   gap: 0.5rem;
@@ -293,7 +345,7 @@ html {
   margin-top: 3rem;
   padding-top: 2.8rem;
   border-top: 1px solid;
-  transition: border-top-color 1s linear;
+  transition: border-color 1s linear;
 }
 
 .link,
@@ -356,4 +408,4 @@ html {
   color: white;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/_reset.scss%22,%22../scss/_raw.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAaC;EACA;EACA;EACA;EACA;EACA;;;AAED;AACA;AAAA;EAEC;;;AAED;EACC;EACA;;;AAED;EACC;;;AAED;EACC;;;AAED;AAAA;EAEC;EACA;;;AAED;EACC;EACA;;;AAGD;EACC;;;AAED;EACC;;;AAED;EACE;;;AAEF;EACE;;;AC5CF;EACE;EACA;EACA;EACA;EACA;EACA;;AAXA;EAKF;IASI;;;AAIA;EACE;EACA;;AAEF;AAAA;AAAA;EAGE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAxCJ;EAuCE;IAII;;;AAGJ;EACE;;AAKF;EACE;EACA;;AAEF;AAAA;AAAA;EAGE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AA1EJ;EAyEE;IAII;;;AAGJ;EACE;;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AA5GF;EAkGF;IAcI;;;;AAIJ;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AA9IA;EAoIF;IAaI;;;;AAKF;EACE;;;AAIJ;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AArKF;EAkKA;IAMI;;;AAIJ;EACE;EACA;EACA;;AA/KF;EA4KA;IAMI;;;;AAKN;EACE;EACA;EACA;EACA;EACA;;AA5LA;EAuLF;IAQI;;;;AAIJ;EACE;EACA;EACA;EACA;;AAvMA;EAmMF;IAOI;;;;AAIJ;EACE;EACA;EACA;EACA;;AAlNA;EA8MF;IAOI;;;AAGF;EAVF;IAWI;IACA;;;AAGF;EAfF;IAgBI;;;AAGF;EACE;;AAEA;EAHF;IAII;IACA;;;AAIJ;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAIJ;EACE;EACA;EACA;EACA;;AAEA;EACE;;;AAIJ;EACE;EACA;EACA;EACA;;;AAGF;EACE;;;AAEF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;AAAA;EAEE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGA;EAEE;EACA;EACA;EACA;;AAKE;EACE;;AAEF;EACE;;AAEF;EACE;;AAKF;EACE;;AAEF;EACE;;AAEF;EACE;;;AAMR;EACE;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA%22,%22file%22:%22styles.dev.css%22%7D */
