@@ -2,36 +2,36 @@
 @use "../variables/fonts";
 
 .case-study-overview {
-   display: grid;
-   grid-gap: rhythm.rhythm(1);
-   gap: rhythm.rhythm(1);
+  display: grid;
+  grid-gap: rhythm.rhythm(1);
+  gap: rhythm.rhythm(1);
 
-   &__section {
-      display: grid;
-      
-      grid-gap: rhythm.rhythm(0.25) rhythm.rhythm(0.75);
-      gap: rhythm.rhythm(0.25) rhythm.rhythm(0.75);
+  &__section {
+    display: grid;
 
-      @media (min-width: 960px) {
-         grid-template-columns: 200px 1fr;
-      }
-   }
+    grid-gap: rhythm.rhythm(0.25) rhythm.rhythm(0.75);
+    gap: rhythm.rhythm(0.25) rhythm.rhythm(0.75);
 
-   &__heading {
-      font-family: fonts.$font-body;
-      font-size: 1em;
-      line-height: 1.5em;
-      font-weight: 700;
-      color: #335055;
-      background-color: #e1ebf0;
-      padding: 0.25em 0.5em;
-   }
+    @media (min-width: 960px) {
+      grid-template-columns: 200px 1fr;
+    }
+  }
 
-   &__content {
-      padding: 0 0.5em;
+  &__heading {
+    font-family: fonts.$font-body;
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: #335055;
+    background-color: #e1ebf0;
+    padding: 0.25em 0.5em;
+  }
 
-      @media (min-width: 960px) { 
-         padding: 0.25em 0;
-      }
-   }
+  &__content {
+    padding: 0 0.5em;
+
+    @media (min-width: 960px) {
+      padding: 0.25em 0;
+    }
+  }
 }

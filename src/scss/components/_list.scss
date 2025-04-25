@@ -1,23 +1,23 @@
 @use "../functions/rhythm";
 
 .list {
-   list-style: none;
+  list-style: none;
 
-   &_style-disc {
-      list-style: disc;
-   }
+  &_style-disc {
+    list-style: disc;
+  }
 
-   &_style-decimal {
-      list-style: decimal;
-   }
+  &_style-decimal {
+    list-style: decimal;
+  }
 
-   &_indent {
-      padding-left: 1rem;
-   }
+  &_indent {
+    padding-left: 1rem;
+  }
 
-   &__item {
-      &:not(:last-child) {
-         margin-bottom: rhythm.rhythm(0.5);
-      }
-   }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rhythm.rhythm(0.5);
+    }
+  }
 }

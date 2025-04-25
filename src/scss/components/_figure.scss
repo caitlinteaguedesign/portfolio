@@ -2,21 +2,21 @@
 @use "../variables/fonts";
 
 .figure {
-   display: grid;
-   grid-gap: rhythm.rhythm(0.5);
-   gap: rhythm.rhythm(0.5);
-   max-width: 400px;
+  display: grid;
+  grid-gap: rhythm.rhythm(0.5);
+  gap: rhythm.rhythm(0.5);
+  max-width: 400px;
 
-   &__img {
-      border: 1px solid #cccccc;
-      box-shadow: 0 1px 3px 0 rgba(125,125,125, 0.5);
-   }
+  &__img {
+    border: 1px solid #cccccc;
+    box-shadow: 0 1px 3px 0 rgba(125, 125, 125, 0.5);
+  }
 
-   &__caption {
-      font-family: fonts.$font-body;
-      font-size: 0.9em;
-      line-height: 1.4em;
-      font-style: italic;
-      color: #445457;
-   }
+  &__caption {
+    font-family: fonts.$font-body;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    font-style: italic;
+    color: #445457;
+  }
 }

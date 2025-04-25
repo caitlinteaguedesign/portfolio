@@ -38,18 +38,18 @@ function devNunjuck() {
     .pipe(
       data(function () {
         return importFresh("./src/data/global.json");
-      })
+      }),
     )
     .pipe(
       data({
         current_year: CURRENT_YEAR,
         stylesheet: "styles.full.css",
-      })
+      }),
     )
     .pipe(
       nunjucksRender({
         path: ["src/templates"],
-      })
+      }),
     )
     .pipe(prettier({ singleQuote: true, tabWidth: 3 }))
     .pipe(dest("build"))
@@ -62,18 +62,18 @@ function prodNunjuck() {
     .pipe(
       data(function () {
         return importFresh("./src/data/global.json");
-      })
+      }),
     )
     .pipe(
       data({
         current_year: CURRENT_YEAR,
         stylesheet: "styles.min.css",
-      })
+      }),
     )
     .pipe(
       nunjucksRender({
         path: ["src/templates"],
-      })
+      }),
     )
     .pipe(prettier({ singleQuote: true, tabWidth: 3 }))
     .pipe(dest("build"));
@@ -170,11 +170,11 @@ exports.default = series(
   parallel(devNunjuck, devJs, copyStaticAssets),
   devSass,
   watchDev,
-  startBrowser
+  startBrowser,
 );
 exports.build = series(
   clean,
   parallel(prodNunjuck, prodJs, copyStaticAssets),
-  prodSass
+  prodSass,
 );
 exports.start = startBrowser;

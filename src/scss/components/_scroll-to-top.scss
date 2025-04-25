@@ -1,37 +1,36 @@
 @use "../functions/rhythm";
 
 .scroll-to-top {
+  &__button {
+    display: block;
+    width: 48px;
+    height: 48px;
+    z-index: 3;
+    position: fixed;
+    right: rhythm.rhythm(1);
+    bottom: rhythm.rhythm(1);
+    font-size: 100%;
+    border: none;
+    transition: all 0.5s ease-in-out;
+    padding: 0.5em 0.5em 0.4em;
+    border-radius: 2em;
+    background-color: #04506b;
+    border: 0.2em solid #7aa1af;
+    color: #e1ebf0;
+    box-shadow: 0 1px 8px 1px rgba(2, 48, 65, 0.5);
+    cursor: pointer;
 
-   &__button {
-      display: block;
-      width: 48px;
-      height: 48px;
-      z-index: 3;
-      position: fixed;
-      right: rhythm.rhythm(1);
-      bottom: rhythm.rhythm(1);
-      font-size: 100%;
-      border: none;
-      transition: all 0.5s ease-in-out;
-      padding: 0.5em 0.5em 0.4em;
-      border-radius: 2em;
-      background-color: #04506b;
-      border: 0.2em solid #7aa1af;
-      color: #e1ebf0;
-      box-shadow: 0 1px 8px 1px rgba(2, 48, 65, 0.5);
-      cursor: pointer;
+    &--hidden {
+      opacity: 0;
+    }
 
-      &--hidden {
-         opacity: 0;
-      }
+    &--visible {
+      opacity: 0.6;
+    }
 
-      &--visible {
-         opacity: 0.6;
-      }
-
-      &:hover {
-         opacity: 1;
-         transform: scale(1.2);
-      }
-   }
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
 }
