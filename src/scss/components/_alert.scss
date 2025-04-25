@@ -1,13 +1,13 @@
 @use "../functions/rhythm";
 
 .alert {
-   padding: rhythm.rhythm(0.5);
-   border-radius: rhythm.rhythm(0.5);
-   border: 1px solid #000000;
+  padding: rhythm.rhythm(0.5);
+  border-radius: rhythm.rhythm(0.5);
+  border: 1px solid #000000;
 
-   &_color-caution {
-      color: #5e370d;
-      border-color: #eebd7d;
-      background-color: #ffe599;
-   }
+  &_color-caution {
+    color: #5e370d;
+    border-color: #eebd7d;
+    background-color: #ffe599;
+  }
 }

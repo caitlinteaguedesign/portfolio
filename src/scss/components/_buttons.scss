@@ -5,136 +5,142 @@
 @use "../variables/speeds";
 
 .menu-button {
-   background: none;
-   border: none;
-   color: #ffffff;
-   cursor: pointer;
-   font-size: inherit;
-   font-family: fonts.$font-body;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: fonts.$font-body;
 
-   @media (min-width: dimensions.$nav-min-width) {
-      display: none; 
-   }
+  @media (min-width: dimensions.$nav-min-width) {
+    display: none;
+  }
 
-   &:hover {
-      color: colors.$link-secondary;
-   }
+  &:hover {
+    color: colors.$link-secondary;
+  }
 
-   &__layout {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-   }
+  &__layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-   &__icon {
-      fill: currentColor;
-      margin-right: rhythm.rhythm(0.25);
+  &__icon {
+    fill: currentColor;
+    margin-right: rhythm.rhythm(0.25);
 
-      &--state-hamburger {
-         .animated-icon__menu-button__top {
-            transform: translateY(0);
-            transform-origin: center;
-            opacity: 1;
-         }
-         .animated-icon__menu-button__middle {
-            transform: rotate(0deg);
-            transform-origin: center;
-         }
-         .animated-icon__menu-button__bottom {
-            transform: translateY(0);
-            transform-origin: center;
-         }
+    &--state-hamburger {
+      .animated-icon__menu-button__top {
+        transform: translateY(0);
+        transform-origin: center;
+        opacity: 1;
       }
-
-      &--to-hamburger{
-         .animated-icon__menu-button__top {
-            animation: topbar speeds.$speed-navigation-animation ease-in-out reverse forwards;
-         }
-         .animated-icon__menu-button__middle {
-            animation: middlebar speeds.$speed-navigation-animation ease-in-out reverse forwards;
-         }
-         .animated-icon__menu-button__bottom {
-            animation: bottombar speeds.$speed-navigation-animation ease-in-out reverse forwards;
-         }
+      .animated-icon__menu-button__middle {
+        transform: rotate(0deg);
+        transform-origin: center;
       }
-
-      &--state-exmark {
-         .animated-icon__menu-button__top {
-            transform: translateY(8px) rotate(0deg);
-            transform-origin: center;
-            opacity: 0;
-         }
-         .animated-icon__menu-button__middle {
-            transform: rotate(45deg);
-            transform-origin: center;
-         }
-         .animated-icon__menu-button__bottom {
-            transform: translate(-5px, -6px) rotate(-45deg);
-            transform-origin: center;
-         }
+      .animated-icon__menu-button__bottom {
+        transform: translateY(0);
+        transform-origin: center;
       }
+    }
 
-      &--to-exmark{
-         .animated-icon__menu-button__top {
-            animation: topbar speeds.$speed-navigation-animation ease-in-out forwards;
-         }
-         .animated-icon__menu-button__middle {
-            animation: middlebar speeds.$speed-navigation-animation ease-in-out forwards;
-         }
-         .animated-icon__menu-button__bottom {
-            animation: bottombar speeds.$speed-navigation-animation ease-in-out forwards;
-         }
+    &--to-hamburger {
+      .animated-icon__menu-button__top {
+        animation: topbar speeds.$speed-navigation-animation ease-in-out reverse
+          forwards;
       }
-   }
+      .animated-icon__menu-button__middle {
+        animation: middlebar speeds.$speed-navigation-animation ease-in-out
+          reverse forwards;
+      }
+      .animated-icon__menu-button__bottom {
+        animation: bottombar speeds.$speed-navigation-animation ease-in-out
+          reverse forwards;
+      }
+    }
+
+    &--state-exmark {
+      .animated-icon__menu-button__top {
+        transform: translateY(8px) rotate(0deg);
+        transform-origin: center;
+        opacity: 0;
+      }
+      .animated-icon__menu-button__middle {
+        transform: rotate(45deg);
+        transform-origin: center;
+      }
+      .animated-icon__menu-button__bottom {
+        transform: translate(-5px, -6px) rotate(-45deg);
+        transform-origin: center;
+      }
+    }
+
+    &--to-exmark {
+      .animated-icon__menu-button__top {
+        animation: topbar speeds.$speed-navigation-animation ease-in-out
+          forwards;
+      }
+      .animated-icon__menu-button__middle {
+        animation: middlebar speeds.$speed-navigation-animation ease-in-out
+          forwards;
+      }
+      .animated-icon__menu-button__bottom {
+        animation: bottombar speeds.$speed-navigation-animation ease-in-out
+          forwards;
+      }
+    }
+  }
 }
 
 @keyframes topbar {
-   0% {
-      transform: translateY(0);
-      transform-origin: center;
-      opacity: 1;
-   }
-   49% {
-      opacity: 1;
-   }
-   50% {
-      transform: translateY(8px) rotate(0deg);
-      transform-origin: center;
-      opacity: 0;
-   }
-   100% {
-      transform: translateY(8px) rotate(0deg);
-      transform-origin: center;
-      opacity: 0;
-   }
+  0% {
+    transform: translateY(0);
+    transform-origin: center;
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px) rotate(0deg);
+    transform-origin: center;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(8px) rotate(0deg);
+    transform-origin: center;
+    opacity: 0;
+  }
 }
 
 @keyframes middlebar {
-   0% {
-      transform: rotate(0deg);
-      transform-origin: center;
-   }
-   50% {
-      transform: rotate(0deg);
-      transform-origin: center;
-   }
-   100% {
-      transform: rotate(45deg);
-      transform-origin: center;
-   }
+  0% {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  100% {
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
 }
 
 @keyframes bottombar {
-   0% {
-      transform: translateY(0);
-      transform-origin: center;
-   }
-   50% {
-      transform: translateY(-8px) rotate(0deg);
-      transform-origin: center;
-   }
-   100% {
-      transform: translate(-5px, -6px) rotate(-45deg);
-      transform-origin: center;
-   }
+  0% {
+    transform: translateY(0);
+    transform-origin: center;
+  }
+  50% {
+    transform: translateY(-8px) rotate(0deg);
+    transform-origin: center;
+  }
+  100% {
+    transform: translate(-5px, -6px) rotate(-45deg);
+    transform-origin: center;
+  }
 }

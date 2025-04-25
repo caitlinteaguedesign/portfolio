@@ -9,3 +9,5 @@ node_modules
 
 # Ignore all * files:
 **/*.html
+**/*.min.js
+**/*.min.css

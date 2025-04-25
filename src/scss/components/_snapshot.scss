@@ -3,64 +3,62 @@
 @use "../variables/fonts";
 
 .snapshot {
+  &__label {
+    font-family: fonts.$font-heading;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    font-weight: 700;
+  }
 
-   &__label {
-      font-family: fonts.$font-heading;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-size: 1em;
-      font-weight: 700;
-   }
+  &__title {
+    font-size: 1.5em;
+    line-height: 1.3em;
+    font-style: normal;
+  }
 
-   &__title {
-      font-size: 1.5em;
-      line-height: 1.3em;
-      font-style: normal;
-   }
+  &__text {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
 
-   &__text {
-      font-size: 1em;
-      line-height: 1.5em;
-   }
+  &__details {
+    display: grid;
+    padding: rhythm.rhythm(1);
+    grid-gap: rhythm.rhythm(1);
+    gap: rhythm.rhythm(1);
+    background-color: #e1ebf0;
 
-   &__details {
-      display: grid;
+    @media (min-width: dimensions.$snapshot-min-width) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+
+  &__detail {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: rhythm.rhythm(0.5);
+    gap: rhythm.rhythm(0.5);
+
+    &--heading {
+      background-color: #1d4f5b;
       padding: rhythm.rhythm(1);
-      grid-gap: rhythm.rhythm(1);
-      gap: rhythm.rhythm(1);
-      background-color: #e1ebf0;
 
       @media (min-width: dimensions.$snapshot-min-width) {
-         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      }
-   }
-   
-   &__detail {
-      display: grid;
-      grid-template-rows: auto 1fr;
-      grid-gap: rhythm.rhythm(0.5);
-      gap: rhythm.rhythm(0.5);
-
-      &--heading {
-         background-color: #1d4f5b;
-         padding: rhythm.rhythm(1);
-
-         @media (min-width: dimensions.$snapshot-min-width) {
-            grid-column: 1 / -1;
-         }
-   
-         .snapshot__label {
-            color: #b5c7d0;
-         }
-
-         .snapshot__title {
-            color: #ffffff;
-         }
+        grid-column: 1 / -1;
       }
 
-      &--default {
-         color: #123337;
-         
+      .snapshot__label {
+        color: #b5c7d0;
       }
-   }
+
+      .snapshot__title {
+        color: #ffffff;
+      }
+    }
+
+    &--default {
+      color: #123337;
+    }
+  }
 }

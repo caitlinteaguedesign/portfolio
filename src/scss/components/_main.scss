@@ -2,12 +2,12 @@
 @use "../variables/dimensions";
 
 .main {
-   padding: rhythm.rhythm(2);
-   background-color: #ffffff;
-   width: 100%;
-   min-width: 0;
+  padding: rhythm.rhythm(2);
+  background-color: #ffffff;
+  width: 100%;
+  min-width: 0;
 
-   @media (min-width: dimensions.$layout-min-width) {
-      padding: rhythm.rhythm(3);
-   }
+  @media (min-width: dimensions.$layout-min-width) {
+    padding: rhythm.rhythm(3);
+  }
 }
