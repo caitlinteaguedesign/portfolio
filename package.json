@@ -30,6 +30,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "import-fresh": "^3.3.0",
+    "prettier": "3.5.3",
     "sass": "^1.49.9"
   }
 }
