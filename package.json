@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "production": "npm install && gulp build"
+    "production": "npm install && gulp build",
+    "prettier:check": "npx prettier . --check",
+    "prettier:write": "npx prettier . --write"
   },
   "repository": {
     "type": "git",
