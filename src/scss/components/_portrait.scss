@@ -1,0 +1,130 @@
+@use "../variables/colors";
+
+// local variables
+:root {
+  // blink settings
+  --blink: 4s linear infinite;
+}
+
+// layouts
+.portrait {
+  z-index: 1;
+  width: 100%;
+  max-height: 284px;
+  margin: auto;
+}
+
+.portrait,
+.portrait-background {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+// grid shimmer animation
+.portrait-background {
+  z-index: 0;
+  max-height: 284px;
+  width: 558px;
+  background: var(--grid-gradient);
+  background-size: 200% 200%;
+  background-position: -50%, 0%;
+  clip-path: url(#clip-path);
+  animation: animate-background 4s ease-out 0.75s infinite;
+
+  display: none;
+  @media screen and (min-width: 680px) {
+    display: block;
+  }
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: -50%, 0%;
+  }
+  35%,
+  100% {
+    background-position: 150%, 0%;
+  }
+}
+
+// eye blink animation
+.eye-open {
+  opacity: 1;
+  animation: animate-eyes-open var(--blink);
+}
+
+@keyframes animate-eyes-open {
+  0%,
+  52% {
+    opacity: 1;
+  }
+  53%,
+  56% {
+    opacity: 0;
+  }
+  57%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.eye-closed {
+  opacity: 0;
+  animation: animate-eyes-closed var(--blink);
+}
+
+@keyframes animate-eyes-closed {
+  0%,
+  52% {
+    opacity: 0.01;
+  }
+  53%,
+  56% {
+    opacity: 1;
+  }
+  57%,
+  100% {
+    opacity: 0.01;
+  }
+}
+
+// color assignments
+.skin {
+  fill: var(--skin);
+}
+.skin-shadow {
+  fill: var(--skin-shadow);
+}
+.nostril {
+  fill: var(--nostril);
+}
+.hair {
+  fill: var(--hair);
+}
+.hair-shadow {
+  fill: var(--hair-shadow);
+}
+.hair-highlight {
+  fill: var(--hair-highlight);
+}
+.eyebrow {
+  fill: var(--eyebrow);
+}
+.eye {
+  fill: var(--eye);
+}
+.lips {
+  fill: var(--lips);
+}
+.teeth {
+  fill: var(--teeth);
+}
+.shirt {
+  fill: var(--shirt);
+}
+.shirt-shadow {
+  fill: var(--shirt-shadow);
+}
+.glasses {
+  fill: var(--glasses);
+}

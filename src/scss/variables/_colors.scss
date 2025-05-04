@@ -1,3 +1,41 @@
 $link-primary: #811b1b;
 $link-secondary: #98e4e8;
 $brand-primary: #00313d;
+
+// animated me variables
+:root {
+  --skin: #f6e2e5;
+  --skin-shadow: #dbb7b4;
+  --nostril: #c7908b;
+  --hair: #dfc59a;
+  --hair-shadow: #cca478;
+  --hair-highlight: #e4d5b7;
+  --eyebrow: #855931;
+  --eye: #5b8ae1;
+  --lips: #e89fa1;
+  --teeth: #ffffff;
+  --shirt: #007b8e;
+  --shirt-shadow: #006373;
+  --glasses: #222222;
+  --teal: #67e5e9;
+  --dark-teal: #007b8e;
+  --grid-stop-1: #18515e;
+  --grid-stop-2: #0b4654;
+
+  --grid-gradient: linear-gradient(
+    -45deg,
+    var(--grid-stop-2),
+    var(--grid-stop-1) 40%,
+    var(--teal) 50%,
+    var(--grid-stop-1) 60%,
+    var(--grid-stop-2)
+  );
+
+  --bar-gradient: linear-gradient(
+    -45deg,
+    var(--dark-teal) 0%,
+    var(--teal) 48%,
+    var(--teal) 52%,
+    var(--dark-teal) 100%
+  );
+}
