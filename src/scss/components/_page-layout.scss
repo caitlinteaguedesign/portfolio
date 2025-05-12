@@ -1,7 +1,7 @@
 @use "../mixins/layout";
 @use "../variables/dimensions";
 
-.layout {
+.page-layout {
   @include layout.universal-container();
   position: relative;
   z-index: 1;
