@@ -114,6 +114,7 @@ $mq-qualities-desktop: 970px;
     display: grid;
     gap: rhythm.rhythm(1);
     grid-template-columns: 1fr;
+    margin-bottom: rhythm.rhythm(3);
 
     @media screen and (min-width: 500px) {
       grid-template-columns: 1fr 1fr;
@@ -124,6 +125,10 @@ $mq-qualities-desktop: 970px;
         grid-row: 1/-1;
       }
     }
+
+    @media screen and (min-width: $mq-hero-tablet) {
+      gap: rhythm.rhythm(2);
+    }
   }
 
   &__personal {
@@ -133,6 +138,10 @@ $mq-qualities-desktop: 970px;
 
     @media screen and (min-width: 500px) {
       grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: $mq-hero-tablet) {
+      gap: rhythm.rhythm(2);
     }
   }
 
@@ -180,6 +189,7 @@ $mq-qualities-desktop: 970px;
 
       @media screen and (min-width: $mq-qualities-desktop) {
         grid-template-columns: 1fr;
+        gap: rhythm.rhythm(2);
         max-width: 556px;
       }
     }
