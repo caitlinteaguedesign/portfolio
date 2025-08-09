@@ -15,6 +15,7 @@
 @use "utilities/typography";
 
 @use "animations/responsive-webpage";
+@use "animations/portrait";
 
 @use "components/link";
 @use "components/list";
@@ -33,6 +34,5 @@
 @use "components/section";
 @use "components/case-study-overview";
 @use "components/scroll-to-top";
-@use "components/portrait";
 
 @use "pages/homepage";
