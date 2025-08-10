@@ -5,9 +5,9 @@
 $speed: 1;
 
 // used in helpers and animation settings
-$time: 15 / $speed;
-$framerate: 24 * $speed;
-$totalframes: $time * $framerate;
+$time: calc(14 / $speed);
+$framerate: calc(24 * $speed);
+$totalframes: calc($time * $framerate);
 
 :root {
   // animation settings
@@ -48,7 +48,7 @@ $totalframes: $time * $framerate;
 
 // set @keyframes by frame instead of percentage
 @function f($frame: 0) {
-  @return percentage($frame / $totalframes);
+  @return percentage(calc($frame / $totalframes));
 }
 
 // ------------------------
