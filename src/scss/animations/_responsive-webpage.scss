@@ -26,9 +26,13 @@ $totalFrames: calc($time * $framerate);
   --sidebar: #bcfbff;
 
   // size of animation
-  --unit: 4px;
+  --unit: 3px;
 
-  @media screen and (min-width: 360px) {
+  @media screen and (min-width: 420px) {
+    --unit: 4px;
+  }
+
+  @media screen and (min-width: 580px) {
     --unit: 5px;
   }
 
