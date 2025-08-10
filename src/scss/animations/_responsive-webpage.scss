@@ -1,4 +1,8 @@
 // ------------------------
+// imports
+@use "sass:math";
+
+// ------------------------
 // settings
 
 // speed
@@ -7,7 +11,7 @@ $speed: 1;
 // used in helpers and animation settings
 $time: calc(14 / $speed);
 $framerate: calc(24 * $speed);
-$totalframes: calc($time * $framerate);
+$totalFrames: calc($time * $framerate);
 
 :root {
   // animation settings
@@ -48,7 +52,7 @@ $totalframes: calc($time * $framerate);
 
 // set @keyframes by frame instead of percentage
 @function f($frame: 0) {
-  @return percentage(calc($frame / $totalframes));
+  @return math.percentage(calc($frame / $totalFrames));
 }
 
 // ------------------------
