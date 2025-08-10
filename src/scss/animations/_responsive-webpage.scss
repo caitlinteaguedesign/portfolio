@@ -1,0 +1,364 @@
+// ------------------------
+// imports
+@use "sass:math";
+
+// ------------------------
+// settings
+
+// speed
+$speed: 1;
+
+// used in helpers and animation settings
+$time: calc(14 / $speed);
+$framerate: calc(24 * $speed);
+$totalFrames: calc($time * $framerate);
+
+:root {
+  // animation settings
+  --animation-settings: calc(1s * #{$time}) linear infinite; // infinite || forwards
+
+  // colors
+  --frame: #67e5e9;
+  --row-a: #a3f4f9;
+  --row-b: #72d4e8;
+  --row-c: #41a5b8;
+  --row-d: #1f7a8c;
+  --sidebar: #bcfbff;
+
+  // size of animation
+  --unit: 3px;
+
+  @media screen and (min-width: 420px) {
+    --unit: 4px;
+  }
+
+  @media screen and (min-width: 580px) {
+    --unit: 5px;
+  }
+
+  @media screen and (min-width: 760px) {
+    --unit: 6px;
+  }
+
+  @media screen and (min-width: 980px) {
+    --unit: 5px;
+  }
+}
+
+// ------------------------
+// helpers
+
+// responsive, mobile friendly scaling
+// easily scale the animation by changing the --unit var
+@function scale($n: 1) {
+  @return calc(#{$n} * var(--unit));
+}
+
+// set @keyframes by frame instead of percentage
+@function f($frame: 0) {
+  @return math.percentage(calc($frame / $totalFrames));
+}
+
+// ------------------------
+// animated bits
+.frame {
+  display: grid;
+  justify-items: end;
+  width: 0;
+  height: 0;
+  border: solid var(--unit) var(--frame);
+  border-radius: scale(1);
+  animation: frame var(--animation-settings);
+  overflow: hidden;
+}
+
+@keyframes frame {
+  0% {
+    height: 0;
+    border-width: 0;
+  }
+  #{f(5)} {
+    height: 0;
+    border-width: scale(1);
+  }
+  #{f(30)} {
+    height: scale(50);
+    border-width: scale(1);
+  }
+  #{f(31)} {
+    width: 0;
+    border-width: scale(2);
+  }
+  #{f(60)},
+  #{f(120)} {
+    height: scale(50);
+    width: scale(75);
+  }
+  #{f(140)},
+  #{f(170)} {
+    height: scale(45);
+    width: scale(60);
+  }
+  #{f(200)},
+  #{f(295)} {
+    height: scale(38);
+    width: scale(28);
+  }
+  #{f(314)} {
+    border-width: scale(2);
+  }
+  #{f(315)} {
+    border-width: scale(1);
+  }
+  #{f(316)} {
+    height: scale(38);
+    width: 0;
+  }
+  #{f(326)} {
+    height: 0;
+    border-width: scale(1);
+  }
+  #{f(331)},
+  100% {
+    height: 0;
+    width: 0;
+    border-width: 0;
+  }
+}
+
+.content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: content var(--animation-settings);
+  gap: scale(4);
+  padding: scale(4);
+}
+
+@keyframes content {
+  0%,
+  #{f(120)} {
+    width: scale(52);
+    grid-template-rows: scale(8) scale(6) scale(0) scale(16);
+  }
+  #{f(140)},
+  #{f(180)} {
+    width: 100%;
+    grid-template-rows: scale(6) scale(4) scale(4) scale(12);
+    gap: scale(4);
+    padding: scale(4);
+  }
+  #{f(200)},
+  #{f(280)} {
+    grid-template-rows: scale(9) scale(7) scale(7) scale(12);
+    gap: scale(2);
+    padding: scale(2);
+    margin-top: 0;
+  }
+  #{f(286)},
+  #{f(288)} {
+    margin-top: scale(-4);
+  }
+  #{f(310)},
+  100% {
+    width: 100%;
+    grid-template-rows: scale(9) scale(7) scale(7) scale(12);
+    gap: scale(2);
+    padding: scale(2);
+    margin-top: scale(100);
+  }
+}
+
+.column {
+  z-index: 1;
+  position: absolute;
+  background: var(--sidebar);
+  animation: column var(--animation-settings);
+  top: scale(4);
+  left: scale(-15.5);
+  width: scale(16);
+  border-radius: scale(1);
+}
+
+@keyframes column {
+  0%,
+  #{f(60)} {
+    height: 0;
+  }
+  #{f(90)},
+  #{f(120)} {
+    height: scale(38);
+    width: scale(16);
+  }
+  #{f(140)},
+  #{f(220)} {
+    top: scale(4);
+    left: scale(-15.5);
+    height: scale(33);
+    width: 0;
+  }
+  #{f(221)} {
+    top: 0;
+    left: 0;
+    height: scale(34);
+  }
+  #{f(230)},
+  #{f(250)} {
+    top: 0;
+    left: 0;
+    height: scale(34);
+    width: scale(16);
+    border-radius: 0;
+  }
+  #{f(260)},
+  100% {
+    top: 0;
+    left: 0;
+    height: scale(34);
+    width: 0;
+    border-radius: 0;
+  }
+}
+
+.row {
+  border-radius: scale(0.5);
+  margin: 0;
+
+  &--a {
+    grid-column: span 2;
+    background: var(--row-a);
+    animation: row-a var(--animation-settings);
+  }
+
+  &--b {
+    grid-column: 1;
+    grid-row: 2;
+    background: var(--row-b);
+    animation: row-b var(--animation-settings);
+  }
+
+  &--c {
+    grid-column: 2;
+    grid-row: 2;
+    background: var(--row-c);
+    animation: row-c var(--animation-settings);
+  }
+
+  &--d {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: var(--row-d);
+    animation: row-d var(--animation-settings);
+  }
+}
+
+@keyframes row-a {
+  0%,
+  #{f(60)} {
+    width: 0;
+  }
+  #{f(90)},
+  #{f(220)} {
+    width: 100%;
+    opacity: 1;
+  }
+  #{f(225)},
+  #{f(250)} {
+    opacity: 0.2;
+  }
+  #{f(260)},
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes row-b {
+  0%,
+  #{f(65)} {
+    width: 0;
+  }
+  #{f(80)},
+  #{f(170)} {
+    width: 100%;
+    grid-column: 1;
+  }
+  #{f(190)},
+  #{f(220)} {
+    grid-column: span 2;
+    opacity: 1;
+  }
+  #{f(225)},
+  #{f(250)} {
+    grid-column: span 2;
+    opacity: 0.2;
+  }
+  #{f(260)},
+  100% {
+    grid-column: span 2;
+    opacity: 1;
+  }
+}
+
+@keyframes row-c {
+  0%,
+  #{f(80)} {
+    width: 0;
+  }
+  #{f(95)},
+  #{f(170)} {
+    width: 100%;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #{f(190)},
+  #{f(220)} {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    opacity: 1;
+  }
+  #{f(225)},
+  #{f(250)} {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    opacity: 0.2;
+  }
+  #{f(260)},
+  100% {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    opacity: 1;
+  }
+}
+
+@keyframes row-d {
+  0%,
+  #{f(70)} {
+    width: 0;
+  }
+  #{f(100)},
+  #{f(220)} {
+    width: 100%;
+    opacity: 1;
+  }
+  #{f(225)},
+  #{f(250)} {
+    opacity: 0.2;
+  }
+  #{f(260)},
+  100% {
+    opacity: 1;
+  }
+}
+
+.responsive-webpage {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: scale(60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 600px) {
+    width: scale(90);
+  }
+}
