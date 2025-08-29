@@ -1,6 +1,11 @@
 // add sun transition after load
 $(document).ready(function () {
   $(".js_sun").addClass("transition--sun");
+
+  // update copyright year
+  const currentYear = new Date().getFullYear();
+  const elem = $('#js_current-year');
+  elem.text(currentYear);
 });
 
 // button that toggles sunset and night modes
