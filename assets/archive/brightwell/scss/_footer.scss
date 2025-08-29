@@ -1,0 +1,21 @@
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 2rem;
+
+  @media screen and (min-width: 650px) {
+    padding: 0 3rem;
+  }
+  
+  &__content {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+    border-top: 1px solid rgba(255,255,255,.2);
+    text-align: center;
+    color: white;
+
+  }
+}
