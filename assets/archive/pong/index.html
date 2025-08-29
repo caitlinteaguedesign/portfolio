@@ -15,7 +15,7 @@
 		<canvas id="gameCanvas" class="game-canvas" height="500" width="800"></canvas>
 
 		<div class="footer">
-			<p>©<span id="js_current-year">2025</span> Caitlin Teague Doerr</p>
+			<p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p>
 			<p>To contact owner/developer, send an email to <a href="mailto:design@caitlinteague.com">design@caitlinteague.com</a></p>
 			<p><a href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a></p>
 		</div>
@@ -27,7 +27,7 @@
 		document.addEventListener('DOMContentLoaded', () => {
 			const currentYear = new Date().getFullYear();
 			const elem = document.getElementById('js_current-year');
-			elem.text(currentYear);
+			elem.innerText = currentYear;
 		});
 	</script>
 	
