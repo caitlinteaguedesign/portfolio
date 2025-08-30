@@ -1,0 +1,14 @@
+.footer {
+  margin: auto;
+  width: 100%;
+  max-width: 75vw;
+  display: grid;
+  gap: 1rem;
+  padding-top: 3rem;
+  border-top: 0.4em solid black;
+  text-align: center;
+
+  @media (min-width: 80em) {
+    grid-column: 1 / 3;
+  }
+}
