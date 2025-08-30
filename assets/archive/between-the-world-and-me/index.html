@@ -65,7 +65,7 @@
             src="img/inspiration.jpg"
             alt="Photo of Between the World and Me by Ta-Nehisi Coates book"
           />
-          For the title and author’s name I chose
+          For the title and author's name I chose
           <a href="https://fonts.google.com/specimen/Oswald">Oswald</a> in bold.
           For the body text I used
           <a href="https://fonts.google.com/specimen/Bitter">Bitter</a>. I
@@ -180,6 +180,21 @@
           </li>
         </ul>
       </section>
+
+      <footer class="footer">
+        <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p>
+        <p>To contact owner/developer, send an email to <a href="mailto:design@caitlinteague.com">design@caitlinteague.com</a></p>
+        <p><a href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a></p>
+      </footer>
     </div>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const currentYear = new Date().getFullYear();
+        const elem = document.getElementById('js_current-year');
+        elem.innerText = currentYear;
+      });
+    </script>
   </body>
 </html>
