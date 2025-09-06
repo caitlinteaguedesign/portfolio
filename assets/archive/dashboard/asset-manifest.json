@@ -1,30 +1,23 @@
 {
   "files": {
-    "main.css": "/archive/dashboard/static/css/main.09313cea.chunk.css",
-    "main.js": "/archive/dashboard/static/js/main.f1145385.chunk.js",
-    "main.js.map": "/archive/dashboard/static/js/main.f1145385.chunk.js.map",
-    "runtime-main.js": "/archive/dashboard/static/js/runtime-main.b6f474ab.js",
-    "runtime-main.js.map": "/archive/dashboard/static/js/runtime-main.b6f474ab.js.map",
-    "static/js/2.d7aa2506.chunk.js": "/archive/dashboard/static/js/2.d7aa2506.chunk.js",
-    "static/js/2.d7aa2506.chunk.js.map": "/archive/dashboard/static/js/2.d7aa2506.chunk.js.map",
+    "main.css": "/archive/dashboard/static/css/main.bae29f89.css",
+    "main.js": "/archive/dashboard/static/js/main.f7678970.js",
+    "static/media/jan-kronies-unsplash.jpg": "/archive/dashboard/static/media/jan-kronies-unsplash.6b7cae0601566a3d5a5e.jpg",
+    "static/media/ingmar-unsplash.jpg": "/archive/dashboard/static/media/ingmar-unsplash.d58a7a694305ef255e33.jpg",
+    "static/media/dark_mosaic.png": "/archive/dashboard/static/media/dark_mosaic.41e612e150cfa9f5ab61.png",
+    "static/media/grid.svg": "/archive/dashboard/static/media/grid.c2697cd59bed54755f17752145113eea.svg",
+    "static/media/gear.svg": "/archive/dashboard/static/media/gear.4e67892546aa3f6e307d42b0184f913a.svg",
     "index.html": "/archive/dashboard/index.html",
-    "precache-manifest.87a7250a629e4a9db9121ab09b46f218.js": "/archive/dashboard/precache-manifest.87a7250a629e4a9db9121ab09b46f218.js",
-    "service-worker.js": "/archive/dashboard/service-worker.js",
-    "static/css/main.09313cea.chunk.css.map": "/archive/dashboard/static/css/main.09313cea.chunk.css.map",
-    "static/js/2.d7aa2506.chunk.js.LICENSE": "/archive/dashboard/static/js/2.d7aa2506.chunk.js.LICENSE",
-    "static/media/alert.5b288616.svg": "/archive/dashboard/static/media/alert.5b288616.svg",
-    "static/media/check.843bd1f0.svg": "/archive/dashboard/static/media/check.843bd1f0.svg",
-    "static/media/styles.css?v=06": "/archive/dashboard/static/media/jan-kronies-unsplash.eb9385d4.jpg",
-    "static/media/exmark.2ea3cb2d.svg": "/archive/dashboard/static/media/exmark.2ea3cb2d.svg",
-    "static/media/gear.dc18cd33.svg": "/archive/dashboard/static/media/gear.dc18cd33.svg",
-    "static/media/grid.3ca179cd.svg": "/archive/dashboard/static/media/grid.3ca179cd.svg",
-    "static/media/link.0d3387a1.svg": "/archive/dashboard/static/media/link.0d3387a1.svg",
-    "static/media/save.5d838526.svg": "/archive/dashboard/static/media/save.5d838526.svg"
+    "static/media/alert.svg": "/archive/dashboard/static/media/alert.acbd9ebdff555e0336c1ed326fc71d37.svg",
+    "static/media/save.svg": "/archive/dashboard/static/media/save.c0c4badf4c390b7671e79fda362e0c1a.svg",
+    "static/media/link.svg": "/archive/dashboard/static/media/link.2fef10c5b2301c37d54bff681d125ec9.svg",
+    "static/media/exmark.svg": "/archive/dashboard/static/media/exmark.176f61bd224537c740b72641d51b036a.svg",
+    "static/media/check.svg": "/archive/dashboard/static/media/check.dea4c293eb67c73400934c52e8d19463.svg",
+    "main.bae29f89.css.map": "/archive/dashboard/static/css/main.bae29f89.css.map",
+    "main.f7678970.js.map": "/archive/dashboard/static/js/main.f7678970.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.b6f474ab.js",
-    "static/js/2.d7aa2506.chunk.js",
-    "static/css/main.09313cea.chunk.css",
-    "static/js/main.f1145385.chunk.js"
+    "static/css/main.bae29f89.css",
+    "static/js/main.f7678970.js"
   ]
 }
