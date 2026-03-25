@@ -1,5 +1,7 @@
+@use "../scss/fonts";
+
 body {
-  font-family: $body;
+  font-family: fonts.$body;
   display: grid;
   grid-template-columns: 1fr 20fr 1fr;
   background: url("../img/halftone-leaflet.jpg?v=1") repeat #eaeaea;
@@ -13,7 +15,13 @@ p {
 a {
   color: #eb240a;
   font-weight: 700;
-  border-bottom: 0.1em solid #eb240a;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.text-bold {
+  font-weight: 700;
 }
 
 .container {
@@ -53,7 +61,7 @@ a {
   }
 
   .headings {
-    font-family: $headings;
+    font-family: fonts.$headings;
     text-transform: uppercase;
     font-weight: bold;
     line-height: 1.25em;
@@ -138,7 +146,7 @@ a {
   }
 
   h3 {
-    font-family: $headings;
+    font-family: fonts.$headings;
     font-size: 2.25em;
     font-weight: 700;
     text-transform: uppercase;
