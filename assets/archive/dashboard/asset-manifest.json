@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/archive/dashboard/static/css/main.bae29f89.css",
-    "main.js": "/archive/dashboard/static/js/main.f7678970.js",
+    "main.css": "/archive/dashboard/static/css/main.4dbd5032.css",
+    "main.js": "/archive/dashboard/static/js/main.58499cc2.js",
     "static/media/jan-kronies-unsplash.jpg": "/archive/dashboard/static/media/jan-kronies-unsplash.6b7cae0601566a3d5a5e.jpg",
     "static/media/ingmar-unsplash.jpg": "/archive/dashboard/static/media/ingmar-unsplash.d58a7a694305ef255e33.jpg",
     "static/media/dark_mosaic.png": "/archive/dashboard/static/media/dark_mosaic.41e612e150cfa9f5ab61.png",
+    "index.html": "/archive/dashboard/index.html",
     "static/media/grid.svg": "/archive/dashboard/static/media/grid.c2697cd59bed54755f17752145113eea.svg",
     "static/media/gear.svg": "/archive/dashboard/static/media/gear.4e67892546aa3f6e307d42b0184f913a.svg",
-    "index.html": "/archive/dashboard/index.html",
     "static/media/alert.svg": "/archive/dashboard/static/media/alert.acbd9ebdff555e0336c1ed326fc71d37.svg",
     "static/media/save.svg": "/archive/dashboard/static/media/save.c0c4badf4c390b7671e79fda362e0c1a.svg",
     "static/media/link.svg": "/archive/dashboard/static/media/link.2fef10c5b2301c37d54bff681d125ec9.svg",
     "static/media/exmark.svg": "/archive/dashboard/static/media/exmark.176f61bd224537c740b72641d51b036a.svg",
     "static/media/check.svg": "/archive/dashboard/static/media/check.dea4c293eb67c73400934c52e8d19463.svg",
-    "main.bae29f89.css.map": "/archive/dashboard/static/css/main.bae29f89.css.map",
-    "main.f7678970.js.map": "/archive/dashboard/static/js/main.f7678970.js.map"
+    "main.4dbd5032.css.map": "/archive/dashboard/static/css/main.4dbd5032.css.map",
+    "main.58499cc2.js.map": "/archive/dashboard/static/js/main.58499cc2.js.map"
   },
   "entrypoints": [
-    "static/css/main.bae29f89.css",
-    "static/js/main.f7678970.js"
+    "static/css/main.4dbd5032.css",
+    "static/js/main.58499cc2.js"
   ]
 }
