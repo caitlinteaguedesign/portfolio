@@ -1,9 +1,11 @@
 // ==============================
 // theme
 
+@use "../scss/colors";
+
 body {
-  background-color: $tan;
-  color: $default-text;
+  background-color: colors.$tan;
+  color: colors.$default-text;
   font-family: "Tinos", serif; /* windsor */
 
   display: grid;
@@ -14,12 +16,13 @@ body {
 }
 
 a {
-  color: $red;
+  color: colors.$red;
   font-weight: 700;
-  border-bottom: 0.125em solid $red;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 
   &:hover {
-    color: $red;
+    color: colors.$red;
   }
 }
 
@@ -59,7 +62,7 @@ a {
   z-index: 2;
   grid-column: 2;
   grid-row: 3 / 5;
-  color: $red;
+  color: colors.$red;
   font-size: 3.5em;
   line-height: 0.7em;
   padding-top: 2rem;
@@ -85,7 +88,7 @@ a {
   font-size: 1.25em;
 
   .other-title {
-    color: $red;
+    color: colors.$red;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -95,16 +98,16 @@ a {
 .decorative-area {
   z-index: 1;
   grid-column: 1 / 4;
-  background-color: $yellow;
+  background-color: colors.$yellow;
 
   &--bottom {
     grid-row: 5;
-    border-top: 6px solid $red;
+    border-top: 6px solid colors.$red;
   }
 
   &--top {
     grid-row: 1;
-    border-bottom: 4px solid $red;
+    border-bottom: 4px solid colors.$red;
   }
 }
 
@@ -121,7 +124,7 @@ a {
   h3 {
     font-size: 2.531em;
     line-height: 1em;
-    color: $red;
+    color: colors.$red;
     font-weight: 700;
     letter-spacing: -1px;
   }
@@ -131,11 +134,11 @@ a {
     line-height: 1.4em;
   }
 
-  strong {
+  .text-bold {
     font-weight: 700;
   }
 
-  em {
+  .text-italic {
     font-style: italic;
   }
 
