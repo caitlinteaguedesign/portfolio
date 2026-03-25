@@ -269,6 +269,10 @@ $title-delay: 0.5s;
   text-indent: 1.5rem;
 }
 
+.text-bold {
+  font-weight: 700;
+}
+
 .no-indent {
   text-indent: 0;
 }
@@ -296,6 +300,8 @@ $title-delay: 0.5s;
 .link,
 .link:hover {
   color: #ff483e;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: color $timing linear;
 }
 
