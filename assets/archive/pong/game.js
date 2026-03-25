@@ -83,7 +83,7 @@ function drawEverything()
 		// winner text 
 		var text;
 		canvasContext.fillStyle = 'white';
-		canvasContext.font = "1.75em Open Sans";
+		canvasContext.font = "1.75em Days One";
 
 		text = "Want to play a game?";
 		canvasContext.fillText(text, canvas.width/2, 190);
@@ -163,14 +163,14 @@ function drawEverything()
 
 	// score board
 	const margin = 15;
-	const boardW = 85;
+	const boardW = 100;
 	const boardH = 68;
 
 	makeRectangle(margin, margin, boardW, boardH, '#070e13');
 	makeRectangle(canvas.width-(boardW+margin), margin, boardW, boardH, '#070e13');
 
 	canvasContext.textAlign = "left"; 
-	canvasContext.font = "1.25em Rajdhani";
+	canvasContext.font = "1.25em Open Sans";
 	canvasContext.fillStyle = '#6e9dbe';
 	canvasContext.fillText("Player 1", 25, 40)
 	canvasContext.fillText("Player 2", canvas.width-(boardW+margin-10), 40)
