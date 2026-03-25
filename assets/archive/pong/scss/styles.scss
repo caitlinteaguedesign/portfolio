@@ -1,22 +1,16 @@
 // =======================
 // MAIN SASS FILE
 
-@import 'reset';
-
-// font families
-@mixin google-font($font) {
-	$font: unquote($font);
-	@import url(https://fonts.googleapis.com/css?family=#{$font});
-}
-
-$google-fonts: "Open+Sans:400,700|Days+One|Rajdhani:400,700";
-
-@include google-font($google-fonts);
+@use 'reset';
 
 // document
 html, body {
 	font-family: "Open Sans", sans-serif;
 	background: url('../img/dark_mosaic.png');
+}
+
+.text-bold {
+	font-weight: 700;
 }
 
 .container {
@@ -25,7 +19,7 @@ html, body {
 	width: 100%;
 	max-width: 60em;
 	min-height: 100vh;
-	padding: 2em 0;
+	padding: 3rem 0;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -33,22 +27,22 @@ html, body {
 // title area
 .title-area {
 	max-width: 800px;
-	margin-bottom: 1em;
+	margin-bottom: 1.5rem;
 	margin-left: auto;
 	margin-right: auto;
 
 	h1 {
 		font-family: "Days One", sans-serif;
-		font-size: 2em;
-		line-height: 1em;
+		font-size: 2rem;
+		line-height: 1;
 		color: #2ba3b9;
-		margin-bottom: .25em;
+		margin-bottom: 0.25em;
 	}
 
 	p {
-		font-family: "Rajdhani", sans-serif;
-		font-size: 1.25em;
-		line-height: 1.5em;
+		font-family: "Open Sans", sans-serif;
+		font-size: 1.125em;
+		line-height: 1.6;
 		color: #7691a5;
 	}
 }
@@ -73,8 +67,8 @@ html, body {
 	color: #7691a5;
 
 	a {
-		color: #12edf1;;
+		color: #12edf1;
 		text-decoration: underline;
-		text-underline-offset: 4px;
+		text-underline-offset: 3px;
 	}
 }
