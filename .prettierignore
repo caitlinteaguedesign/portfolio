@@ -1,12 +1,14 @@
-# Ignore artifacts:
+# Ignore artifacts & building tools
+.vscode
 build
 coverage
-
-# Ignore 
-.vscode
-assets
 node_modules
 
-# Ignore all * files:
+# Ignore external apps
+assets/dashboard
+assets/tic-tac-toe
+
+
+# Ignore all * minified files
 **/*.min.js
 **/*.min.css
