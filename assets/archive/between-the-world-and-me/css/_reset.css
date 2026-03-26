@@ -48,9 +48,9 @@ h6 {
 }
 
 /* 9. Improve line wrapping */
-p {
+p,
+li {
   text-wrap: pretty;
-  line-height: 1.7;
 }
 h1,
 h2,

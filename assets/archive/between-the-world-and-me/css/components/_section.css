@@ -3,7 +3,23 @@
 .section {
   max-width: 70ch;
 
-  @media (min-width: 80em) {
+  @media (min-width: 64rem) {
     grid-column: 2;
+  }
+
+  .heading-2 {
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 64rem) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .list:not(:last-child) {
+    margin-bottom: 1rem;
   }
 }

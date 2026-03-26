@@ -16,10 +16,24 @@
 }
 
 /* specific styles */
-.heading-2 {
-  margin-bottom: 1em;
+
+.heading-1 {
   font-family: var(--ff-oswald);
-  font-size: 2.25em;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: 40rem) {
+    font-size: 4.5rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+.heading-2 {
+  font-family: var(--ff-oswald);
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   background:
@@ -29,8 +43,23 @@
       rgba(0, 0, 0, 0.5),
       var(--color-neutral-800)
     ),
-    url("../../img/trees.png");
+    var(--pattern-trees);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+
+  @media (min-width: 64rem) {
+    font-size: 2.25rem;
+  }
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary-400);
+  text-align: center;
+
+  @media (min-width: 40rem) {
+    font-size: 1.25em;
+  }
 }
