@@ -1,0 +1,9 @@
+/* =================== */
+/* section             */
+.section {
+  max-width: 70ch;
+
+  @media (min-width: 80em) {
+    grid-column: 2;
+  }
+}
