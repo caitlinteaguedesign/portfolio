@@ -4,19 +4,23 @@
 .container {
   grid-column: 2;
 
-  padding: 2rem 4rem 4rem;
-  background: url("../../img/halftone2.jpg") repeat var(--color-neutral-200);
+  padding: 2rem 3rem 4rem;
+  background: var(--pattern-halftone) repeat var(--color-neutral-200);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
 
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4em;
+  gap: 3rem;
   justify-items: center;
 
   max-width: 1600px;
   margin: auto;
 
-  @media (min-width: 80em) {
+  @media (min-width: 60em) {
+    padding: 2rem 4rem 4rem;
+    gap: 4rem;
+  }
+  @media (min-width: 64rem) {
     grid-template-columns: 1fr 1fr;
   }
 }

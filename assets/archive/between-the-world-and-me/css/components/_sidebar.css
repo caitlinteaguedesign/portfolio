@@ -9,32 +9,30 @@
   align-items: center;
   padding: 1em;
 
-  .stanza {
-    .line {
-      font-style: italic;
-      color: var(--color-neutral-500);
-      margin-bottom: 0.5em;
+  .line {
+    font-style: italic;
+    color: var(--color-neutral-500);
+    margin-bottom: 0.5em;
 
-      @media (min-width: 650px) {
-        margin-bottom: 0;
+    @media (min-width: 64rem) {
+      margin-bottom: 0;
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: 64rem) {
+        display: block;
       }
+    }
 
-      br {
-        display: none;
+    .indent {
+      display: inline;
+      padding-left: 0;
 
-        @media (min-width: 650px) {
-          display: block;
-        }
-      }
-
-      .indent {
-        display: inline;
-        padding-left: 0;
-
-        @media (min-width: 650px) {
-          display: block;
-          padding-left: 2em;
-        }
+      @media (min-width: 64rem) {
+        display: block;
+        padding-left: 2em;
       }
     }
   }
