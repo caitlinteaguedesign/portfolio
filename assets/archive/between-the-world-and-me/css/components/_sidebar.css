@@ -12,7 +12,7 @@
   .stanza {
     .line {
       font-style: italic;
-      color: #666666;
+      color: var(--color-neutral-500);
       margin-bottom: 0.5em;
 
       @media (min-width: 650px) {
@@ -42,6 +42,6 @@
   .author {
     margin-top: 1em;
     justify-self: end;
-    color: #333333;
+    color: var(--color-neutral-700);
   }
 }

@@ -23,7 +23,12 @@
   font-weight: 700;
   text-transform: uppercase;
   background:
-    linear-gradient(to bottom, #363636, rgba(0, 0, 0, 0.5), #1a1a1a),
+    linear-gradient(
+      to bottom,
+      var(--color-neutral-700),
+      rgba(0, 0, 0, 0.5),
+      var(--color-neutral-800)
+    ),
     url("../../img/trees.png");
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

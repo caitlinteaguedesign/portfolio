@@ -4,7 +4,8 @@
 body {
   display: grid;
   grid-template-columns: 1fr 20fr 1fr;
-  background: url("../../img/halftone-leaflet.jpg") repeat #eaeaea;
+  background: url("../../img/halftone-leaflet.jpg") repeat
+    var(--color-neutral-200);
   font-family: var(--ff-bitter);
   color: var(--color-neutral-700);
 }
