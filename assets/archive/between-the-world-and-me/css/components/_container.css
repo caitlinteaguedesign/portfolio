@@ -1,0 +1,22 @@
+/* =================== */
+/* container           */
+
+.container {
+  grid-column: 2;
+
+  padding: 2rem 4rem 4rem;
+  background: url("../../img/halftone2.jpg") repeat #eaeaea;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4em;
+  justify-items: center;
+
+  max-width: 1600px;
+  margin: auto;
+
+  @media (min-width: 80em) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

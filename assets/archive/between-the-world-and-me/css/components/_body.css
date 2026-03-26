@@ -1,0 +1,10 @@
+/* =================== */
+/* body                */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 20fr 1fr;
+  background: url("../../img/halftone-leaflet.jpg") repeat #eaeaea;
+  font-family: var(--ff-bitter);
+  color: var(--color-neutral-700);
+}

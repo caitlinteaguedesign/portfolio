@@ -1,0 +1,13 @@
+/* =================== */
+/* list                */
+.list {
+  margin-bottom: 1.375em;
+  list-style-position: inside;
+  padding-left: 1.125em;
+  list-style: disc;
+
+  .list-item {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}

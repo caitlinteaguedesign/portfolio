@@ -1,0 +1,17 @@
+/* =================== */
+/* variables           */
+
+:root {
+  /* typography */
+  --ff-oswald: "Oswald", sans-serif;
+  --ff-bitter: "Bitter", serif;
+
+  /* color */
+  --color-primary-400: #eb240a;
+
+  --color-neutral-200: #eaeaea;
+  --color-neutral-500: #666666;
+  --color-neutral-700: #333333; /* 363636 */
+  --color-neutral-800: #1a1a1a;
+  --color-neutral-900: #000000;
+}

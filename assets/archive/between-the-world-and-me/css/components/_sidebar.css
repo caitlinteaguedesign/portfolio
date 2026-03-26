@@ -1,0 +1,47 @@
+/* =================== */
+/* sidebar             */
+
+.sidebar {
+  max-width: 50ch;
+  align-self: start;
+
+  display: grid;
+  align-items: center;
+  padding: 1em;
+
+  .stanza {
+    .line {
+      font-style: italic;
+      color: #666666;
+      margin-bottom: 0.5em;
+
+      @media (min-width: 650px) {
+        margin-bottom: 0;
+      }
+
+      br {
+        display: none;
+
+        @media (min-width: 650px) {
+          display: block;
+        }
+      }
+
+      .indent {
+        display: inline;
+        padding-left: 0;
+
+        @media (min-width: 650px) {
+          display: block;
+          padding-left: 2em;
+        }
+      }
+    }
+  }
+
+  .author {
+    margin-top: 1em;
+    justify-self: end;
+    color: #333333;
+  }
+}

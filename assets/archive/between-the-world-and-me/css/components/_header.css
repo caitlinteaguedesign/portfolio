@@ -1,0 +1,51 @@
+/* =================== */
+/* header              */
+
+.header {
+  @media (min-width: 80em) {
+    grid-column: 1 / 3;
+  }
+
+  .text-effect {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background:
+      linear-gradient(to bottom, #363636, rgba(0, 0, 0, 0.5), #1a1a1a),
+      url("../../img/trees.png");
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .headings {
+    font-family: var(--ff-oswald);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.25em;
+    font-size: 8vh;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    @media (min-width: 500px) {
+      font-size: 4.5em;
+      letter-spacing: 0.1em;
+    }
+
+    &.title:after {
+      content: "";
+      display: block;
+      margin: 0.4em auto;
+      width: 25vw;
+      height: 0.1em;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .tagline {
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: #eb240a;
+  }
+}
