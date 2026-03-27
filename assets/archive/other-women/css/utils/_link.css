@@ -1,0 +1,13 @@
+/* ================== */
+/* link               */
+
+.link {
+  color: var(--color-text-interactive);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: var(--color-text-interactive);
+  }
+}

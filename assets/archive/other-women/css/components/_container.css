@@ -1,0 +1,17 @@
+/* ================== */
+/* container          */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4rem;
+  background-color: var(--color-tan-100);
+  font-family: var(--ff-tino);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-default);
+
+  @media screen and (min-width: 45rem) {
+    font-size: 1.125rem;
+  }
+}

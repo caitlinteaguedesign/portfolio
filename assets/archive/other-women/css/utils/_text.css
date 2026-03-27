@@ -1,0 +1,43 @@
+/* ================== */
+/* text               */
+
+/* text treatment */
+.text-bold {
+  font-weight: 700;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+/* specific styles */
+.heading-1 {
+  font-family: var(--ff-berkshire);
+  font-weight: 400;
+}
+
+.heading-2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  color: var(--color-red-400);
+  font-weight: 700;
+
+  @media screen and (min-width: 45rem) {
+    font-size: 2.25rem;
+  }
+}
+
+.tagline {
+  font-size: 1.125rem;
+  line-height: 1.2;
+
+  .other-title {
+    color: var(--color-red-400);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media screen and (min-width: 45rem) {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,11 @@
+/* ================== */
+/* section            */
+
+.section {
+  justify-self: center;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 72ch;
+  display: grid;
+  grid-gap: 1.125rem;
+}
