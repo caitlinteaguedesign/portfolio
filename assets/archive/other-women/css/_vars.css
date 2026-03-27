@@ -1,0 +1,18 @@
+/* ================== */
+/* variables          */
+
+:root {
+  /* font families */
+  --ff-tino: "Tinos", serif;
+  --ff-berkshire: "Berkshire Swash", serif;
+
+  /* colors */
+  --color-red-400: #e83600;
+  --color-yellow-400: #f5e963;
+  --color-tan-100: #fffef0;
+  --color-tan-700: #332e15;
+  --color-tan-900: #090804;
+
+  --color-text-default: var(--color-tan-700);
+  --color-text-interactive: var(--color-red-400);
+}
