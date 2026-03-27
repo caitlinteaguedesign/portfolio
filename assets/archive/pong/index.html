@@ -1,40 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Ultimate Pong</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ultimate Pong</title>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Days+One&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-	<link rel="stylesheet" href="css/styles.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>ultimate pong</h1>
+        <p>First to <b>5</b> is the winner. Show that bot who's boss!</p>
+      </header>
+      <canvas
+        id="gameCanvas"
+        class="game-canvas"
+        height="500"
+        width="800"
+      ></canvas>
 
-	<div class="container">
-		<div class="title-area">
-			<h1>ultimate pong</h1>
-			<p>First to <b>5</b> is the winner. Show that bot who's boss!</p>
-		</div>
-		<canvas id="gameCanvas" class="game-canvas" height="500" width="800"></canvas>
+      <footer class="footer">
+        <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p>
+        <p>
+          To contact owner/developer,
+          <a href="mailto:design@caitlinteague.com">send an email</a> to
+          <span class="text-bold">design@caitlinteague.com</span>
+        </p>
+        <p>
+          <a href="//caitlinteague.com/builds"
+            >View more projects in Caitlin's portfolio</a
+          >
+        </p>
+      </footer>
+    </div>
 
-		<footer class="footer">
-			<p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p>
-			<p>To contact owner/developer, <a href="mailto:design@caitlinteague.com">send an email</a> to <span class="text-bold">design@caitlinteague.com</span></p>
-			<p><a href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a></p>
-		</footer>
-	</div>
+    <script src="game.js"></script>
 
-	<script src="game.js"></script>
-
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const currentYear = new Date().getFullYear();
-			const elem = document.getElementById('js_current-year');
-			elem.innerText = currentYear;
-		});
-	</script>
-	
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentYear = new Date().getFullYear();
+        const elem = document.getElementById("js_current-year");
+        elem.innerText = currentYear;
+      });
+    </script>
+  </body>
 </html>
