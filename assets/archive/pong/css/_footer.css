@@ -1,0 +1,16 @@
+/* footer */
+
+.footer {
+  max-width: 800px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+  color: #7691a5;
+
+  a {
+    color: #12edf1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}

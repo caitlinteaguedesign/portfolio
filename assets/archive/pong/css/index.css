@@ -1,0 +1,31 @@
+@layer default, components, utilites;
+
+@import "./_reset.css" layer(default);
+@import "./_header.css" layer(components);
+@import "./_footer.css" layer(components);
+@import "./_canvas.css" layer(components);
+
+@layer default {
+  html,
+  body {
+    font-family: "Open Sans", sans-serif;
+    background: url("../img/dark_mosaic.png");
+  }
+
+  .container {
+    background: url("../img/zwartevilt.png");
+    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.75);
+    width: 100%;
+    max-width: 60em;
+    min-height: 100vh;
+    padding: 3rem 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@layer utilites {
+  .text-bold {
+    font-weight: 700;
+  }
+}
