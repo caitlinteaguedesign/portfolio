@@ -1,9 +1,10 @@
 .about {
+  padding: 4rem 2rem;
   display: grid;
   gap: 3rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 4rem 2rem;
+  background: var(--color-deep-water);
   color: var(--color-text);
+  transition: all var(--timing) linear;
 
   @media screen and (min-width: 650px) {
     padding: 4rem 3rem;
@@ -11,7 +12,7 @@
 
   @media screen and (min-width: 970px) {
     gap: 5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
   }
 
   @media screen and (min-width: 1100px) {
@@ -20,11 +21,13 @@
 }
 
 .about__copy {
-  width: 100%;
-
   @media screen and (min-width: 1100px) {
-    max-width: 62ch;
+    max-width: 50ch;
     grid-column: 2;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -33,9 +36,10 @@
 }
 
 .about__cover {
+  margin: auto;
   max-width: 300px;
   width: 100%;
   height: auto;
-  margin: auto;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--color-accent);
+  transition: border-color var(--timing) linear;
 }

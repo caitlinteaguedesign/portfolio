@@ -3,15 +3,25 @@
   font-weight: 700;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* text alignment */
 .text-center {
   text-align: center;
 }
 
 /* paragraph indent size */
-.indent-none {
-  text-indent: 0;
-}
 .indent-sm {
-  text-indent: 1.25rem;
+  text-indent: 1.5rem;
+}
+
+.indent-md {
+  text-indent: 1.75rem;
 }

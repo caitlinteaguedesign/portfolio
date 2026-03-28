@@ -1,23 +1,21 @@
 .sample {
-  max-width: 72ch;
+  max-width: 57ch;
   margin: 6rem auto 0;
   padding: 3rem 2rem 3rem;
-  transition: color var(--timing) linear;
   color: var(--color-text);
+  transition: color var(--timing) linear;
 
   @media screen and (min-width: 650px) {
     padding: 3rem 3rem 3.5rem;
   }
+
+  p:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .detail {
-  font-family: "Merriweather", serif;
-  font-size: 1.25rem;
-  line-height: 1;
   margin: 3rem auto 3.25rem;
-  display: grid;
-  gap: 0.5rem;
-  text-align: center;
 }
 
 .cta {

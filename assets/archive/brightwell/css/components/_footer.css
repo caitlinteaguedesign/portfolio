@@ -1,20 +1,23 @@
 .footer {
-  background: rgba(0, 0, 0, 0.5);
   padding: 0 2rem;
+  background: var(--color-deep-water);
+  font-size: 0.75rem;
+  color: var(--color-text);
+  transition: all var(--timing) linear;
 
   @media screen and (min-width: 650px) {
     padding: 0 3rem;
+    font-size: 1rem;
   }
 
   .footer__content {
+    max-width: 1000px;
+    margin: auto;
     display: grid;
     gap: 1rem;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 3rem 2rem 4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3rem 0 4rem;
+    border-top: 1px solid var(--color-accent);
+    transition: border-color var(--timing) linear;
     text-align: center;
-    color: white;
   }
 }

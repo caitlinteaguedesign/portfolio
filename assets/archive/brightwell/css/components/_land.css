@@ -1,23 +1,22 @@
-.landscape {
+.land {
   grid-row: 1;
   z-index: 4;
   position: absolute;
-  width: 360px;
-  height: 120px;
-  top: 21rem;
+  width: 330px;
+  height: 110px;
+  top: 21.6rem;
   left: 0;
 
   @media screen and (min-width: 650px) {
+    width: 360px;
+    height: 120px;
     top: 24rem;
   }
 }
 
-.landscape-svg {
-  position: absolute;
-}
-
-#landscape-sunset {
+.land-svg {
   z-index: 1;
+  position: absolute;
   opacity: var(--opacity-sunset-land);
   transition: opacity var(--timing) linear;
 }

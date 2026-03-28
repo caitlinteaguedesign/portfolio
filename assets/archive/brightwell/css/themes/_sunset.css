@@ -1,11 +1,15 @@
 .theme-sunset {
-  --color-title: #ffffff;
-  --color-text: #ffffff;
-  --color-accent: #ffe939;
-  --color-water: #475ea4;
+  --color-title: var(--color-neutral-0);
+  --color-text: var(--color-neutral-0);
+  --color-accent: var(--color-yellow-400);
+  --color-water: var(--color-blue-300);
+  --color-deep-water: var(--color-blue-600);
   --opacity-sunset-sky: 1;
   --opacity-sunset-isle: 1;
   --top-sun-widescreen: 29rem;
-  --top-sun-default: 26rem;
+  --top-sun-default: 25.5rem;
   --delay-transition-title: 0;
+  --button-icon-sunset-left: -3.5rem;
+  --button-icon-moon-left: 10.5px;
+  --button-moon-bg-opacity: 1;
 }

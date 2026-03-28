@@ -1,11 +1,15 @@
 .theme-night {
-  --color-title: red;
-  --color-text: #d8e1ff;
-  --color-accent: #ff483e;
-  --color-water: #101b3d;
+  --color-title: var(--color-red-300);
+  --color-text: var(--color-blue-100);
+  --color-accent: var(--color-red-300);
+  --color-water: var(--color-blue-700);
+  --color-deep-water: var(--color-blue-800);
   --opacity-sunset-sky: 0;
   --opacity-sunset-land: 0;
   --top-sun-widescreen: 32rem;
   --top-sun-default: 28rem;
   --delay-transition-title: 0.5s;
+  --button-icon-sunset-left: 10.5px;
+  --button-icon-moon-left: 3.5rem;
+  --button-moon-bg-opacity: 0;
 }
