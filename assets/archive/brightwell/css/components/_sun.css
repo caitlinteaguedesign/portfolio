@@ -8,10 +8,10 @@
   grid-row: 1 / span 2;
   background-color: yellow;
   left: calc(50% - 50px);
-  top: 26rem;
+  top: var(--top-sun-default);
 
   @media screen and (min-width: 650px) {
-    top: 29rem;
+    top: var(--top-sun-widescreen);
   }
 }
 

@@ -1,33 +1,11 @@
 .theme-night {
-  .title {
-    color: red;
-    transition: color var(--title-timing) linear var(--title-delay);
-  }
-  .author,
-  .sample,
-  .about {
-    color: #d8e1ff;
-  }
-  .cta {
-    border-color: #ff483e;
-  }
-  .link {
-    color: #ff483e;
-  }
-  .sky {
-    opacity: 0;
-  }
-  .water {
-    background-color: #101b3d;
-  }
-  .sun {
-    top: 28rem;
-
-    @media screen and (min-width: 650px) {
-      top: 32rem;
-    }
-  }
-  #landscape-sunset {
-    opacity: 0;
-  }
+  --color-title: red;
+  --color-text: #d8e1ff;
+  --color-accent: #ff483e;
+  --color-water: #101b3d;
+  --opacity-sunset-sky: 0;
+  --opacity-sunset-land: 0;
+  --top-sun-widescreen: 32rem;
+  --top-sun-default: 28rem;
+  --delay-transition-title: 0.5s;
 }

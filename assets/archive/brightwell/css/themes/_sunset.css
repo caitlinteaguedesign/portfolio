@@ -1,33 +1,11 @@
 .theme-sunset {
-  .title {
-    color: white;
-    transition: color var(--title-timing) linear;
-  }
-  .author,
-  .sample,
-  .about {
-    color: white;
-  }
-  .cta {
-    border-color: #ffe939;
-  }
-  .link {
-    color: #ffe939;
-  }
-  .sky {
-    opacity: 1;
-  }
-  .water {
-    background-color: #475ea4;
-  }
-  .sun {
-    top: 26rem;
-
-    @media screen and (min-width: 650px) {
-      top: 29rem;
-    }
-  }
-  #landscape-sunset {
-    opacity: 1;
-  }
+  --color-title: #ffffff;
+  --color-text: #ffffff;
+  --color-accent: #ffe939;
+  --color-water: #475ea4;
+  --opacity-sunset-sky: 1;
+  --opacity-sunset-isle: 1;
+  --top-sun-widescreen: 29rem;
+  --top-sun-default: 26rem;
+  --delay-transition-title: 0;
 }

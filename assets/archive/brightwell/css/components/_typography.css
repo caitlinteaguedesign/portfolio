@@ -4,6 +4,8 @@
   grid-column: 1;
   font-family: "Josefin Slab", sans-serif;
   line-height: 1;
+  color: var(--color-title);
+  transition: color var(--title-timing) linear var(--delay-transition-title);
 
   &.title-default {
     display: none;
@@ -31,6 +33,7 @@
   font-family: "Josefin Slab", sans-serif;
   font-size: 2.5rem;
   line-height: 1em;
+  color: var(--color-text);
   transition: color var(--timing) linear;
 
   @media screen and (min-width: 650px) {
