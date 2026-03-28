@@ -1,6 +1,6 @@
 .link,
 .link:hover {
-  color: #ff483e;
+  color: var(--color-accent);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color var(--timing) linear;

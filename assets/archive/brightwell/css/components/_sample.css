@@ -3,6 +3,7 @@
   margin: 6rem auto 0;
   padding: 3rem 2rem 3rem;
   transition: color var(--timing) linear;
+  color: var(--color-text);
 
   @media screen and (min-width: 650px) {
     padding: 3rem 3rem 3.5rem;
@@ -22,6 +23,6 @@
 .cta {
   margin-top: 3rem;
   padding-top: 2.8rem;
-  border-top: 1px solid;
+  border-top: 1px solid var(--color-accent);
   transition: border-color var(--timing) linear;
 }
