@@ -1,0 +1,53 @@
+.title {
+  z-index: 2;
+  grid-row: 1;
+  grid-column: 1;
+  font-family: "Josefin Slab", sans-serif;
+  line-height: 1;
+
+  &.title-default {
+    display: none;
+    font-size: 6rem;
+    padding: 8rem 3rem 0;
+
+    @media screen and (min-width: 650px) {
+      display: block;
+    }
+  }
+
+  &.title-mobile {
+    display: block;
+    font-size: 4rem;
+    padding: 6rem 2rem 0;
+
+    @media screen and (min-width: 650px) {
+      display: none;
+    }
+  }
+}
+
+.author {
+  padding: 3rem 2rem 0;
+  font-family: "Josefin Slab", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1em;
+  transition: color var(--timing) linear;
+
+  @media screen and (min-width: 650px) {
+    padding: 3rem 3rem 0;
+  }
+}
+
+.chapter {
+  font-family: "Josefin Slab", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-indent: 1.5rem;
+}

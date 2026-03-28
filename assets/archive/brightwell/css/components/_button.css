@@ -1,0 +1,65 @@
+.button {
+  cursor: pointer;
+  position: fixed;
+  overflow: hidden;
+  background: radial-gradient(circle closest-side, #f08118 40%, #35200f);
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  z-index: 10;
+  top: 2rem;
+  right: 2rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  box-shadow:
+    0 6px 12px 0 rgba(0, 0, 0, 0.5),
+    0 0 0 2px rgba(255, 255, 255, 0.25);
+
+  .button__bg {
+    /* moon version */
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle closest-side, #465da3 40%, #101b3d);
+    transition: opacity var(--btn-timing) ease-in-out;
+  }
+
+  &.button_mode--night {
+    .svg-sunset {
+      left: -3.5rem;
+    }
+    .svg-moon {
+      left: 10.5px;
+    }
+    .button__bg {
+      opacity: 1;
+    }
+  }
+
+  &.button_mode--sunset {
+    .svg-sunset {
+      left: 10.5px;
+    }
+    .svg-moon {
+      left: 3.5rem;
+    }
+    .button__bg {
+      opacity: 0;
+    }
+  }
+}
+
+.svg {
+  position: absolute;
+  transition: all var(--btn-timing) ease-in-out;
+
+  &.svg-sunset {
+    top: 8px;
+    color: yellow;
+  }
+
+  &.svg-moon {
+    top: 10px;
+    color: white;
+  }
+}

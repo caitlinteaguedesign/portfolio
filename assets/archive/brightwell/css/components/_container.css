@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template-rows: 28rem 1fr;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #050608;
+
+  @media screen and (min-width: 650px) {
+    grid-template-rows: 31rem 1fr;
+  }
+}

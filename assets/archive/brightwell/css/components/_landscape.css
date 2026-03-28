@@ -1,0 +1,22 @@
+.landscape {
+  grid-row: 1;
+  z-index: 4;
+  position: absolute;
+  width: 360px;
+  height: 120px;
+  top: 21rem;
+  left: 0;
+
+  @media screen and (min-width: 650px) {
+    top: 24rem;
+  }
+}
+
+.landscape-svg {
+  position: absolute;
+}
+
+#landscape-sunset {
+  z-index: 1;
+  transition: opacity var(--timing) linear;
+}

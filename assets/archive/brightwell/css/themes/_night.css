@@ -1,0 +1,33 @@
+.theme-night {
+  .title {
+    color: red;
+    transition: color var(--title-timing) linear var(--title-delay);
+  }
+  .author,
+  .sample,
+  .about {
+    color: #d8e1ff;
+  }
+  .cta {
+    border-color: #ff483e;
+  }
+  .link {
+    color: #ff483e;
+  }
+  .sky {
+    opacity: 0;
+  }
+  .water {
+    background-color: #101b3d;
+  }
+  .sun {
+    top: 28rem;
+
+    @media screen and (min-width: 650px) {
+      top: 32rem;
+    }
+  }
+  #landscape-sunset {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,11 @@
+.sky {
+  position: relative;
+  z-index: 1;
+  grid-row: 1;
+  grid-column: 1;
+  background: linear-gradient(to bottom, #050608 35%, #442812 50%, #e98817);
+  width: 100%;
+  height: 100%;
+  transition: all var(--timing) linear;
+  box-sizing: border-box;
+}
