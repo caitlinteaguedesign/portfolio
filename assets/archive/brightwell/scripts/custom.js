@@ -1,10 +1,10 @@
-// add sun transition after load
 $(document).ready(function () {
+  // add sun transition after load
   $(".js_sun").addClass("transition--sun");
 
   // update copyright year
   const currentYear = new Date().getFullYear();
-  const elem = $('#js_current-year');
+  const elem = $("#js_current-year");
   elem.text(currentYear);
 });
 
