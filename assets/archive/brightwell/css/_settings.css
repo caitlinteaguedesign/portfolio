@@ -1,5 +1,27 @@
 :root {
+  /* animation */
   --timing: 1s;
   --btn-timing: 0.25s;
   --title-timing: 0.5s;
+
+  /* font-families */
+  --ff-josefin: "Josefin Slab", sans-serif;
+  --ff-merriweather: "Merriweather", serif;
+
+  /* colors */
+  --color-neutral-0: #ffffff;
+
+  --color-red-300: #ff483e;
+
+  --color-orange-400: #f08118;
+  --color-orange-800: #35200f;
+
+  --color-yellow-400: #ffe939;
+
+  --color-blue-100: #d8e1ff;
+  --color-blue-300: #475ea4;
+  --color-blue-600: #212e55;
+  --color-blue-700: #101b3d;
+  --color-blue-800: #080d1e;
+  --color-blue-900: #050608;
 }

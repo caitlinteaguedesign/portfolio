@@ -1,5 +1,19 @@
-@import "./_reset.css";
-@import "./_settings.css";
-@import "./themes/index.css";
-@import "./components/index.css";
-@import "./utils/index.css";
+@layer default, theme, components, utilities;
+
+@import "./_reset.css" layer(default);
+@import "./_settings.css" layer(theme);
+@import "./themes/index.css" layer(theme);
+@import "./components/index.css" layer(components);
+@import "./utils/index.css" layer(utilities);
+
+@layer theme {
+  body {
+    font-family: var(--ff-merriweather);
+    font-size: 1rem;
+    line-height: 1.7;
+
+    @media screen and (min-width: 650px) {
+      font-size: 1.125rem;
+    }
+  }
+}

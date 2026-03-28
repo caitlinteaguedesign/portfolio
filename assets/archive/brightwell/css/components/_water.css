@@ -7,5 +7,4 @@
   background-color: var(--color-water);
   transition: all var(--timing) linear;
   display: grid;
-  box-sizing: border-box;
 }

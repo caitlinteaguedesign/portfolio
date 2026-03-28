@@ -6,15 +6,14 @@
   border-radius: 100%;
   grid-column: 1;
   grid-row: 1 / span 2;
-  background-color: yellow;
+  background-color: var(--color-yellow-400);
   left: calc(50% - 50px);
   top: var(--top-sun-default);
 
   @media screen and (min-width: 650px) {
     top: var(--top-sun-widescreen);
   }
-}
-
-.transition--sun {
-  transition: all var(--timing) ease-in-out;
+  &.transition {
+    transition: all var(--timing) ease-in-out;
+  }
 }
