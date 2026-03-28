@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 // button that toggles sunset and night modes
 function toggleMode() {
-  $(".container").toggleClass("sunset night");
+  $(".container").toggleClass("theme-sunset theme-night");
 
   const btn = $("#toggleBtn");
   btn.toggleClass("button_mode--night button_mode--sunset");

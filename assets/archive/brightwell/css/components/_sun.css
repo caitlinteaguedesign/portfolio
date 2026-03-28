@@ -1,0 +1,20 @@
+.sun {
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background-color: yellow;
+  left: calc(50% - 50px);
+  top: 26rem;
+
+  @media screen and (min-width: 650px) {
+    top: 29rem;
+  }
+}
+
+.transition--sun {
+  transition: all var(--timing) ease-in-out;
+}
