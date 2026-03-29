@@ -14,9 +14,4 @@
   --color-neutral-700: #333333;
   --color-neutral-800: #1a1a1a;
   --color-neutral-900: #000000;
-
-  /* patterns */
-  --pattern-leaflet: url("/assets/archive/between-the-world-and-me/img/halftone-leaflet.jpg");
-  --pattern-halftone: url("/assets/archive/between-the-world-and-me/img/halftone.jpg");
-  --pattern-trees: url("/assets/archive/between-the-world-and-me/img/trees.png");
 }
