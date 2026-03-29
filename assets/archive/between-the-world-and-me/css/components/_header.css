@@ -16,7 +16,7 @@
         rgba(0, 0, 0, 0.5),
         var(--color-neutral-800)
       ),
-      var(--pattern-trees);
+      url("../../img/trees.png");
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
