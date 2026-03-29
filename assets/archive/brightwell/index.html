@@ -18,16 +18,16 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <main class="container theme-sunset">
+    <main id="js_container" class="container theme-sunset">
       <button
-        id="toggleBtn"
-        class="button button_mode--night"
-        aria-label="Use night mode"
+        id="js_toggle-btn"
+        class="button"
+        aria-label="Switch to night mode"
         onclick="toggleMode()"
       >
         <div class="button__bg" role="presentation"></div>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
           fill="none"
           class="svg svg-moon"
           viewBox="-0.5 -0.5 36 36"
@@ -43,7 +43,7 @@
           ></path>
         </svg>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
           fill="none"
           class="svg svg-sunset"
           viewBox="-0.5 -0.5 36 36"
@@ -102,81 +102,81 @@
           ></path>
         </svg>
       </button>
-      <h1 class="title">Murder at <br class="at__return" />the Brightwell</h1>
+      <h1 class="title heading-xl">
+        Murder at <br class="return" />the Brightwell
+      </h1>
       <div class="sky" role="presentation"></div>
       <div class="water" role="presentation">
-        <div class="author">Ashley<br />Weaver</div>
-        <section class="sample" role="presentation">
-          <h2 class="chapter text-center">Chapter One</h2>
+        <div class="author heading-lg">Ashley<br />Weaver</div>
+        <section class="sample">
+          <h2 class="heading-lg text-uppercase text-center">Chapter One</h2>
           <div class="detail" role="presentation">
-            <p>Kent, England</p>
-            <p>1932</p>
+            <p class="text-lg text-center">Kent, England</p>
+            <p class="text-lg text-center">1932</p>
           </div>
-          <p class="indent-none paragraph">
+          <p>
             It is an impossibly great trial to be married to a man one loves and
             hates in equal proportions.
           </p>
-          <p class="paragraph">
+          <p class="indent-md">
             It was late June and I was dining alone in the breakfast room when
             Milo blew in from the south.
           </p>
-          <p class="paragraph indent-sm">
+          <p class="indent-sm">
             'Hello, darling,' he said, brushing a light kiss across my cheek. He
             dropped into the seat beside me and began buttering a piece of
             toast, as though it had been two hours since I had seen him last,
             rather than two months.
           </p>
-          <p class="paragraph">
+          <p class="indent-md">
             I took a sip of coffee. 'Hello, Milo. How good of you todrop in.'
           </p>
-          <p class="paragraph indent-sm">'You're looking well, Amory.'</p>
-          <p class="paragraph">
+          <p class="indent-sm">'You're looking well, Amory.'</p>
+          <p class="indent-md">
             I had thought the same of him. His time on the Riviera had obviously
             served him well. His skin was smooth and golden, setting off the
             bright blue of his eyes. He was wearing a dark grey suit, lounging
             in that casual way he had of looking relaxed and at home in
             expensive and impeccably tailored clothes.
           </p>
-          <p class="paragraph indent-sm">
+          <p class="indent-sm">
             'I hadn't expected to see you back so soon,' I said. His last
             letter, an offhanded attempt at keeping me informed of his
             whereabouts, had arrived three weeks before and hinted at the fact
             that he should probably not return home until late July.
           </p>
-          <p class="paragraph indent-sm">
+          <p class="indent-sm">
             'Monte Carlo grew so tedious; I simply had to get away.'
           </p>
-          <p class="paragraph indent-sm">
+          <p class="indent-sm">
             'Yes,' I replied. 'Nothing to replace the dull routine of roulette,
             champagne, and beautiful women like a rousing jaunt to your country
             house for toast and coffee with your wife.'
           </p>
-          <p class="paragraph">
+          <p class="indent-md">
             Without really meaning to do so, I had poured a cup of coffee, two
             sugars, no milk, and handed it to him.
           </p>
-          <p class="paragraph indent-sm">
-            'You know, I believe I've missed you, Amory.'
-          </p>
-          <p class="paragraph">
+          <p class="indent-sm">'You know, I believe I've missed you, Amory.'</p>
+          <p class="indent-md">
             He looked me in the eyes then and smiled. Despite myself, I nearly
             caught my breath. He had that habit, of startling, dazzling one with
             his sudden and complete attention.
           </p>
-          <p class="paragraph">
+          <p class="indent-md">
             Grimes, our butler, appeared at the door just then. 'Someone to see
             you in the morning room, Madam.' He did not acknowledge Milo.
             Grimes, it had long been apparent, was no great admirer of my
             husband. He treated him with just enough respect that his obvious
             distaste should not cross the boundary into impropriety.
           </p>
-          <p class="paragraph indent-sm">
+          <p class="indent-sm">
             'Thank you, Grimes. I will go to the morning room directly.'
           </p>
-          <p class="paragraph indent-sm">
+          <p class="indent-sm">
             'Very good, Madam.' He disappeared as noiselessly as he had come.
           </p>
-          <p class="paragraph">
+          <p class="indent-md">
             The fact that Grimes' announcement had been so vague as to keep Milo
             in the dark as to the identity of my visitor was not lost on my
             husband. He turned to me and smiled as he buttered a second piece of
@@ -184,7 +184,7 @@
             unexpected arrival?'
           </p>
 
-          <p class="indent-none cta paragraph">
+          <p class="cta">
             Like the book so far? Support the author and small bookstores by
             purchasing the book at
             <a
@@ -197,8 +197,10 @@
         </section>
         <section class="about">
           <div class="about__copy">
-            <h2 class="about__title chapter">About this theme</h2>
-            <p class="paragraph indent-none">
+            <h2 class="about__title heading-lg text-uppercase">
+              About this theme
+            </h2>
+            <p>
               This theme was a ton of fun to make. In addition to incorporating
               animation with the movement of the sun and the shifting of the
               colors, I essentially made two themes in one with the inclusion of
@@ -206,7 +208,7 @@
               I was able to use the color schemes to reinforce the
               murder-mystery mood.
             </p>
-            <p class="paragraph">
+            <p class="indent-md">
               This theme is based on the book cover for Murder at the Brightwell
               by Ashley Weaver (2014), designed by Molly Rose Murphy. For the
               title, author, and section headings I chose
@@ -219,9 +221,9 @@
                 class="link"
                 href="https://fonts.google.com/specimen/Merriweather"
                 >Merriweather</a
-              >. The landscape graphic is a rough facsimile of the original art
-              in the cover, along with a "nighttime" alternative color scheme
-              for dark mode.
+              >. The land graphic is a rough facsimile of the original art in
+              the cover, along with a "nighttime" alternative color scheme for
+              dark mode.
             </p>
           </div>
           <img
@@ -233,17 +235,15 @@
         </section>
         <footer class="footer">
           <div class="footer__content">
-            <p class="paragraph">
-              ©<span id="js_current-year">2024</span> Caitlin Teague Doerr
-            </p>
-            <p class="paragraph">
+            <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p>
+            <p>
               To contact owner/developer,
               <a class="link" href="mailto:design@caitlinteague.com"
                 >send an email</a
               >
               to <span class="text-bold">design@caitlinteague.com</span>
             </p>
-            <p class="paragraph">
+            <p>
               <a href="//caitlinteague.com/builds" class="link"
                 >View more projects in Caitlin's portfolio</a
               >
@@ -251,18 +251,12 @@
           </div>
         </footer>
 
-        <div class="landscape" role="presentation">
+        <div class="land" role="presentation">
           <svg
-            id="landscape-sunset"
-            class="landscape-svg"
+            class="land-svg"
             width="100%"
             height="100%"
             viewBox="0 0 360 120"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xml:space="preserve"
-            xmlns:serif="http://www.serif.com/"
             style="
               fill-rule: evenodd;
               clip-rule: evenodd;
@@ -270,6 +264,9 @@
               stroke-miterlimit: 2;
             "
           >
+            <title>
+              Land in the distance, buildings lit by the setting sun.
+            </title>
             <g id="Sunset">
               <g>
                 <g>
@@ -749,14 +746,10 @@
           </svg>
 
           <svg
+            role="img"
             width="100%"
             height="100%"
             viewBox="0 0 360 120"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xml:space="preserve"
-            xmlns:serif="http://www.serif.com/"
             style="
               fill-rule: evenodd;
               clip-rule: evenodd;
@@ -764,6 +757,10 @@
               stroke-miterlimit: 2;
             "
           >
+            <title>
+              Land in the distance, darkened buildings with a few windows
+              emitting light from within.
+            </title>
             <g id="Night">
               <g>
                 <g>
@@ -1243,7 +1240,7 @@
           </svg>
         </div>
       </div>
-      <div class="sun js_sun"></div>
+      <div id="js_sun" class="sun" role="img" aria-label="Sun"></div>
     </main>
   </body>
 
