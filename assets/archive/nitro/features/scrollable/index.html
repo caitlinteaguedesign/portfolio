@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Scollable | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --><link rel="stylesheet" href="/archive/nitro/styles/pages/scrollable.css"></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">Scrollable</h1> <section> <h2 class="heading-2">Dynamic Shadows</h2> <p class="paragraph">
+Now introducing shadows for better UX! Should the scroll fall in such a
+      way that might imply the content has ended before it actually has, the
+      shadows will communicate to the user that there's more content. New
+      max-height classes are based on typographic rhythm value, with values
+      between <b>5 - 20</b> (anything smaller than 5 seemed unnecessarily short).
+      Append this number to class <b>.scrollable__container-#</b>.
+</p> <p class="paragraph">See <b>/scripts/custom.js</b> for required scripts.</p> <div class="grid"> <div class="column_6 scrollable"> <div class="scrollable__shadow scrollable__shadow-top"></div> <div class="scroll-example scrollable__container-8"> <p class="scroll-example__content scrollable__content">
+Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts. Separated they
+            live in Bookmarksgrove right at the coast of the Semantics, a large
+            language ocean. A small river named Duden flows by their place and
+            supplies it with the necessary regelialia. It is a paradisematic
+            country, in which roasted parts of sentences fly into your mouth.
+            Even the all-powerful Pointing has no control about the blind texts
+            it is an almost unorthographic life One day however a small line of
+            blind text by the name of Lorem Ipsum decided to leave for the far
+            World of Grammar. The Big Oxmox advised her not to do so, because
+            there were thousands of bad Commas, wild Question Marks and devious
+            Semikoli, but the Little Blind Text didn’t listen. She packed her
+            seven versalia, put her initial into the belt and made herself on
+            the way.
+</p> </div> <div class="scrollable__shadow scrollable__shadow-bottom"></div> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;div class="scrollable"&gt;
+	&lt;div class="scrollable__shadow scrollable__shadow-top"&gt;&lt;/div&gt;
+	&lt;div class="scrollable__container-#"&gt;
+		&lt;div class="scrollable__content"&gt;&lt;!-- content --&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="scrollable__shadow scrollable__shadow-bottom"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre> </div> </section> <section> <h2 class="heading-2">Basic</h2> <p class="paragraph">
+The "scrollable" feature sets the max-height and overflow: auto to the
+      element it's applied to. To use, apply <b>.scrollable-###</b> to the element,
+      where ### is any number between 100 and 400 in increments of 50. This method
+      is preserved from Nitro 1.0.
+</p> <div class="grid"> <div class="column_6 scroll-example scrollable-150"> <p class="scroll-example__content">
+Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts. Separated they
+          live in Bookmarksgrove right at the coast of the Semantics, a large
+          language ocean. A small river named Duden flows by their place and
+          supplies it with the necessary regelialia. It is a paradisematic
+          country, in which roasted parts of sentences fly into your mouth. Even
+          the all-powerful Pointing has no control about the blind texts it is
+          an almost unorthographic life One day however a small line of blind
+          text by the name of Lorem Ipsum decided to leave for the far World of
+          Grammar. The Big Oxmox advised her not to do so, because there were
+          thousands of bad Commas, wild Question Marks and devious Semikoli, but
+          the Little Blind Text didn't listen. She packed her seven versalia,
+          put her initial into the belt and made herself on the way.
+</p> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;div class="scrollable-150"&gt;
+	&lt;!-- content --&gt;
+&lt;/div&gt;
+</code></pre> </div> </section>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>

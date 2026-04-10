@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Tablesorter | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">Tablesorter</h1> <p class="paragraph">
+Finally brought to Nitro by popular demand! Requires 3rd party library, <b>tablesorter.js</b>. May not be compatible with older versions of tablesorter. Read
+<a href="https://mottie.github.io/tablesorter/docs/" target="_blank" class="link link_style-default">
+Tablersorter Documentation
+<span class="icon_inline"> <svg class="icon icon_fill" role="img" aria-label="open in a new window"> <use href="/archive/nitro/img/core-icons.svg#icon-arrow-box"></use> </svg> </span> </a>
+for details on implementation and features.
+</p> <p class="paragraph">
+A simple version is implemented below. To toggle icons and set specific
+    columns to unsortable requires additional script.
+</p> <table class="table-sortable table table_theme-generated table_theme-generated--lined bottom-spacing-2"> <thead class="table__header"> <tr> <th class="table__heading table__column-width-4 text_align-center" title="Press to toggle sort by ID">
+ID
+<span class="icon_inline"> <svg class="icon icon_fill table-sortable__icon" role="img" aria-label="Sort column" width="16" height="16"> <use href="/archive/nitro/img/core-icons.svg#icon-sort-unsorted"></use> </svg> </span> </th> <th class="table__heading" title="Press to toggle sort by Name"> <span class="icon_inline"> <svg class="icon icon_fill table-sortable__icon" role="img" aria-label="Sort column" width="16" height="16"> <use href="/archive/nitro/img/core-icons.svg#icon-sort-unsorted"></use> </svg> </span>
+Name
+</th> <th class="table__heading text_align-right" title="Press to toggle sort by Username">
+Username
+<span class="icon_inline"> <svg class="icon icon_fill table-sortable__icon" role="img" aria-label="Sort column" width="16" height="16"> <use href="/archive/nitro/img/core-icons.svg#icon-sort-unsorted"></use> </svg> </span> </th> <th class="table__heading table-sortable__sorter-false">Email (not sortable)</th> </tr> </thead> <tbody class="table__body"> <tr class="table__row"> <td class="table__cell text_align-center">34</td> <td class="table__cell">Barbara</td> <td class="table__cell text_align-right">babes</td> <td class="table__cell">babes@hotmail.com</td> </tr> <tr class="table__row"> <td class="table__cell text_align-center">12</td> <td class="table__cell">Timmy</td> <td class="table__cell text_align-right">timtim</td> <td class="table__cell">tiny@gmail.com</td> </tr> <tr class="table__row"> <td class="table__cell text_align-center">1</td> <td class="table__cell">Leanne Graham</td> <td class="table__cell text_align-right">Bret</td> <td class="table__cell">Sincere@april.biz</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">2</td> <td class="table__cell">Ervin Howell</td> <td class="table__cell text_align-right">Antonette</td> <td class="table__cell">Shanna@melissa.tv</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">3</td> <td class="table__cell">Clementine Bauch</td> <td class="table__cell text_align-right">Samantha</td> <td class="table__cell">Nathan@yesenia.net</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">4</td> <td class="table__cell">Patricia Lebsack</td> <td class="table__cell text_align-right">Karianne</td> <td class="table__cell">Julianne.OConner@kory.org</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">5</td> <td class="table__cell">Chelsey Dietrich</td> <td class="table__cell text_align-right">Kamren</td> <td class="table__cell">Lucio_Hettinger@annie.ca</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">6</td> <td class="table__cell">Mrs. Dennis Schulist</td> <td class="table__cell text_align-right">Leopoldo_Corkery</td> <td class="table__cell">Karley_Dach@jasper.info</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">7</td> <td class="table__cell">Kurtis Weissnat</td> <td class="table__cell text_align-right">Elwyn.Skiles</td> <td class="table__cell">Telly.Hoeger@billy.biz</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">8</td> <td class="table__cell">Nicholas Runolfsdottir V</td> <td class="table__cell text_align-right">Maxime_Nienow</td> <td class="table__cell">Sherwood@rosamond.me</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">9</td> <td class="table__cell">Glenna Reichert</td> <td class="table__cell text_align-right">Delphine</td> <td class="table__cell">Chaim_McDermott@dana.io</td> </tr><tr class="table__row"> <td class="table__cell text_align-center">10</td> <td class="table__cell">Clementina DuBuque</td> <td class="table__cell text_align-right">Moriah.Stanton</td> <td class="table__cell">Rey.Padberg@karina.biz</td> </tr> </tbody> </table> <p class="paragraph">
+Add class <b>.table-sortable</b> to the table, or target with custom class or
+    id and apply javscsript manually. Follow the example below for the <b>.table-sortable__icon</b>, and add <b>.table-sortable__sorter-false</b> to columns that should not have
+    sorting (if desired). Add a title attribute to the th for additional labeling
+    for mouse users.
+</p> <pre class="code-block code-snippet"><code class="html">&lt;table class="table-sortable table"&gt;
+   &lt;thead class="table__header"&gt;
+      &lt;tr&gt;
+         &lt;!-- each column with sortable --&gt;
+         &lt;th class="table__heading" title="Press to toggle sort by ID"&gt;
+            ID
+            &lt;span class="icon_inline"&gt;
+               &lt;svg class="icon icon_fill table-sortable__icon" width="16" height="16"
+                  role="img" 
+                  aria-label="Sort column"&gt;
+                  &lt;use href="/images/core-icons.svg#icon-sort-unsorted" /&gt;
+               &lt;/svg&gt;
+            &lt;/span&gt;
+         &lt;/th&gt;
+         &lt;!-- each column not sortable --&gt;
+         &lt;th class="table__heading table-sortable__sorter-false"&gt;
+            Email (not sortable)
+         &lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;!-- rest of table --&gt;
+&lt;/table&gt;
+</code></pre> <p class="paragraph">
+The code snippet below can be used globally. Use the variable to modify
+    individual table's features as necessary. Relies on classes provided by the
+    library (<b>.tablesorter-headerUnSorted</b>, <b>.tablesorter-headerAsc</b>,
+    and <b>.tablesorter-headerDesc</b>).
+</p> <pre class="code-block code-snippet"><code class="js">$(document).ready(function() &lbrace; 
+  $(".table-sortable").tablesorter(&lbrace;
+      headers: &lbrace;
+         '.table-sortable__sorter-false' : &lbrace;
+            sorter: false
+         &rbrace;
+      &rbrace;
+   &rbrace;).bind('sortEnd', function() &lbrace;
+      $(".tablesorter-headerUnSorted .table-sortable__icon")
+         .find("use")
+         .attr("href", "/images/core-icons.svg#icon-sort-unsorted");
+      $(".tablesorter-headerAsc .table-sortable__icon")
+         .find("use")
+         .attr("href", "/images/core-icons.svg#icon-sort-up");
+      $(".tablesorter-headerDesc .table-sortable__icon")
+         .find("use")
+         .attr("href", "/images/core-icons.svg#icon-sort-down");
+   &rbrace;);
+&rbrace;);
+</code></pre>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>

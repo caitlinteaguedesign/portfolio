@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Typography | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --><link rel="stylesheet" href="/archive/nitro/styles/pages/typography.css"></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">Typography</h1> <p>Helpful classes for making some content more managable.</p> <section> <h2 class="heading-2">Custom Fonts and Headings</h2> <p class="paragraph">
+Typography should be defined at the project level, and as such the
+      framework only has a few common fonts set as default. In this
+      documentation, we have <b>.heading-1</b>, <b>.heading-2</b>, <b>.heading-3</b>, and <b>.paragraph</b>, for examples.
+</p> </section> <section> <h2 class="heading-2">General SEO &amp; Accesibilty Notes</h2> <p class="paragraph">
+Only use one <b>&lt;h1&gt;</b> per page. It doesn't necessarily need to be the
+      biggest text on the page, but it should concisely describe the page's content
+      or main focus.
+</p> <p class="paragraph">
+Don't use other h's just as a method of setting the font size in places
+      like buttons and navigation as it will confuse screen readers. (Looking at
+      you, LOU 2.0.) Use <b>&lt;h2&gt;</b>, <b>&lt;h3&gt;</b>, <b>&lt;h4&gt;</b>, <b>&lt;h5&gt;</b>, and <b>&lt;h6&gt;</b> as they are intended.
+</p> <p class="paragraph">
+Tags like <b>&lt;strong&gt;</b> and <b>&lt;em&gt;</b> give screen readers specific
+      instructions on how the text is said (importance, emphasis respectively). Sometimes
+      its appropriate to use strong and em, other times it may be better just style
+      with css. For style uses, <b>.text_bold</b> and <b>.text_italic</b> are availble,
+      as are the semantic tags <b>&lt;b&gt;</b> and <b>&lt;i&gt;</b>.
+</p> <p class="paragraph">
+Text can be struck through with <b>.text_strike</b>. <span class="text_strike">Example.</span> </p> <p class="paragraph">
+Text can be set to uppercase with <b>.text_uppercase</b>. <span class="text_uppercase">Example.</span> Includes letter-spacing for better legibility.
+</p> </section> <section> <h2 class="heading-2">Text Alignment</h2> <p class="paragraph">
+Text aligns to the left by default. For aligning text to the right and
+      center, use <b>.text_align-right</b>, and <b>.text_align-center</b>.
+</p> <div class="page-typo__3up"> <div class="alert alert_light"> <p>Far far away, behind the word mountains...</p> </div> <div class="alert alert_light"> <p class="text_align-center">
+...Far far away, behind the word mountains...
+</p> </div> <div class="alert alert_light"> <p class="text_align-right">
+...Far far away, behind the word mountains
+</p> </div> </div> </section> <section> <h2 class="heading-2">Long Strings of Text that Escape Containers</h2> <p class="paragraph">
+Long strings have different break behavior in different browsers; this
+      class will guarantee that long strings, like a url, will line break
+      instead of overflowing their container. Place <b>.text_break-word</b> directly
+      on the element that contains the text.
+</p> <div class="alert alert_caution bottom-spacing-2"> <p class="paragraph">
+The original example used a url, but in 2026 the url example had no
+        issue line wrapping on the "/" character. Updated example with a long
+        string of characters to properly demo the problem this class solved.
+</p> </div> <div class="page-typo__2up"> <div> <p class="text_bold">Without help</p> <div class="alert alert_info max-width-300"> <p>VeJzBuOqAqQd83raXBqfkCJm8YFODrVeJzBuOqAqQd83ra</p> </div> </div> <div> <p class="text_bold">With help</p> <div class="alert alert_info max-width-300"> <p class="text_break-word">
+VeJzBuOqAqQd83raXBqfkCJm8YFODrVeJzBuOqAqQd83ra
+</p> </div> </div> </div> </section> <section> <h2 class="heading-2">
+Long Strings of Text that we want to Trim to One Line
+</h2> <p class="paragraph">
+Place <b>.text_truncate</b> directly on the element that contains the text.
+      Commonly used in tables where we don't really care if we can see all the text
+      in the cell.
+</p> <div class="page-typo__2up"> <div> <p><b>Without help</b></p> <div class="alert alert_info"> <p>
+A long string of words that don't necessarily mean anything super
+            important
+</p> </div> </div> <div> <p><b>With help</b></p> <div class="alert alert_info"> <p class="text_truncate">
+A long string of words that don't necessarily mean anything super
+            important
+</p> </div> </div> </div> </section> <section> <h2 class="heading-2">Fill Remaining Space with Ellipses</h2> <p class="paragraph">
+Place <b>.text_ellipses</b> directly on the element that contains the text.
+      Only works for single line of text.
+</p> <div class="page-typo__3up"> <p class="text_ellipses">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+</p> <p class="text_ellipses">Aenean vulputate</p> <p class="text_ellipses">Text and stuff</p> </div> </section>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>

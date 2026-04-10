@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Grid | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --><link rel="stylesheet" href="/archive/nitro/styles/pages/grid.css"></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">Grid System</h1> <p class="paragraph">
+The grid system is largely for laying out specific sections within a page.
+    Unique areas like headers, sidebars, footers and the relationship of the
+    main column to those elements are usually defined with custom css. For
+    examples with annotation, see the <a class="link link_style-default" href="quickstart">Quick Start Guide</a>. The grid system is now <em>optional</em> and a tool to use for quick and simple
+    layouts. This version of the grid system reflects better accessibility practices
+    and gives web designers more options.
+</p> <p class="paragraph">
+The <b>&lt;body&gt;</b> contains attributes that make the page span the height
+    of the screen even if the content is too short (you won't see weird empty bottoms
+    after the footer). The layout of the content starts with the <b>.container</b>. The container will have properties like the page's max-width and
+    horizontal centering, and <b>role="presentation"</b> for the accesibility tree.
+    The <b>.container</b> can be modified in project level code for additional layout
+    rules (like handling page content area in relation to navigation areas).
+</p> <p class="paragraph">
+Inside the <b>.container</b> comes the <b>&lt;main&gt;</b>. This element
+    represents the unique content on the page, and is sometimes sibling to a
+    sidebar or other repeating element, hence the name "main". The class <b>.main</b> contains important css reset rules.
+</p> <p class="paragraph">
+The basic building blocks of the grid layout uses <b>.grid</b> 's and <b>.column-##</b> 's, where ## is 1 through the total number of columns in the layout (Nitro uses
+    12). For two columns in a 12-column layout, use two <b>.column-6</b>; In
+    this instance the number refers to the number of columns the element spans
+    across, so all <b>.column-##</b> in a row should add up to the total number of
+    columns (ex: 6 + 6 = 12). See more examples below.
+</p> <p class="paragraph">
+In Nitro 1.0 a dedicated div with the <b>.column-##</b> was required, but in this
+    version the column class can go on a single block element directly. An additional
+    element for "rows" is also no longer required, CSS grid will handle all that logic
+    on its own.
+</p> <div class="grid grid_demo"> <div class="column_6 demoCol">.column_6</div> <div class="column_6 demoCol">.column_6</div> <div class="column_10 demoCol">.column_10</div> <div class="column_2 demoCol">.column_2</div> <div class="column_3 demoCol">.column_3</div> <div class="column_9 demoCol">.column_9</div> </div> <pre class="code-block code-snippet"><code class="html">&lt;div class="grid"&gt;
+	
+	&lt;div class="column_6"&gt;Spans 6 columns&lt;/div&gt;
+
+	&lt;div class="column_6"&gt;Spans 6 columns&lt;/div&gt;
+
+	&lt;div class="column_10"&gt;Spans 10 columns&lt;/div&gt;
+
+	&lt;div class="column_2"&gt;Spans 2 columns&lt;/div&gt;
+
+	&lt;div class="column_3"&gt;Spans 3 columns&lt;/div&gt;
+
+	&lt;div class="column_9"&gt;Spans 9 columns&lt;/div&gt;
+
+&lt;/div&gt;	
+</code></pre> <section> <h2 class="heading-2">A Note on Responsive Web</h2> <p class="paragraph">
+The grid system in not inheritantly responsive and must be set manually.
+      Complex layouts may require custom solutions, the use of <b>.grid</b> should
+      be limited to simple implementations.
+</p> </section> <section> <h2 class="heading-2">Complex Demo</h2> <p class="paragraph">
+As noted above, responsive design in this example is set manually. Custom
+      styling was added to center the circle in its row, and to make the bottom
+      row height match the height of the top row. Additionally, the margin top
+      of the <b>.heading-3</b> was overridden with a contextual class.
+</p> <div class="grid grid_complex-demo"> <div class="column_4"> <h3 class="heading-3 grid_complex-demo__heading">A Section Heading</h3> <p>by <a class="link link_style-default" href="#">A. Developer</a></p> </div> <div class="column_8 demoObj"></div> <p class="column_4">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.
+</p> <p class="column_4">
+Curabitur nibh ligula, porta non neque volutpat, gravida porta risus.
+        Nullam eros eros, dictum sed sagittis sit amet, bibendum vel orci.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus
+        tortor tortor, hendrerit sit amet efficitur nec, consectetur nec felis.
+        Vivamus fringilla mauris et tortor volutpat faucibus. Curabitur at purus
+        eget leo venenatis.
+</p> <div class="column_4 demoChart"></div> <div class="column_8 demoObj"></div> <div class="column_4 demoObj"></div> </div> <pre class="code-block code-snippet"><code class="html">&lt;div class="grid"&gt;
+	&lt;div class="column_4"&gt;
+		&lt;h3 class="heading-3"&gt;A Section Heading&lt;/h3&gt;
+		&lt;p&gt;by &lt;a href="#"&gt;A. Developer&lt;/a&gt;&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class="column_8 demoObj"&gt;&lt;/div&gt;
+
+	&lt;p class="column_4"&gt;Lorem ipsum...&lt;/p&gt;
+
+	&lt;p class="column_4"&gt;Curabitur...&lt;/p&gt;
+
+	&lt;div class="column_4 demoChart"&gt;&lt;/div&gt;
+
+	&lt;div class="column_8 demoObj"&gt;&lt;/div&gt;
+
+	&lt;div class="column_4 demoObj"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre> </section>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>

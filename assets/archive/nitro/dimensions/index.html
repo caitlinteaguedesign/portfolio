@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Spacing, Dimensions, &amp; Scrollable | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">Spacing, Dimensions, &amp; Scrollable</h1> <p class="paragraph">
+Jump to section: <a class="link link_style-default" href="#spacing">Vertical Spacing</a>, <a class="link link_style-default" href="#positioning">Positioning</a>,
+    and <a class="link link_style-default" href="#pixels">Max-width &amp; Height</a>.
+</p> <section id="spacing"> <h2 class="heading-2">Vertical Spacing</h2> <p class="paragraph">
+Vertical spacing is governed by the height of body text when the font-size
+      is 16px (this value is a variable set in a theme file <b>$standard-text-height</b>). This helps establish a consistant vertical rhythm. In the example
+      below, each class uses a mixin to calculate the appropriate margin top and
+      bottom. Simply @include <b>vertical-rhythm-bottom</b> or <b>vertical-rhythm-top</b> and pass an integer for the amount of "line heights" to make the margins.
+      In the text example below, every element has margin-bottom of 1 line-height,
+      while the <b>&lt;h3&gt;</b> has a margin-top of 2 line-height.
+</p> <p class="paragraph">
+If you want to assign a margin bottom manually, a few classes are availble
+      in the framework: <b>bottom-spacing-1</b>, <b>bottom-spacing-2</b>, <b>bottom-spacing-3</b>. In the other direction, <b>top-spacing-1</b>, <b>top-spacing-2</b>, <b>top-spacing-3</b> is available for margin top (useful in cases where an element needs spacing
+      but is not always present on the page, such as in ajax'ed scenarios).
+</p> <div class="grid"> <div class="column_6"> <div class="breadcrumb">Breadcrumb ></div> <h1 class="heading-1">Page Title</h1> <h3 class="heading-3">Section Title</h3> <p class="paragraph">
+Li Europan lingues es membres del sam familie. Lor separat existentie
+          es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
+          vocabular. Li lingues differe solmen in li grammatica, li
+          pronunciation e li plu commun vocabules. Omnicos directe al
+          desirabilite de un nov lingua franca: On refusa
+</p> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;section&gt;
+	&lt;div class="breadcrumb"&gt;Breadcrumb >&lt;div&gt;
+	&lt;h1 class="heading-1"&gt;Page Title&lt;/h1&gt;
+	&lt;h3 class="heading-3"&gt;Section Title&lt;/h3&gt;
+	&lt;p class="paragraph"&gt;Text...&lt;/p&gt;	
+&lt;/section&gt;
+</code></pre> </div> </section> <section id="positioning"> <h2 class="heading-2">Positioning</h2> <p class="paragraph">
+A few basic float and centering classes have been added to make styling
+      dynamic content simpler, such as in the cases of articles or other
+      standalone bodies of text. For centering with margin-left and margin-right
+      set to "auto", use <b>.center-content</b> or <b>.horizontal-center</b>.
+      The former, <b>.center-content</b>, is an older version that also includes
+      the property display: block, and is most useful for elements that need
+      their display property changed to make margin auto work (like images). To
+      float an object left or right (like an image in a sea of text), <b>.float-left</b> and <b>.float-right</b>.
+</p> <p class="paragraph">
+As always, any situation that requires a complex solution is best off
+      using custom css, rather than a bunch of these single property classes.
+      Use sparingly.
+</p> </section> <section id="pixels"> <h2 class="heading-2">Max-width &amp; Height</h2> <p class="paragraph">
+Sometimes it's nice to limit the width of an element, like alerts or
+      forms. Similarly we may need to fix the height or max-height of an
+      element, like an element that needs to be scrollable at a certain height.
+</p> <p class="paragraph">
+To set max-width and height use <b>.max-width-###</b> and <b>.height-###</b>, where # is any number between 100 and 800 in increments of 25.
+</p> <p class="paragraph">
+We use <b>max-width</b> instead of width to keep elements flexible for responsive
+      and mobile friendly layouts.
+</p> <div class="grid"> <div class="column_6"> <p class="alert alert_light max-width-200 bottom-spacing-2">
+Set to 200px max-width
+</p> <p class="alert alert_light height-200">Set to 200px height</p> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;div class="alert alert_light max-width-200"&gt;
+	&lt;p&gt;An example! ...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert_light height-200"&gt;
+	&lt;p&gt;An example! ...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre> </div> </section>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>

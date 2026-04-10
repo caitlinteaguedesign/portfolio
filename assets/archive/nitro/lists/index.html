@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Lists | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1" class="">Lists</h1> <section> <h2 class="heading-2">Basics</h2> <div class="grid"> <div class="column_6"> <p class="paragraph">The default appearance of lists with no css.</p> <div class="grid"> <ul class="column_6"> <li>Item</li> <li>Item</li> <li>Item</li> </ul> <ol class="column_6"> <li>Item</li> <li>Item</li> <li>Item</li> </ol> </div> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;ol&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre> <div class="column_6"> <p class="paragraph">
+A basic <b>.list</b> class will strip browser defaults, add vertical spacing,
+          and position the bullet outside and pad the left edge. <b>Bullets intentionally left off in the next two examples.</b> </p> <div class="grid"> <ul class="column_6 list"> <li>Item</li> <li>Item</li> <li>Item</li> </ul> <ol class="column_6 list"> <li>Item</li> <li>Item</li> <li>Item</li> </ol> </div> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;ul class="list"&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class="list"&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+&lt;/ol&gt;	
+</code></pre> <div class="column_6"> <p class="paragraph">
+Add <b>.list_vertical-dense</b> to tighten up the vertical rhythm.
+</p> <div class="grid"> <ul class="column_6 list list_vertical-dense"> <li>Item</li> <li>Item</li> <li>Item</li> </ul> <ol class="column_6 list list_vertical-dense"> <li>Item</li> <li>Item</li> <li>Item</li> </ol> </div> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;ul class="list list_vertical-dense"&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class="list list_vertical-dense"&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+&lt;/ol&gt;	
+</code></pre> </div> </section> <section> <h2 class="heading-2">Bullet Styles</h2> <p class="paragraph">All style classes begin with <b>.list_style</b>.</p> <div class="grid"> <ul class="column_3 list list_style-circle"> <li><b>-disc</b></li> <li><b>-circle</b></li> </ul> <ul class="column_3 list list_style-circle"> <li><b>-square</b></li> <li><b>-decimal</b></li> </ul> <ul class="column_3 list list_style-circle"> <li><b>-lower-roman</b></li> <li><b>-upper-roman</b></li> </ul> <ul class="column_3 list list_style-circle"> <li><b>-lower-alpha</b></li> <li><b>-upper-alpha</b></li> </ul> <ul class="column_6 list list_style-disc"> <li>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa.
+<ul class="list list_style-circle"> <li>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa.
+</li> </ul> </li> <li>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa.
+<ul class="list list_style-circle"> <li>Item</li> <li>Item</li> </ul> </li> </ul> <pre class="code-block column_6 code-snippet"><code class="html">&lt;ul class="list list_style-disc"&gt;
+	&lt;li&gt;
+		Item
+		&lt;ul class="list list_style-circle"&gt;
+			&lt;li&gt;Item&lt;/li&gt;
+			&lt;li&gt;Item&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;	
+</code></pre> <ol class="column_6 list list_style-upper-roman"> <li>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa.
+<ol class="list list_style-upper-alpha"> <li>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa.
+</li> </ol> </li> <li>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa.
+<ol class="list list_style-upper-alpha"> <li>Item</li> <li>Item</li> </ol> </li> </ol> <pre class="code-block column_6 code-snippet"><code class="html">&lt;ul class="list list_style-upper-roman"&gt;
+	&lt;li&gt;
+		Item
+		&lt;ul class="list list_style-upper-alpha"&gt;
+			&lt;li&gt;Item&lt;/li&gt;
+			&lt;li&gt;Item&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+	&lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;	
+</code></pre> </div> </section>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">File Structure</h1> <section> <h2 class="heading-2">Framework</h2> <p class="paragraph">
+The subfolder <strong>framework</strong> contains the files that shouldn't change
+      project to project (except for framework updates).
+</p> <ul class="list list_style-disc"> <li> <b>/framework/_reset.scss</b> <p>
+Contains the standard css reset plus some custom stuff we use to
+          reduce browser differences.
+</p> </li> <li> <b>/framework/base/</b> <p>
+Contains basic components, layout tools, and content styles. Majority
+          of css lives here.
+</p> </li> <li> <b>/framework/legacy/</b> <p>Contains legacy partials that are being phased out.</p> </li> <li> <b>/framework/mixins/</b> <p>
+Helpful tools used by the framework and available to custom project
+          files. Must be included in the stylesheet compiling file in order to
+          access code.
+</p> </li> <li> <b>/framework/options/</b> <p>
+Contains extra componenets that require JavaScript to run (modals,
+          tooltips, etc). Can include all with the _bootstrap partial or
+          individually depending on section, page, or project.
+</p> </li> <li> <b>/framework/theme/_default.scss</b> <p>
+Contains default values for theme files. Project specific files can
+          override these values. Contains some legacy variables that we are in
+          the process of deprecating.
+</p> </li> </ul> </section> <section> <h2 class="heading-2">Project</h2> <div class="grid"> <div class="column_6"> <p class="paragraph">
+The subfolder <strong>project</strong> contains unique files to the project
+          and the file with which all the css from the framework will compile with.
+          An example might look like the following list. In a new project, the main
+          global.scss files might look like the code on the right.
+</p> <div class="alert alert_caution bottom-spacing-1"> <p class="paragraph">
+In contemporary practice, <b>"index"</b> would be the better name for
+            the entry file into a folder, rather than <b>"_bootstrap"</b>.
+</p> </div> <ul class="list list_style-disc"> <li> <b>/project/global.scss</b> (compiles general framework css, the theme,
+            and anything global)
+</li> <li> <b>/project/global/</b> <ul class="list list_style-disc"> <li> <b>_bootstrap.scss</b> (imports all the files in this folder)
+</li> <li><b>_header.scss</b></li> <li><b>_footer.scss</b></li> <li><b>_layout.scss</b></li> <li><b>_typography.scss</b></li> </ul> </li> <li> <b>/project/commerce.scss</b> (compiles section css only with the theme
+            and any helpers from the framework)
+</li> <li> <b>/project/commerce/</b> (assorted individual page files that could be
+            organized in a <b>pages</b> folder or in the relevant section folder)
+<ul class="list list_style-disc"> <li><b>_department.scss</b></li> <li><b>_category.scss</b></li> <li><b>_product.scss</b></li> </ul> </li> <li> <b>/project/homepage.scss</b> (compiles page css only with the theme and
+            any helpers from the framework)
+</li> <li> <b>/project/themes/</b> (one project can have different themes for different
+            sectons or to enable different modes)
+<ul class="list list_style-disc"> <li><b>_main.scss</b></li> <li><b>_admin.scss</b></li> </ul> </li> </ul> </div> <pre class="column_6 code-block code-snippet"><code class="sass">// ====================================
+// framework - reset
+@import '../framework/reset';
+
+// framework - default theme
+@import '../framework/theme/defaults';
+
+// ====================================
+// project theme
+@import 'theme/main';
+
+// ====================================
+// framework
+ 
+// tools for making other things
+@import '../framework/mixins/bootstrap';
+
+// components, layouts, content styles
+@import '../framework/base/bootstrap';
+
+// optional components, require scripts
+@import '../framework/options/bootstrap';
+
+// ====================================
+// project global styles
+@import 'global/bootstrap';
+</code></pre> </div> </section> <section> <h2 class="heading-2">Output</h2> <div class="grid"> <div class="column_6"> <p class="paragraph">
+Files compiled and minified for production should go into the relevant <b>build</b> directory. Optionally, files that are uncompressed and being watched during
+          development can go in a separate <b>dev</b> directory.
+</p> <ul class="list list_style-disc"> <li> <b>/build/</b> <ul class="list list_style-disc"> <li><b>global.min.css</b></li> </ul> </li> <li> <b>/dev/</b> <ul class="list list_style-disc"> <li><b>global.css</b></li> </ul> </li> </ul> </div> <div class="column_6 alert alert_caution bottom-spacing-1"> <p class="paragraph">
+The original version of this project kept all of the scss and output
+          files together in a <b>nitrocss</b> directory, kept amongst php view files.
+          In this docs site, <b>nitrocss</b> source files are maintained separately,
+          with the output files placed into the <b>public/</b> folder.
+</p> </div> </div> </section> <section> <h2 class="heading-2">Third-party Libraries</h2> <p class="paragraph">
+The subfolder <strong>vendors</strong> contains unique files from third-parties
+      that might be helpful, and vary project to project. I'm a fan of Matej Latin's
+      Modular Scale for font sizing, and will include modular scale for web typography
+      purposes.
+</p> <ul class="list list_style-disc"> <li><b>/vendors/_bootsrap.scss</b> (includes all the vendor files)</li> <li> <b>/vendors/modularscale/</b> <ul class="list list_style-disc"> <li> <b>_bootstrap.scss</b> (includes all of <em>this</em> vendor's files)
+</li> <li><b>_function.scss</b></li> <li><b>_power.scss</b></li> <li><b>_respond.scss</b></li> <li>etc...</li> </ul> </li> </ul> </section> <div class="alert alert_info top-spacing-1"> <h2 class="alert__heading">Image Credit</h2><p class="paragraph">
+Photo in header by <a class="link link_style-default" href="https://unsplash.com/@jannerboy62">Nick Fewings <span class="icon_inline"> <svg class="icon icon_fill" role="img" aria-label="Open in a new window"> <use href="/archive/nitro/img/core-icons.svg#icon-arrow-box"></use> </svg> </span></a> on <a class="link link_style-default" href="https://unsplash.com/photos/green-grass-on-body-of-water-DxPyFEwvS6c">Unsplash <span class="icon_inline"> <svg class="icon icon_fill" role="img" aria-label="Open in a new window"> <use href="/archive/nitro/img/core-icons.svg#icon-arrow-box"></use> </svg> </span></a>.
+</p> </div>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>
