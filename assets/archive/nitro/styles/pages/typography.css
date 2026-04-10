@@ -1,0 +1,1 @@
+.page-typo__2up{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));grid-gap:2.375em;gap:2.375em}.page-typo__3up{display:grid;grid-template-columns:repeat(auto-fit, minmax(1fr, 1fr));grid-gap:2.375em;gap:2.375em}@media(min-width: 780px){.page-typo__3up{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));grid-gap:2.375em;gap:2.375em}}

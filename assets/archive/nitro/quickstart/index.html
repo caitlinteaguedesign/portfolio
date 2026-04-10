@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Quick Start Guide | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">Quick Start Guide</h1> <p class="paragraph">
+For miscellaneous projects floating around leerburg.com, here's a quick
+    guide to get you started.
+</p> <div class="alert alert_caution"> <p class="paragraph">
+These instructions were relevant to an old php website where pages were
+      updated to NitroCSS on a rolling basis. They assume that NitroCSS and
+      custom css have already been compiled and made available in the project.
+</p> </div> <section> <h2 class="heading-2">Starter sample</h2> <pre class="code-block code-snippet"><code class="html">&lt;?php
+	$SVG_PATH = "/images/core-icons.svg";
+	$ICONIC_PATH = "/images/open-iconic-sprites.svg"; 
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;	
+	&lt;link rel="stylesheet" href="//leerburg.com/nitro-leerburg/build/global.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="container" role="presentation"&gt;
+
+	&lt;main class="main global-padding"&gt;
+
+		&lt;h1 class="heading-1"&gt;Page Title&lt;/h1&gt;
+
+		&lt;!-- actual content will vary --&gt;
+		&lt;section&gt;
+			&lt;h2 class="heading-2"&gt;Section Title&lt;/h2&gt;
+		&lt;/section&gt;
+
+	&lt;/main&gt;
+&lt;/div&gt;&lt;!-- ends .container --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> </section> <section> <h2 class="heading-2">HTML structure explained</h2> <pre class="code-block code-snippet"><code class="html">&lt;?php
+	// declare path for svgs in PHP (for convenience, best in an include or config if your project has one)
+	$SVG_PATH = "/images/core-icons.svg";
+	$ICONIC_PATH = "/images/open-iconic-sprites.svg"; 
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;	
+	&lt;!-- stylesheet link --&gt;
+	&lt;link rel="stylesheet" href="//leerburg.com/nitro/css/styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;!-- typically header area --&gt;
+
+&lt;!-- typically the end of a header include --&gt;
+&lt;!-- ************************************* --&gt;
+
+		&lt;!-- interior layout here (details below) --&gt;
+
+&lt;!-- *************************************** --&gt;
+&lt;!-- typically the start of a footer include --&gt;
+
+	&lt;!-- typically footer area --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> </section> <section> <h2 class="heading-2">Interior layout annotated example</h2> <pre class="code-block code-snippet"><code class="html">&lt;!-- the wrapper around all the content on the page (sometimes excluding main header/footer includes, depends on layout) --&gt;
+&lt;div class="container" role="presentation"&gt;
+	
+	&lt;!-- typically the spot you might add a sidebar include --&gt;
+
+	&lt;!-- content on *this* page --&gt;
+	&lt;main class="main global-padding"&gt;
+
+		&lt;!-- every page should have one &lt;h1&gt; --&gt;
+		&lt;h1 class="heading-1"&gt;Page Title&lt;/h1&gt;	
+
+		&lt;!-- some content, like &lt;p&gt; can just exist on the page without additional markup --&gt;
+		&lt;!-- .paragraph and .heading-# classes contains css for vertical rhythm --&gt;
+		&lt;p class="paragraph"&gt;Some text...&lt;/p&gt;
+	
+		&lt;section&gt;
+			&lt;!-- section is a semantic element that should include a heading tag --&gt;
+			&lt;h2 class="heading-2"&gt;Section Title&lt;/h2&gt;	
+
+			&lt;!-- for more complex layouts, you can use the grid system --&gt;
+			&lt;!-- the grid system need not be used to define the whole page, just use as needed --&gt;
+			&lt;div class="grid"&gt;
+				&lt;div class="column_6"&gt;&lt;/div&gt;
+				&lt;div class="column_6"&gt;&lt;/div&gt;
+				&lt;div class="column_4"&gt;&lt;/div&gt;
+				&lt;div class="column_8"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+
+	&lt;/main&gt;
+&lt;/div&gt;&lt;!-- ends .container --&gt;
+</code></pre> </section>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Buttons | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">Buttons</h1> <section> <h2 class="heading-2"><b>Basic</b></h2> <p class="paragraph">
+For button, submit, and reset, use &lt;button&gt; instead of &lt;input&gt;
+</p> <pre class="code-block code-snippet"><code class="html">&lt;button type="button"&gt;Click Me&lt;/button&gt;
+&lt;button type="submit"&gt;Submit &amp; Save&lt;/button&gt;
+&lt;button type="reset"&gt;Reset Form&lt;/button&gt;
+</code></pre> <p class="paragraph"> <b>.button</b> controls for some default behaviors of all buttons. Use <b>.button_rounded</b> to add rounded corners.
+</p> <p class="paragraph"> <b>.button_color-default</b> is a default class that makes basic gray buttons.
+      If a button is disabled, use <b>.button_color-default--muted</b> instead.
+</p> <button type="button" class="button button_color-default">Click Me</button> <button type="button" class="bottom-spacing-1 button button_rounded button_color-default--muted" disabled="">Don't Click Me</button> <pre class="code-block code-snippet"><code class="html">&lt;button type="button" class="button button_color-default"&gt;Click Me&lt;/button&gt;
+&lt;button type="button" class="button button_rounded button_color-default--muted"&gt;Don't Click Me&lt;/button&gt;
+</code></pre> </section> <section> <h2 class="heading-2"><b>Icons</b></h2> <p class="paragraph">
+Use <b>.button_icon-only</b> for buttons that are just an icon.
+</p> <button type="button" class="button button_icon-only button_color-default"> <svg class="icon icon_fill"><use href="/archive/nitro/img/core-icons.svg#icon-plus"></use></svg> </button> <button type="button" class="button button_icon-only button_color-default--muted"> <svg class="icon icon_fill"><use href="/archive/nitro/img/core-icons.svg#icon-exMark"></use></svg> </button> <button type="button" class="bottom-spacing-1 button button_icon-only button_color-default button_rounded"> <svg class="icon icon_fill"><use href="/archive/nitro/img/core-icons.svg#icon-pencil"></use></svg> </button> <pre class="code-block code-snippet"><code class="html">&lt;!-- buttons that are just an icon --&gt;
+&lt;button type="button" class="button button_icon-only button_color-default"&gt;
+	&lt;svg class="icon icon_fill"&gt;&lt;use href="/images/core-icons.svg#iconName"&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;button type="button" class="button button_icon-only button_color-default button_rounded"&gt;
+	&lt;svg class="icon icon_fill"&gt;&lt;use href="/images/core-icons.svg#iconName"&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;/button&gt;
+</code></pre> <p class="paragraph">
+Use a <b>&lt;span&gt;</b> with class <b>.icon_inline</b>, just like icons
+      in other areas of text, to include an icon with a label in a button. More
+      details about icons found on the <a href="/icons">Icons</a> page.
+</p> <div class="bottom-spacing-1" role="presentation"> <button type="button" class="button button_color-default"> <span class="icon_inline"> <svg class="icon icon_fill" role="img" aria-label="download file"> <use href="/archive/nitro/img/core-icons.svg#icon-download"></use> </svg> </span>
+Download
+</button> <button type="button" class="button button_color-default"> <span class="icon_inline"> <svg class="icon icon_fill icon_rotate270" role="img" aria-label="caret pointing to the left"> <use href="/archive/nitro/img/core-icons.svg#icon-doubleCaret"></use> </svg> </span>
+Go back
+</button> <button type="button" class="button button_color-default">
+Watch this
+<span class="icon_inline"> <svg class="icon icon_fill" role="img" aria-label="eye"> <use href="/archive/nitro/img/core-icons.svg#icon-eyeball"></use> </svg> </span> </button> <button type="button" class="button button_color-default">
+Create new
+<span class="icon_inline"> <svg class="icon icon_fill" role="img" aria-label="plus sign"> <use href="/archive/nitro/img/core-icons.svg#icon-plus"></use> </svg> </span> </button> </div> <pre class="code-block code-snippet"><code class="html">&lt;!-- An icon on the right side --&gt;
+&lt;button type="button" class="button button_color-default"&gt;
+	Click Me
+	&lt;span class="icon_inline"&gt;
+		&lt;svg class="icon icon_fill" role="img" aria-label="icon description"&gt;
+			&lt;use href="/images/core-icons.svg#iconName"&gt;&lt;/use&gt;
+		&lt;/svg&gt;
+	&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- An icon on the left side --&gt;
+&lt;button type="button" class="button button_color-default"&gt;
+	&lt;span class="icon_inline"&gt;
+		&lt;svg class="icon icon_fill" role="img" aria-label="icon description"&gt;
+			&lt;use href="/images/core-icons.svg#iconName"&gt;&lt;/use&gt;
+		&lt;/svg&gt;
+	&lt;/span&gt;
+	Click Me
+&lt;/button&gt;
+</code></pre> </section> <section> <h2 class="heading-2"><b>Input File</b></h2> <div class="grid"> <p class="column_6 paragraph">
+Technically an input but contains "button-like" functionality. In order
+        to implement style update, must include code that handles the FileList.
+        Can handle "multiple" version of input file as well (place on <b>.file-select__input</b>). Colors and fonts can be changed by replacing the default style class <b>.file-select_color-default</b>.
+</p> <div class="column_6 file-select file-select_color-default"> <input type="file" name="file" id="file" class="file-select__input"> <button class="file-select__button" type="button">Choose File</button> <span class="file-select__label"></span> <button class="file-select__clear" type="button" title="clear media uploader"> <svg class="icon icon_fill" role="img" aria-label="ex"> <use href="/archive/nitro/img/core-icons.svg#icon-exMark"></use> </svg> </button> </div> </div> <section> <h3 class="heading-3">HTML</h3> <pre class="code-block code-snippet"><code class="html">&lt;div class="file-select file-select_color-default"&gt;
+	&lt;input type="file" name="file" id="file" class="file-select__input"/&gt;
+	&lt;button class="file-select__button" type="button"&gt;Choose File&lt;/button&gt;
+	&lt;span class="file-select__label"&gt;&lt;/span&gt;
+	&lt;button class="file-select__clear" type="button" title="clear media uploader"&gt;
+		&lt;svg class="icon icon_fill" role="img" aria-label="ex"&gt;
+			&lt;use href="/images/core-icons.svg#icon-exMark" /&gt;
+		&lt;/svg&gt;
+	&lt;/button&gt;
+&lt;/div&gt;
+</code></pre> </section> <section> <h3 class="heading-3">JavaScript</h3> <div class="alert alert_warning bottom-spacing-1"> <h4 class="alert__heading">!CAUTION!</h4> <p>
+2026 Caitlin does not stand by the JavaScript decisions of 2017-2020
+          Caitlin.
+</p> </div> <pre class="code-block code-snippet"><code class="js">Array.prototype.forEach.call(
+	document.querySelectorAll(".file-select__button"),
+	function(button) &lbrace;
+		const hiddenInput = button.parentElement.querySelector(".file-select__input");
+		const label = button.parentElement.querySelector(".file-select__label");
+		const clearButton = button.parentElement.querySelector(".file-select__clear");
+		const defaultLabelText = "No file selected";
+
+		// Set default text for label
+		label.textContent = defaultLabelText;
+
+		button.addEventListener("click", function() &lbrace;
+			hiddenInput.click();
+		&rbrace;);
+
+		hiddenInput.addEventListener("change", function() &lbrace;
+			const filenameList = Array.prototype.map.call(hiddenInput.files, function(file) &lbrace;
+				return file.name;
+			&rbrace;);
+
+			label.textContent = filenameList.join(", ") || defaultLabelText;
+			label.title = label.textContent;
+
+			// show clear
+			clearButton.style.display = "block";
+		&rbrace;);
+
+		clearButton.addEventListener("click", function() &lbrace;
+			// empty hidden input
+			hiddenInput.value = '';
+
+			// reset default text for label
+			label.textContent = defaultLabelText;
+
+			// hide clear
+			clearButton.style.display = "none";
+		&rbrace;);
+	&rbrace;
+);
+</code></pre> </section> </section> <script>
+    Array.prototype.forEach.call(
+      document.querySelectorAll(".file-select__button"),
+      function (button) {
+        const hiddenInput = button.parentElement.querySelector(
+          ".file-select__input",
+        );
+        const label = button.parentElement.querySelector(".file-select__label");
+        const clearButton = button.parentElement.querySelector(
+          ".file-select__clear",
+        );
+        const defaultLabelText = "No file selected";
+
+        // Set default text for label
+        label.textContent = defaultLabelText;
+
+        button.addEventListener("click", function () {
+          hiddenInput.click();
+        });
+
+        hiddenInput.addEventListener("change", function () {
+          const filenameList = Array.prototype.map.call(
+            hiddenInput.files,
+            function (file) {
+              return file.name;
+            },
+          );
+
+          label.textContent = filenameList.join(", ") || defaultLabelText;
+          label.title = label.textContent;
+
+          // show clear
+          clearButton.style.display = "block";
+        });
+
+        clearButton.addEventListener("click", function () {
+          // empty hidden input
+          hiddenInput.value = "";
+
+          // reset default text for label
+          label.textContent = defaultLabelText;
+
+          // hide clear
+          clearButton.style.display = "none";
+        });
+      },
+    );
+  </script>  </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>

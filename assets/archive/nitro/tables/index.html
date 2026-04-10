@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1.0,width=device-width"><title>Tables | NitroCSS</title><meta name="description" content="A CSS Framework for the convience of non-UX Engineers by a UX Engineer"><!-- main stylesheet built from sass --><link rel="stylesheet" href="/archive/nitro/styles/global.css"><!-- jQuery-ui styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-ui/jquery-ui.min.css"><!-- date/time picker styles --><link rel="stylesheet" href="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.min.css"><!-- JS --><!-- jQuery Library --><script src="/archive/nitro/scripts/jquery-3.2.1.min.js"></script><!-- jQuery UI --><script src="/archive/nitro/scripts/jquery-ui/jquery-ui.min.js"></script><!-- form validation --><script src="/archive/nitro/scripts/parsley.min.js"></script><!-- jQuery DateTimePicker --><script src="/archive/nitro/scripts/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script><!-- jQuery TableSorter --><script src="/archive/nitro/scripts/jquery.tablesorter.min.js"></script><!-- jQuery Hover Intent --><script src="/archive/nitro/scripts/jquery.hoverIntent.minified.js"></script><!-- for forcing IE to play nice and show external svgs linking --><script src="/archive/nitro/scripts/svg4everybody.min.js"></script><script>
+  svg4everybody();
+</script><!-- Custom --><script src="/archive/nitro/scripts/custom.js"></script><script src="/archive/nitro/scripts/supermodals.js"></script><!-- highlighting for code examples --><link rel="stylesheet" href="/archive/nitro/scripts/highlighter/sunburst.css"><script src="/archive/nitro/scripts/highlighter/highlight.pack.js"></script><script>
+  hljs.initHighlightingOnLoad();
+</script><!-- page stylesheet, optional --><link rel="stylesheet" href="/archive/nitro/styles/pages/tables.css"></head> <body> <header> <div class="banner"> <p class="paragraph">
+This project was last updated in 2020 and is now deprecated. The css and
+      sass techniques used, while still functional, are not representative of
+      current best practices.
+</p> </div> <div class="imageDemo"></div> <div class="title">NitroCSS 2.1: Marshland</div> </header> <div class="container" role="presentation"> <nav class="sidebar"> <div class="accordion accordion_style-basic accordion_color-theme"> <div> <div class="accordion__label"> Introduction <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/"> File Structure </a> </li><li> <a class="link link_style-default" href="/archive/nitro/changelog"> Changelog </a> </li><li> <a class="link link_style-default" href="/archive/nitro/quickstart"> Quick Start Guide </a> </li> </ul> </div><div> <div class="accordion__label"> Layout <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/flex"> Flex Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/form-layouts"> Form Layouts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/grid"> Grid System </a> </li><li> <a class="link link_style-default" href="/archive/nitro/dimensions"> Spacing, Positioning &amp; Dimensions </a> </li> </ul> </div><div> <div class="accordion__label"> Content <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/icons"> Icons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/links"> Links </a> </li><li> <a class="link link_style-default" href="/archive/nitro/typography"> Typography </a> </li><li> <a class="link link_style-default" href="/archive/nitro/videos"> Videos </a> </li> </ul> </div><div> <div class="accordion__label"> Components <svg class="accordion__label-icon icon icon_fill
+                false" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content  accordion__content--visible"> <li> <a class="link link_style-default" href="/archive/nitro/alerts"> Alerts </a> </li><li> <a class="link link_style-default" href="/archive/nitro/buttons"> Buttons </a> </li><li> <a class="link link_style-default" href="/archive/nitro/forms"> Form Fields </a> </li><li> <a class="link link_style-default" href="/archive/nitro/lists"> Lists </a> </li><li> <a class="link link_style-default" href="/archive/nitro/progress"> Progress Bars </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tables"> Tables </a> </li><li> <a class="link link_style-default" href="/archive/nitro/tabs"> Tabs </a> </li> </ul> </div><div> <div class="accordion__label"> Interactive Features <svg class="accordion__label-icon icon icon_fill
+                 icon_rotate180" role="img" aria-label="Expand/Collapse list"> <use href="/archive/nitro/img/core-icons.svg#icon-caret"></use> </svg> </div> <ul class="nav accordion__content false"> <li> <a class="link link_style-default" href="/archive/nitro/features/accordions"> Accordions </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/calendars"> Date &amp; Time Pickers </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/epicmodals"> Epicmodals </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/parsley"> Parsley.js </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/readmore"> Read More &amp; Show Less </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrollable"> Scrollable </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/scrolltotop"> Scroll to Top </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tablesorter"> Tablesorter </a> </li><li> <a class="link link_style-default" href="/archive/nitro/features/tooltips"> Tooltips </a> </li> </ul> </div> </div> </nav> <main class="main global-padding">  <h1 class="heading-1">Tables</h1> <p class="paragraph">
+Jump to section: <a class="link link_style-default" href="#styles">Default Styles</a>, <a class="link link_style-default" href="#theme-colors">Theme Table Colors</a>, <a class="link link_style-default" href="#table-colors">Pre-defined Table Color Schemes</a>, <a class="link link_style-default" href="#table-scrollable">Scrollable Tables</a>, <a class="link link_style-default" href="#text">Text Alignment</a>, <a class="link link_style-default" href="#column-widths">Column Widths</a>, and <a class="link link_style-default" href="#responsive">Responsive</a>.
+</p> <section id="styles"> <h2 class="heading-2">Default Styles</h2> <div class="grid bottom-spacing-1"> <div class="column_6"> <p class="paragraph">
+Tables will have a very sparse appearance without any css. To create a
+          basic table, use <b>.table</b> and <b>.table_theme-default</b> for a simple
+          gray theme. The value assigned to <b>$default-text-color</b> is used for
+          the <b>--emphasize</b> version of cells and rows.
+</p> <p class="paragraph">
+To dull the appearance of a cell or row (as in the case of
+          representing the content as disabled or hidden), add <b>--dull</b> to rows
+          or individual cells. To emphasize a row or cell, add <b>--emphasize</b>. In both cases you will use the standard version of the class (like <b>.table__cell</b>) <em>in addition</em> to the modifier class (<b>.table__cell--dull)</b>.
+</p> </div> <table class="column_6 table table_theme-default"> <caption class="table__caption">Default</caption> <thead class="table__header"> <tr> <th class="table__heading">Col Header</th> <th class="table__heading">Col Header</th> </tr> </thead> <tbody class="table__body"> <tr class="table__row"> <td class="table__cell">First row</td> <td class="table__cell"></td> </tr> <tr class="table__row table__row--dull"> <td class="table__cell">.table__row--dull</td> <td class="table__cell"></td> </tr> <tr class="table__row"> <td class="table__cell"></td> <td class="table__cell table__cell--dull">.table__cell--dull</td> </tr> <tr class="table__row table__row--emphasize"> <td class="table__cell">.table__row--emphasize</td> <td class="table__cell"></td> </tr> <tr class="table__row"> <td class="table__cell"></td> <td class="table__cell table__cell--emphasize">.table__cell--emphasize</td> </tr> <tr class="table__row"> <td class="table__cell">Last Row</td> <td class="table__cell"></td> </tr> </tbody> </table> </div> <pre class="code-block code-snippet"><code class="html">&lt;table class="table table_theme-default"&gt;	
+	&lt;caption class="table__caption"&gt;Caption Text&lt;/caption&gt;
+	&lt;thead class="table__header"&gt;
+		&lt;tr&gt;
+			&lt;th class="table__heading"&gt;Column Heading&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody class="table__body"&gt;
+		&lt;tr class="table__row"&gt;
+			&lt;td class="table__cell"&gt;Cell Text&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="table__row table__row--dull"&gt;
+			&lt;td class="table__cell table__cell--dull"&gt;Cell Text&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="table__row table__row--emphasize"&gt;
+			&lt;td class="table__cell table__cell--emphasize"&gt;Cell Text&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;		
+&lt;/table&gt;
+</code></pre> </section> <section id="theme-colors"> <h2 class="heading-2">Theme Table Colors</h2> <div class="grid bottom-spacing-1"> <div class="column_6 grid"> <p class="column_12">
+Setting the following values in the theme file can create a custom
+          themed table on the fly. Additional colors are created based on a few
+          variables fed into some sass color functons. These variables are:
+</p> <ul class="column_6 list list_style-circle"> <li><b>$table-caption-bg</b></li> <li><b>$table-caption-color</b></li> <li><b>$table-header-bg</b></li> <li><b>$table-header-color</b></li> <li><b>$table-dull</b></li> </ul> <ul class="column_6 list list_style-circle"> <li><b>$table-row-even</b></li> <li><b>$table-row-odd</b></li> <li><b>$table-heading-border</b></li> <li><b>$table-cell-border</b></li> <li><b>$table-emphasize</b></li> </ul> </div> <div class="column_6"> <table class="table table_theme-generated bottom-spacing-1"> <caption class="table__caption">Generated Theme</caption> <thead class="table__header"> <tr> <th class="table__heading">Column Header</th> <th class="table__heading">Column Header</th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">row 1 cell 1</td> <td class="table__cell">row 1 cell 2</td> </tr> <tr class="table__row"> <td class="table__cell">row 2 cell 1</td> <td class="table__cell">row 2 cell 2</td> </tr> </tbody> </table> <pre class="code-block code-snippet"><code class="html">&lt;table class="table table_theme-generated"&gt;	
+	&lt;!-- content as usual --&gt;
+&lt;/table&gt;
+</code></pre> </div> <p class="column_12">
+The tables below features two style choices, <b>.table_theme-generated--lined</b> and <b>.table_theme-generated--alternate</b> for alternating row background
+        colors. They can be used together or individually, and implementing at least
+        one of them is recommended for usability. Dull and emphasis colors are not
+        recommended on alternate background-color tables.
+</p> <table class="column_6 table table_theme-generated table_theme-generated--lined"> <caption class="table__caption">Lined</caption> <thead class="table__header"> <tr> <th class="table__heading">Column Header</th> <th class="table__heading">Column Header</th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Regular row &amp; cell</td> <td class="table__cell"></td> </tr> <tr class="table__row table__row--dull"> <td class="table__cell">Dull row</td> <td class="table__cell"></td> </tr> <tr class="table__row"> <td class="table__cell"></td> <td class="table__cell table__cell--dull">Dull cell</td> </tr> <tr class="table__row table__row--emphasize"> <td class="table__cell">Emphasize row</td> <td class="table__cell"></td> </tr> <tr class="table__row"> <td class="table__cell"></td> <td class="table__cell table__cell--emphasize">Emphasize cell</td> </tr> </tbody> </table> <table class="column_6 table table_theme-generated table_theme-generated--alternate"> <caption class="table__caption">Alternate</caption> <thead class="table__header"> <tr> <th class="table__heading">Column Header</th> <th class="table__heading">Column Header</th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">row 1 cell 1</td> <td class="table__cell">row 1 cell 2</td> </tr> <tr class="table__row"> <td class="table__cell">row 2 cell 1</td> <td class="table__cell">row 2 cell 2</td> </tr> <tr class="table__row"> <td class="table__cell">row 3 cell 1</td> <td class="table__cell">row 3 cell 2</td> </tr> <tr class="table__row"> <td class="table__cell">row 4 cell 1</td> <td class="table__cell">row 4 cell 2</td> </tr> </tbody> </table> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;table class="table table_theme-generated table_theme-generated--lined table_theme-generated--alternate"&gt;	
+	&lt;!-- both --&gt;
+&lt;/table&gt;
+
+&lt;table class="table table_theme-generated table_theme-generated--lined"&gt;
+	&lt;!-- lined only --&gt;
+&lt;/table&gt;
+
+&lt;table class="table table_theme-generated table_theme-generated--alternate"&gt;	
+	&lt;!-- alternate only --&gt;
+&lt;/table&gt;
+</code></pre> </section> <section id="table-colors"> <h2 class="heading-2">Pre-defined Table Color Schemes</h2> <p class="paragraph">
+Be sure to limit the number of different table color classes used in a
+      project, and to use classes that work well with the projects' overall
+      theme. All classes have an optional lined variant, like <b>.table_theme-mint--lined</b>.
+</p> <div class="grid"> <table class="column_3 table table_theme-rose table_theme-rose--lined"> <caption class="table__caption">rose</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-rose </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-buttermilk table_theme-buttermilk--lined"> <caption class="table__caption">buttermilk</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-buttermilk </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-lime table_theme-lime--lined"> <caption class="table__caption">lime</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-lime </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-mint table_theme-mint--lined"> <caption class="table__caption">mint</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-mint </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-sky table_theme-sky--lined"> <caption class="table__caption">sky</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-sky </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-aegean table_theme-aegean--lined"> <caption class="table__caption">aegean</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-aegean </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-periwinkle table_theme-periwinkle--lined"> <caption class="table__caption">periwinkle</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-periwinkle </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-taffy table_theme-taffy--lined"> <caption class="table__caption">taffy</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-taffy </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-garnet table_theme-garnet--lined"> <caption class="table__caption">garnet</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-garnet </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-gold table_theme-gold--lined"> <caption class="table__caption">gold</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-gold </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-moss table_theme-moss--lined"> <caption class="table__caption">moss</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-moss </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-pine table_theme-pine--lined"> <caption class="table__caption">pine</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-pine </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-ocean table_theme-ocean--lined"> <caption class="table__caption">ocean</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-ocean </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-navy table_theme-navy--lined"> <caption class="table__caption">navy</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-navy </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-eggplant table_theme-eggplant--lined"> <caption class="table__caption">eggplant</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-eggplant </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table><table class="column_3 table table_theme-jam table_theme-jam--lined"> <caption class="table__caption">jam</caption> <thead class="table__header"> <tr> <th class="table__heading" colspan="2">
+.table_theme-jam </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">Odd row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">Even row</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> <tr class="table__row"> <td class="table__cell">-</td> <td class="table__cell">-</td> </tr> </tbody> </table> </div> </section> <section id="table-scrollable"> <h2 class="heading-2">Scrollable Tables</h2> <p class="paragraph">
+Scrollable methods can be used normally by wrapping the entire table in a
+      div with the scrollable classes (from either basic or advanced solutions).
+      The downside is the the head of the table will be hidden as the user
+      scrolls down; the solutions below are for when fixing the table head is
+      desireable. Since these methods require splitting the head and body into
+      two tables, they are unfortunately incompatible with tools like <b>tablesorter</b>.
+</p> <section> <h3 class="heading-3">Basic</h3> <div class="grid"> <div class="column_6"> <p class="paragraph">
+A simple version that requires some modifications to a traditional
+            HTML table. This method utilizes the basic version of <b>scrollable</b> introduced in Nitro 1.0.
+</p> <p class="paragraph">
+To start, split the table into two. Both tables will require any
+            theme classes on the <b>&lt;table&gt;</b> tag. Whatever column-width-#
+            class is set on the th in the head portion should also be set on the first
+            (at least) td in the corresponding body portion.
+</p> <div class="alert alert_caution bottom-spacing-1"> <p class="paragraph">
+There may be accessibility consequences to this method. No longer
+              recommended without deeper investigation.
+</p> </div> <p class="paragraph">
+Lastly, wrap the body table in a div with <b>.scrollable-#</b> like normal.
+            Ta da! Now you have scrollable table with a fixed header.
+</p> <table class="table table_theme-generated table_theme-generated--lined"> <thead class="table__header"> <tr> <th class="table__heading table__column-width-3 text_align-center">ID</th> <th class="table__heading table__column-width-6">Name</th> <th class="table__heading">Username</th> </tr> </thead> </table> <div class="scrollable-200"> <table class="table table_theme-generated table_theme-generated--lined"> <tbody class="table__body"> <tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 1 </td> <td class="table__cell table__column-width-6"> Leanne Graham </td> <td class="table__cell">Bret</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 2 </td> <td class="table__cell table__column-width-6"> Ervin Howell </td> <td class="table__cell">Antonette</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 3 </td> <td class="table__cell table__column-width-6"> Clementine Bauch </td> <td class="table__cell">Samantha</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 4 </td> <td class="table__cell table__column-width-6"> Patricia Lebsack </td> <td class="table__cell">Karianne</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 5 </td> <td class="table__cell table__column-width-6"> Chelsey Dietrich </td> <td class="table__cell">Kamren</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 6 </td> <td class="table__cell table__column-width-6"> Mrs. Dennis Schulist </td> <td class="table__cell">Leopoldo_Corkery</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 7 </td> <td class="table__cell table__column-width-6"> Kurtis Weissnat </td> <td class="table__cell">Elwyn.Skiles</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 8 </td> <td class="table__cell table__column-width-6"> Nicholas Runolfsdottir V </td> <td class="table__cell">Maxime_Nienow</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 9 </td> <td class="table__cell table__column-width-6"> Glenna Reichert </td> <td class="table__cell">Delphine</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 10 </td> <td class="table__cell table__column-width-6"> Clementina DuBuque </td> <td class="table__cell">Moriah.Stanton</td> </tr> </tbody> </table> </div> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;table class="table"&gt;
+	&lt;thead class="table__header"&gt;
+		&lt;tr&gt;
+			&lt;th class="table__heading table__column-width-3"&gt;
+				ID
+			&lt;/th&gt;
+			&lt;th class="table__heading table__column-width-6"&gt;
+				Name
+			&lt;/th&gt;
+			&lt;th class="table__heading"&gt;
+				Username
+			&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+&lt;/table&gt;
+
+&lt;div class="scrollable-#"&gt;
+	&lt;table class="table"&gt;
+		&lt;tbody class="table__body"&gt;
+			&lt;tr class="table__row"&gt;
+				&lt;td class="table__cell table__column-width-3"&gt;
+					123
+				&lt;/td&gt;
+				&lt;td class="table__cell table__column-width-6"&gt;
+					Leanne R
+				&lt;/td&gt;
+				&lt;td class="table__cell"&gt;
+					lennieg
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+</code></pre> </div> </section> <section> <h3 class="heading-3">Advanced</h3> <div class="grid"> <div class="column_6"> <p class="paragraph">
+Toggles shadows depending on the position of the scroll bar.
+            Requires additional markup and accompanying javascript. See <a href="/features/scrollable" class="link link_style-default">Scrollable</a> for more information.
+</p> <p class="paragraph">
+As with the basic version, begin by splitting the table into two,
+            one for the table head and one for the table content. Column heads
+            and their correspond table cells should have matching <b>.column-width-#</b> definitions.
+</p> <p class="paragraph">
+The structure around the body for scrollable will differ from the
+            basic implementation. As with normal scrollable on tables, the class
+            defining the max-height and overflow must be on a div wrapping the
+            table (<b>.scrollable__container-#</b> or <b>.scrollable-###</b>).
+            The table should have an additional class <b>.scrollable-content</b> for
+            the the javascript to determine the height and width of the scrollable
+            area.
+</p> <table class="table table_theme-generated table_theme-generated--lined"> <thead class="table__header"> <tr> <th class="table__heading table__column-width-3 text_align-center">ID</th> <th class="table__heading table__column-width-6">Name</th> <th class="table__heading">Username</th> </tr> </thead> </table> <div class="scrollable"> <div class="scrollable__shadow scrollable__shadow-top"></div> <div class="scrollable__container-8"> <table class="table table_theme-generated table_theme-generated--lined scrollable__content"> <tbody class="table__body"> <tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 1 </td> <td class="table__cell table__column-width-6"> Leanne Graham </td> <td class="table__cell">Bret</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 2 </td> <td class="table__cell table__column-width-6"> Ervin Howell </td> <td class="table__cell">Antonette</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 3 </td> <td class="table__cell table__column-width-6"> Clementine Bauch </td> <td class="table__cell">Samantha</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 4 </td> <td class="table__cell table__column-width-6"> Patricia Lebsack </td> <td class="table__cell">Karianne</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 5 </td> <td class="table__cell table__column-width-6"> Chelsey Dietrich </td> <td class="table__cell">Kamren</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 6 </td> <td class="table__cell table__column-width-6"> Mrs. Dennis Schulist </td> <td class="table__cell">Leopoldo_Corkery</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 7 </td> <td class="table__cell table__column-width-6"> Kurtis Weissnat </td> <td class="table__cell">Elwyn.Skiles</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 8 </td> <td class="table__cell table__column-width-6"> Nicholas Runolfsdottir V </td> <td class="table__cell">Maxime_Nienow</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 9 </td> <td class="table__cell table__column-width-6"> Glenna Reichert </td> <td class="table__cell">Delphine</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 10 </td> <td class="table__cell table__column-width-6"> Clementina DuBuque </td> <td class="table__cell">Moriah.Stanton</td> </tr> </tbody> </table> </div> <div class="scrollable__shadow scrollable__shadow-bottom"></div> </div> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;div class="scrollable"&gt;
+	&lt;div class="scrollable__shadow scrollable__shadow-top"&gt;&lt;/div&gt;
+	&lt;div class="scrollable__container-8"&gt;
+		&lt;table class="table scrollable__content"&gt;
+			&lt;tbody class="table__body"&gt;
+				&lt;tr class="table__row"&gt;
+					&lt;td class="table__cell table__column-width-3"&gt;
+						123
+					&lt;/td&gt;
+					&lt;td class="table__cell table__column-width-6"&gt;
+						Leanne R
+					&lt;/td&gt;
+					&lt;td class="table__cell"&gt;
+						lennieg
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+	&lt;div class="scrollable__shadow scrollable__shadow-bottom"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre> </div> </section> <section> <h3 class="heading-3">Trials &amp; Tribulations</h3> <div class="grid"> <p class="column_6 paragraph">
+Tables with multiple columns with unspecified widths may not line up
+          correctly (see example to the right). For best results define all but
+          the last column width with <b>.table__column-width-#</b>.
+</p> <div class="column_6"> <table class="table table_theme-generated table_theme-generated--lined"> <thead class="table__header"> <tr> <th class="table__heading table__column-width-3 text_align-center">ID</th> <th class="table__heading">Name</th> <th class="table__heading">Username</th> </tr> </thead> </table> <div class="scrollable-150"> <table class="table table_theme-generated table_theme-generated--lined"> <tbody class="table__body"> <tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 1 </td> <td class="table__cell table__column-width-6"> Leanne Graham </td> <td class="table__cell">Bret</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 2 </td> <td class="table__cell table__column-width-6"> Ervin Howell </td> <td class="table__cell">Antonette</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 3 </td> <td class="table__cell table__column-width-6"> Clementine Bauch </td> <td class="table__cell">Samantha</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 4 </td> <td class="table__cell table__column-width-6"> Patricia Lebsack </td> <td class="table__cell">Karianne</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 5 </td> <td class="table__cell table__column-width-6"> Chelsey Dietrich </td> <td class="table__cell">Kamren</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 6 </td> <td class="table__cell table__column-width-6"> Mrs. Dennis Schulist </td> <td class="table__cell">Leopoldo_Corkery</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 7 </td> <td class="table__cell table__column-width-6"> Kurtis Weissnat </td> <td class="table__cell">Elwyn.Skiles</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 8 </td> <td class="table__cell table__column-width-6"> Nicholas Runolfsdottir V </td> <td class="table__cell">Maxime_Nienow</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 9 </td> <td class="table__cell table__column-width-6"> Glenna Reichert </td> <td class="table__cell">Delphine</td> </tr><tr class="table__row"> <td class="table__cell table__column-width-3 text_align-center"> 10 </td> <td class="table__cell table__column-width-6"> Clementina DuBuque </td> <td class="table__cell">Moriah.Stanton</td> </tr> </tbody> </table> </div> </div> </div> </section> </section> <section id="text"> <h2 class="heading-2">Text Alignment</h2> <div class="grid"> <div class="column_6"> <p class="paragraph">
+All text in a table is aligned left by default. To modify, place
+          classes <b>.text_align-center</b> and <b>.text_align-right</b> on the section
+          you want to affect (i.e. the whole table, a row, a cell, etc.).
+</p> <p class="paragraph">
+To center an icon, use <b>.table__icon</b> on the <b>svg</b>.
+</p> <table class="table table_theme-ocean bottom-spacing-1"> <caption class="table__caption">Text Alignment</caption> <thead class="table__header text_align-center"> <tr> <th class="table__heading">.text_align-center</th> <th class="table__heading">Heading</th> <th class="table__heading">Heading</th> <th class="table__heading"> <svg class="table__icon icon icon_fill" role="img" aria-label="icon description"> <use href="/archive/nitro/img/core-icons.svg#icon-storeFront"></use> </svg> </th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell text_align-right">.text_align-right</td> <td class="table__cell">Data</td> <td class="table__cell">Data</td> <td class="table__cell">2435345</td> </tr> <tr class="table__row"> <td class="table__cell">Data</td> <td class="table__cell">Data</td> <td class="table__cell">Data</td> <td class="table__cell">2435345</td> </tr> </tbody> </table> <table class="table table_theme-ocean"> <caption class="table__caption">Text Alignment</caption> <thead class="table__header text_align-right"> <tr> <th class="table__heading">.text_align-right</th> <th class="table__heading">Heading</th> <th class="table__heading">Heading</th> <th class="table__heading">Heading</th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell text_align-center">.text_align-center</td> <td class="table__cell">Data</td> <td class="table__cell">Data</td> <td class="table__cell">2435345</td> </tr> <tr class="table__row"> <td class="table__cell">Data</td> <td class="table__cell">Data</td> <td class="table__cell">Data</td> <td class="table__cell">2435345</td> </tr> </tbody> </table> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;!-- align all text center --&gt;
+&lt;table class="text_align-center"&gt;
+	&lt;!-- align column header text center --&gt;
+	&lt;thead class="text_align-center"&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Column Text&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;!-- align cell text right --&gt;
+			&lt;td class="text_align-right"&gt;Cell text&lt;/td&gt;
+		&lt;/tr&gt;				
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre> </div> </section> <section id="column-widths"> <h2 class="heading-2">Column Widths</h2> <p class="paragraph">
+To set explicit column widths, place <b>.table__column-width-#</b> on the first
+      row of th's (or td's), where ## is 1 and 20. The number corresponds to the value
+      of the typographic rhythm multipled by the corresponding value. If more precise
+      values are required, chances are custom css is a better option. Leave at least
+      one column with no width set for best responsive results./p>
+</p><div class="grid"> <div class="column_6"> <table class="table table_theme-default bottom-spacing-1"> <caption class="table__caption">default</caption> <thead class="table__header"> <tr> <th class="table__heading">heading</th> <th class="table__heading">heading</th> <th class="table__heading">heading</th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">cell</td> <td class="table__cell">cell</td> <td class="table__cell">cell</td> </tr> </tbody> </table> <table class="table table_theme-default"> <caption class="table__caption">first and last column set</caption> <thead class="table__header"> <tr> <th class="table__heading table__column-width-3">-3</th> <th class="table__heading">heading</th> <th class="table__heading table__column-width-6">-6</th> </tr> </thead> <tbody> <tr class="table__row"> <td class="table__cell">cell</td> <td class="table__cell">cell</td> <td class="table__cell">cell</td> </tr> </tbody> </table> </div> <pre class="code-block column_6 code-snippet"><code class="html">&lt;thead&gt;
+	&lt;tr&gt;
+		&lt;th class="table__column-width-1"&gt;
+			heading
+		&lt;/th&gt;
+		&lt;th&gt;heading&lt;/th&gt;
+		&lt;th&gt;heading&lt;/th&gt;
+	&lt;/tr&gt;		
+&lt;/thead&gt;
+</code></pre> </div>  <section id="responsive"> <h2 class="heading-2">Responsive Tables</h2> <div class="grid bottom-spacing-1"> <div class="column_6"> <p class="paragraph">
+To make a table responsive, the html in the table will need to be
+            altered slightly. Then in Sass, you'll need to target the table by
+            id or class and include the mixin <b>table--mobile()</b>. Because
+            every table is unique, there's no way to create a custom
+            "responsive" class that would work in all cases.
+</p> <p class="paragraph">
+The mixin <b>table--mobile()</b> can accept a parameters for label width.
+            This value may vary depending on the length of the labels and ensures
+            consistant text alignment for easy table reading.
+</p> </div> <pre class="code-block column_6 code-snippet"><code class="sass">/* css with sass mixin */
+#responsive-table-demo &lbrace;
+	@media screen and (max-width: 1500px) &lbrace; 
+		@include table--mobile(6rem);
+	&rbrace;
+&rbrace;	
+</code></pre> <div class="column_6"> <p class="paragraph">
+In each cell, wrap a label (should match the corresponding column
+            header), in a div with class <b>.mobile-table__cell-label</b>.
+            Labels are optional, like in the case of a group of buttons. Wrap
+            the rest of the cell content in a div with class <b>.mobile-table__cell-content</b>. By default the content will be in column two, but this can be
+            modified with custom css, as with the example below and the edit
+            button (its container spans both columns).
+</p> <table class="table table_theme-sky table_theme-sky--lined bottom-spacing-1"> <caption class="table__caption">Table with HTML Required for Responsive Mode</caption> <thead class="table__header"> <tr> <th class="table__heading">ID #</th> <th class="table__heading">Name</th> <th class="table__heading">Place</th> <th class="table__heading"></th> </tr> </thead> <tbody class="table__body"> <tr class="table__row"> <td class="table__cell"> <div class="mobile-table__cell-label">ID #</div> <div class="mobile-table__cell-content">05486</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Name</div> <div class="mobile-table__cell-content">John S. Doe</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Address</div> <div class="mobile-table__cell-content">
+406 Technology Dr W, Menomonie, WI
+</div> </td> <td class="table__cell"> <div class="mobile-table__cell-content"> <button type="button" class="button button_color-default">Edit</button> </div> </td> </tr> <tr class="table__row"> <td class="table__cell"> <div class="mobile-table__cell-label">ID #</div> <div class="mobile-table__cell-content">05486</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Name</div> <div class="mobile-table__cell-content">John S. Doe</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Address</div> <div class="mobile-table__cell-content">
+406 Technology Dr W, Menomonie, WI
+</div> </td> <td class="table__cell"> <div class="mobile-table__cell-content"> <button type="button" class="button button_color-default">Edit</button> </div> </td> </tr> <tr class="table__row"> <td class="table__cell"> <div class="mobile-table__cell-label">ID #</div> <div class="mobile-table__cell-content">05486</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Name</div> <div class="mobile-table__cell-content">John S. Doe</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Address</div> <div class="mobile-table__cell-content">
+406 Technology Dr W, Menomonie, WI
+</div> </td> <td class="table__cell"> <div class="mobile-table__cell-content"> <button type="button" class="button button_color-default">Edit</button> </div> </td> </tr> </tbody> </table> <table id="responsive-table-demo" class="table table_theme-sky table_theme-sky--lined bottom-spacing-1"> <caption class="table__caption">Responsive mode invoked</caption> <thead class="table__header"> <tr> <th class="table__heading">ID #</th> <th class="table__heading">Name</th> <th class="table__heading">Place</th> <th class="table__heading"></th> </tr> </thead> <tbody class="table__body"> <tr class="table__row"> <td class="table__cell"> <div class="mobile-table__cell-label">ID #</div> <div class="mobile-table__cell-content">05486</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Name</div> <div class="mobile-table__cell-content">John S. Doe</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Address</div> <div class="mobile-table__cell-content">
+406 Technology Dr W, Menomonie, WI
+</div> </td> <td class="table__cell"> <div class="mobile-table__cell-content button-group"> <button type="button" class="button button_color-default">Edit</button> </div> </td> </tr> <tr class="table__row"> <td class="table__cell"> <div class="mobile-table__cell-label">ID #</div> <div class="mobile-table__cell-content">05486</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Name</div> <div class="mobile-table__cell-content">John S. Doe</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Address</div> <div class="mobile-table__cell-content">
+406 Technology Dr W, Menomonie, WI
+</div> </td> <td class="table__cell"> <div class="mobile-table__cell-content button-group"> <button type="button" class="button button_color-default">Edit</button> </div> </td> </tr> <tr class="table__row"> <td class="table__cell"> <div class="mobile-table__cell-label">ID #</div> <div class="mobile-table__cell-content">05486</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Name</div> <div class="mobile-table__cell-content">John S. Doe</div> </td> <td class="table__cell"> <div class="mobile-table__cell-label">Address</div> <div class="mobile-table__cell-content">
+406 Technology Dr W, Menomonie, WI
+</div> </td> <td class="table__cell"> <div class="mobile-table__cell-content button-group"> <button type="button" class="button button_color-default">Edit</button> </div> </td> </tr> </tbody> </table> </div> <div class="column_6"> <pre class="code-block code-snippet"><code class="html">&lt;!-- html --&gt;
+&lt;table id="responsive-table-demo" class="table table_theme-sky table_theme-sky--lined"&gt;
+	&lt;thead class="table__header"&gt;
+		&lt;!-- column headings --&gt;
+	&lt;/thead&gt; 
+	&lt;tbody class="table__body"&gt;
+		&lt;tr class="table__row"&gt;
+			&lt;td class="table__cell"&gt;
+				&lt;div class="mobile-table__cell-label"&gt;ID #&lt;/div&gt;
+				&lt;div class="mobile-table__cell-content"&gt;05486&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class="table__cell"&gt;
+				&lt;div class="mobile-table__cell-label"&gt;Name&lt;/div&gt;
+				&lt;div class="mobile-table__cell-content"&gt;
+					John S. Doe
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class="table__cell"&gt;
+				&lt;div class="mobile-table__cell-label"&gt;Address&lt;/div&gt;
+				&lt;div class="mobile-table__cell-content"&gt;
+					406 Technology Dr W, Menomonie, WI
+				&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td class="table__cell"&gt;
+				&lt;div class="mobile-table__cell-content"&gt;
+					&lt;!-- buttons --&gt;
+				&lt;/div&gt;
+			&lt;/td&gt;			
+		&lt;/tr&gt;				
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre> </div> </div> </section> </section> </main> </div> <footer> <div class="quote">
+"Developed for the domestication of css in Leerburg projects to ease UI
+    engineering tasks."
+</div> <div class="portfolio"> <p>©<span id="js_current-year">2024</span> Caitlin Teague Doerr</p> <p>
+To contact owner/developer,
+<a class="link" href="mailto:design@caitlinteague.com">send an email</a>
+to
+<span class="text_bold">design@caitlinteague.com</span> </p> <p> <a class="link" href="//caitlinteague.com/builds">View more projects in Caitlin's portfolio</a> </p> </div> </footer> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentYear = new Date().getFullYear();
+    const elem = document.getElementById("js_current-year");
+    if (elem) elem.innerText = currentYear.toString();
+  });
+</script> <button type="button" id="scroll-to-top" class="scroll-to-top scroll-to-top_style-default">Scroll to Top</button> </body></html>
