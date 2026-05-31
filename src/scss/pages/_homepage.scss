@@ -170,10 +170,18 @@ $mq-qualities-desktop: 970px;
     display: grid;
     align-items: center;
     justify-items: center;
-    gap: rhythm.rhythm(2);
+    gap: rhythm.rhythm(1) rhythm.rhythm(2);
 
     @media screen and (min-width: $mq-qualities-desktop) {
+      grid-template-rows: auto 1fr;
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-heading {
+      justify-self: start;
+      @media screen and (min-width: $mq-qualities-desktop) {
+        grid-column: span 2;
+      }
     }
 
     &-list {
@@ -208,6 +216,13 @@ $mq-qualities-desktop: 970px;
         margin-right: 16px;
         width: 40px;
         height: 40px;
+      }
+    }
+
+    .responsive-webpage {
+      margin-top: rhythm.rhythm(1);
+      @media screen and (min-width: $mq-qualities-desktop) {
+        margin-top: 0;
       }
     }
   }
@@ -258,7 +273,8 @@ $mq-qualities-desktop: 970px;
   }
 
   // typography
-  .heading-1 {
+  .heading-1,
+  .heading-2 {
     color: #67e5e9;
   }
   &__greeting {

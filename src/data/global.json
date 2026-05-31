@@ -12,7 +12,7 @@
         "label": "Result",
         "value": "Reduced average cost of shipping and streamlined the process for users to make and modify labels."
       },
-      "role": "UI Developer & UX/UI Designer",
+      "role": "Lead UX Engineer & Designer",
       "summary": ""
     },
     "id_2": {
@@ -24,7 +24,7 @@
         "label": "Result",
         "value": "33% increase in sitewide conversion rate"
       },
-      "role": "Front-end Developer & UX/UI Designer",
+      "role": "Lead UX Engineer & Designer",
       "summary": ""
     },
     "id_3": {
@@ -34,9 +34,9 @@
       "client": "Leerburg Enterprises, Inc.",
       "key": {
         "label": "Role",
-        "value": "Front-end Developer & UI Designer"
+        "value": "UX Engineer & Designer"
       },
-      "role": "Front-end Developer & UI Designer",
+      "role": "UX Engineer & Designer",
       "summary": ""
     },
     "id_4": {
@@ -46,9 +46,9 @@
       "client": "Leerburg Enterprises, Inc.",
       "key": {
         "label": "Role",
-        "value": "Front-end Developer and UI Designer"
+        "value": "Lead UX Engineer & Designer"
       },
-      "role": "Front-end Developer and UI Designer",
+      "role": "Lead UX Engineer & Designer",
       "summary": ""
     },
     "id_5": {
@@ -58,9 +58,9 @@
       "client": "Leerburg Enterprises, Inc.",
       "key": {
         "label": "Role",
-        "value": "Web Designer & Developer, Graphic Designer"
+        "value": "Software Engineer, UI Designer, Graphic Designer"
       },
-      "role": "Web Designer & Developer, Graphic Designer",
+      "role": "Software Engineer, UI Designer, Graphic Designer",
       "summary": ""
     },
     "id_6": {
@@ -70,9 +70,9 @@
       "client": "North America Diving Dogs",
       "key": {
         "label": "Role",
-        "value": "Lead Front-end Developer & UI Designer"
+        "value": "Lead UX Engineer & Designer"
       },
-      "role": "Lead Front-end Developer & UI Designer",
+      "role": "Lead UX Engineer & Designer",
       "summary": ""
     },
     "id_7": {
@@ -82,9 +82,9 @@
       "client": "Leerburg",
       "key": {
         "label": "Role",
-        "value": "Front-end Developer & UI Designer"
+        "value": "Software Engineer & UI Designer"
       },
-      "role": "Front-end Developer & UI Designer",
+      "role": "Software Engineer & UI Designer",
       "summary": ""
     },
     "id_8": {
@@ -94,9 +94,9 @@
       "client": "Uptake Technologies, Inc.",
       "key": {
         "label": "Role",
-        "value": "Web Developer & UI Designer"
+        "value": "Software Engineer & UI Designer"
       },
-      "role": "Web Developer & UI Designer",
+      "role": "Software Engineer & UI Designer",
       "summary": ""
     }
   }
