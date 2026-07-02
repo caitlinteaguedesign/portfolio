@@ -1,19 +1,23 @@
-{% macro settings(GLOBAL_ICON_PATH, name, url, file, isExt = false) %}
-
-{% if not isExt %}
-   {% set url = '/archive/'+url %}
-{% endif %}
+{% macro settings(GLOBAL_ICON_PATH, name, project_url, file, repo_url = '') %}
 
 <div class="gallery__item">
-   <a href="{{ url }}" target="_blank">
+   <a href="{{ project_url }}" target="_blank">
       <img src="/img/builds/{{ file }}" alt="{{ name }} thumbnail image" width="360" height="218" class="gallery__image">
    </a>
-   <a href="{{ url }}" target="_blank" class="gallery__link link_layout-flex link_style-primary">
+   <a href="{{ project_url }}" target="_blank" class="gallery__link link_layout-flex link_style-primary">
       {{ name }}
       <svg class="link__icon icon_scale icon_fill" width="16" height="16" role="img" aria-label="(press to open in a new window)">
          <use xlink:href="{{ GLOBAL_ICON_PATH }}#icon-leave"></use>
       </svg>
    </a>
+	 {% if not repo_url == '' %}
+	 <a href="{{ repo_url }}" target="_blank" class="gallery__link link_layout-flex link_style-primary">
+      View the code
+      <svg class="link__icon icon_scale icon_fill" width="16" height="16" role="img" aria-label="(press to open in a new window)">
+         <use xlink:href="{{ GLOBAL_ICON_PATH }}#icon-leave"></use>
+      </svg>
+   </a>
+	 {% endif %}
 </div>
 
 {% endmacro %}
